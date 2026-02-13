@@ -32,7 +32,34 @@
                         <li><a href="contacts.html" target="_blank" data-en="Contact" data-es="Contacto">Contact</a></li>
                     </ul>
                 </nav>
-            </div>    
+            </div>
+            
+            <!-- MENÚ HAMBURGUESA MÓVIL (CUADRADO) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- MENÚ DESPLEGABLE MÓVIL -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li class="mobile-has-submenu">
+                        <a href="" data-en="Our Routes" data-es="Nuestras Rutas" class="routes-toggle">Our Routes</a>
+                        <ul class="mobile-submenu">
+                            <li><a href="route-1.html">Route 1</a></li>
+                            <li><a href="route-2.html">Route 2</a></li>
+                            <li><a href="route-3.html">Route 3</a></li>
+                            <li><a href="route-4.html">Route 4</a></li>
+                            <li><a href="route-5.html">Route 5</a></li>
+                            <li><a href="route-6.html">Route 6</a></li>                              
+                        </ul>
+                    </li>
+                    <li><a href="about us.html" target="_blank" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                    <li><a href="contacts.html" target="_blank" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="header-content container">
@@ -118,31 +145,35 @@
         </video>
 
     <div class="stats-container">
-        <div class="stat-circle" data-percentage="25">
-            <svg>
-                <circle cx="60" cy="60" r="50"></circle>
-                <circle class="progress" cx="60" cy="60" r="50"></circle>
-            </svg>
-            <div class="percentage">0%</div>
-            <p data-en="Of Colombia's bird species are found in Huila" data-es="De las especies de aves de Colombia se encuentran en Huila">Of Colombia's bird species are found in Huila<br></p>
+        <div class="stats-row-top">
+            <div class="stat-circle" data-percentage="25">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle class="progress" cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="percentage">0%</div>
+                <p data-en="Of Colombia's bird species are found in Huila" data-es="De las especies de aves de Colombia se encuentran en Huila">Of Colombia's bird species are found in Huila<br></p>
+            </div>
+        
+            <div class="stat-circle" data-percentage="35">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle class="progress" cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="percentage">0%</div>
+                <p data-en="Of the departmental territory under conservation and environmental management schemes" data-es="Del territorio departamental bajo esquemas de conservación y gestión ambiental">Of the departmental territory under conservation and environmental management schemes<br></p>
+            </div>
         </div>
-    
-        <div class="stat-circle" data-percentage="35">
-            <svg>
-                <circle cx="60" cy="60" r="50"></circle>
-                <circle class="progress" cx="60" cy="60" r="50"></circle>
-            </svg>
-            <div class="percentage">0%</div>
-            <p data-en="Of the departmental territory under conservation and environmental management schemes" data-es="Del territorio departamental bajo esquemas de conservación y gestión ambiental">Of the departmental territory under conservation and environmental management schemes<br></p>
-        </div>
-    
-        <div class="stat-circle" data-percentage="27">
-            <svg>
-                <circle cx="60" cy="60" r="50"></circle>
-                <circle class="progress" cx="60" cy="60" r="50"></circle>
-            </svg>
-            <div class="percentage">0%</div>
-            <p data-en="Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif" data-es="De las especies de colibríes de Colombia habitan los ecosistemas del Macizo Colombiano">Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif<br></p>
+
+        <div class="stats-row-bottom">
+            <div class="stat-circle" data-percentage="27">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle class="progress" cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="percentage">0%</div>
+                <p data-en="Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif" data-es="De las especies de colibríes de Colombia habitan los ecosistemas del Macizo Colombiano">Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif<br></p>
+            </div>
         </div>
     </div>
 </section>
@@ -267,14 +298,62 @@
         <span class="lang-text" data-en="ES" data-es="EN">ES</span>
     </button>
 
-    <!-- JAVASCRIPT PARA ANIMACIÓN DE ESTADÍSTICAS -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // SCRIPT PARA MENÚ MÓVIL
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        const routesToggle = document.querySelector('.routes-toggle');
+        const mobileSubmenu = document.querySelector('.mobile-submenu');
+
+        // Abrir/cerrar menú
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Si no es el toggle de routes, cerrar el menú
+                if (!this.classList.contains('routes-toggle')) {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                } else {
+                    e.preventDefault();
+                    mobileSubmenu.classList.toggle('active');
+                }
+            });
+        });
+
         const stats = document.querySelectorAll('.stat-circle');
+        const routeBoxes = document.querySelectorAll('.route-box');
 
         function isVisible(elem) {
             const rect = elem.getBoundingClientRect();
             return rect.top < window.innerHeight && rect.bottom > 0;
         }
+
+        // Detectar cuando las rutas están visibles y aplicar zoom
+        function handleRouteZoom() {
+            routeBoxes.forEach(box => {
+                const rect = box.getBoundingClientRect();
+                const isInView = rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2;
+                
+                if (isInView) {
+                    box.classList.add('in-view');
+                } else {
+                    box.classList.remove('in-view');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            handleRouteZoom();
+        });
+
+        // Ejecutar al cargar la página
+        handleRouteZoom();
 
         function animateStats() {
             stats.forEach(stat => {
