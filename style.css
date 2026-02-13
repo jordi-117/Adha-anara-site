@@ -1,0 +1,1271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===================== */
+/* RESET Y CONFIGURACIÓN BASE */
+/* ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ===================== */
+/* HEADER Y SLIDER */
+/* ===================== */
+
+.header {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    box-shadow: none;
+    overflow: hidden;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    z-index: 1;
+}
+
+.slider-box {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    background-image: url('img header/colibri.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.slider {
+    width: 600%;
+    height: 100%;
+    display: flex;
+    animation: slide 35s steps(1000, end) infinite;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 16.666%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%, 14% { transform: translateX(0); }
+    16.6%, 30.6% { transform: translateX(-16.666%); }
+    33.3%, 47.3% { transform: translateX(-33.333%); }
+    50%, 64% { transform: translateX(-50%); }
+    66.6%, 80.6% { transform: translateX(-66.666%); }
+    83.3%, 99.99% { transform: translateX(-83.333%); }
+    /* El salto al 100% ahora será sobre un fondo idéntico */
+    100% { transform: translateX(0); }
+}
+
+/* ===================== */
+/* MENÚ DE NAVEGACIÓN */
+/* ===================== */
+
+.menu-container {
+    position: relative;
+    z-index: 4;
+    padding: 20px 0;
+}
+
+.menu.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    z-index: 4;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 100px;
+}
+
+.navbar {
+    margin-top: -120px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li {
+    position: relative;
+    padding-top: 15px;
+    border: none;
+}
+
+.navbar ul li a {
+    color: #fffdfc;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #21ba66;
+    border-bottom: 2px solid #21ba66;
+}
+
+/* Submenu */
+.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #21ba66;
+    border-radius: 6px;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. Eliminar espacios en la lista del submenú */
+.submenu {
+    padding: 0 !important;          /* Quita el espacio interno de la caja grande */
+    margin: 0 !important;
+    list-style: none;
+    border: none;        /* Quita bordes si los tiene */
+    overflow: hidden;    /* Para que las esquinas respeten el borde si usas border-radius */
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: none;
+}
+
+.submenu li a:hover {
+    background-color: #ffffff;
+    color: #ff830e !important;
+}
+
+/* ===================== */
+/* CONTENIDO DEL HEADER */
+/* ===================== */
+
+.header-content {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    padding-top: 70px;
+}
+
+.header-txt {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 75px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: -70px;
+    margin-bottom: 5px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.header-txt p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 45px;
+    padding: 0 350px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.btn-1 {
+    display: inline-block;
+    color: #fffdfc;
+    background-color: #21ba66;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 75px;
+    width: 300px;
+    line-height: 1.4;
+}
+
+.btn-1:hover {
+    background-color: #fffdfc;
+    color: #ff830e;
+}
+
+/* ===================== */
+/* SECCIÓN: OUR REGION AND DESTINATIONS */
+/* ===================== */
+
+.general {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.general h2 {
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.general-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.our-region-1,
+.our-region-2,
+.our-region-3 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.our-region-1 img,
+.our-region-2 img,
+.our-region-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text-1,
+.overlay-text-2,
+.overlay-text-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(33, 186, 102, 0.4);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.overlay-text-1 h3,
+.overlay-text-2 h3,
+.overlay-text-3 h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+}
+
+.overlay-text-1 p,
+.overlay-text-2 p,
+.overlay-text-3 p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para el párrafo */
+}
+
+/* ===================== */
+/* SECCIÓN: STATISTICS */
+/* ===================== */
+
+/* ===== Arreglar título STATISTICS ===== */
+
+.stats-title {
+    text-align: center;
+    padding: 60px 0 30px;
+    background-color: #ffffff;
+    margin-top: -75px;
+}
+
+.stats-title h2 {
+    font-size: 45px;
+    color: #333;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-title h2 {
+        font-size: 24px;
+    }
+}
+
+.stats-section {
+    position: relative;
+    padding: 120px 0 0;
+    overflow: hidden;
+    height: 550px;
+    margin-bottom: 0px;  /* Espacio fijo hasta Every Route */
+}
+
+.g2 {
+    padding: 0 0 60px;  /* Sin padding arriba */
+    margin-top: 0;
+}
+
+.stats-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Estilos para que el video cubra todo el fondo */
+#stats-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el video actúe como background-size: cover */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Capa oscura sobre el video para legibilidad */
+.stats-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0); /* Ajusta el 0.5 para más o menos oscuridad */
+    z-index: 2;
+}
+
+/* Contenedor de círculos - encima de la imagen */
+.stats-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 180px 0;  /* 🔥 Más espacio arriba y abajo de los círculos */
+}
+
+.stat-circle {
+    text-align: center;
+    position: relative;
+}
+
+.stat-circle svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+}
+
+.stat-circle circle {
+    fill: none;
+    stroke-width: 8;
+}
+
+.stat-circle circle:first-child {
+    stroke: rgba(255, 255, 255, 0.3);
+}
+
+.stat-circle circle.progress {
+    stroke: #ff830e;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.stat-circle .percentage {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stat-circle p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    max-width: 150px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =====================================================
+   CÓDIGO RESPONSIVE ACTUALIZADO PARA STATISTICS
+   Agregar o reemplazar en la sección responsive
+   ===================================================== */
+
+/* Tablets (menos de 1024px) */
+@media (max-width: 1024px) {
+    .stats-section {
+        padding: 70px 0 90px;
+        min-height: 450px;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 60px 0 80px;
+        min-height: 400px;
+    }
+
+    .stats-container {
+        gap: 40px;
+        padding: 30px 0;
+    }
+
+    .stat-circle svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-circle .percentage {
+        top: 30px;
+        font-size: 20px;
+    }
+
+    .stat-circle p {
+        font-size: 12px;
+        max-width: 120px;
+    }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+    .stats-section {
+        padding: 50px 0 70px;
+        min-height: 350px;
+    }
+
+    .stats-container {
+        padding: 20px 0;
+    }
+
+    .stat-circle svg {
+        width: 90px;
+        height: 90px;
+    }
+
+    .stat-circle .percentage {
+        top: 25px;
+        font-size: 18px;
+    }
+}
+
+/* ===================== */
+/* SECCIÓN: EVERY ROUTE */
+/* ===================== */
+
+.g2 {
+    padding: 45px 0;
+}
+
+.g2 h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.route-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.route-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.route-box:hover {
+    transform: translateY(-5px);
+}
+
+.route-img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.route-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.route-label {
+    padding: 15px;
+    background-color: #21ba66;
+    color: white;
+    font-size: 18px;
+    height: 100px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid #ffffff;
+}
+
+/* Posicionamiento especial para rutas 5 y 6 */
+.route-box:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.route-box:nth-child(6) {
+    grid-column: 3 / 4;
+}
+
+/* Zoom específico para algunas imágenes */
+.route-box:nth-child(2) .route-img-container img {
+    transform: scale(1.2);
+    transform-origin: 15% center;
+}
+
+.route-box:nth-child(5) .route-img-container img {
+    transform: scale(1.65);
+    transform-origin: center;
+}
+
+.route-box:nth-child(6) .route-img-container img {
+    transform: scale(1.65);
+    transform-origin: center;
+    object-position: 15% center;
+}
+
+/* Animaciones de hover */
+.route-box:nth-child(1):hover .route-img-container img,
+.route-box:nth-child(3):hover .route-img-container img,
+.route-box:nth-child(4):hover .route-img-container img {
+    animation: zoomBase 5s ease-in-out infinite alternate;
+}
+
+.route-box:nth-child(2):hover .route-img-container img {
+    animation: zoom2 5s ease-in-out infinite alternate;
+}
+
+.route-box:nth-child(5):hover .route-img-container img {
+    animation: zoom5 5s ease-in-out infinite alternate;
+}
+
+.route-box:nth-child(6):hover .route-img-container img {
+    animation: zoom6 5s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBase {
+    from { transform: scale(1); }
+    to { transform: scale(1.25); }
+}
+
+@keyframes zoom2 {
+    from { transform: scale(1.2); }
+    to { transform: scale(1.5); }
+}
+
+@keyframes zoom5 {
+    from { transform: scale(1.65); }
+    to { transform: scale(2.05); }
+}
+
+@keyframes zoom6 {
+    from { transform: scale(1.65); }
+    to { transform: scale(1.95); }
+}
+
+/* ===================== */
+/* SECCIÓN: OUR TEAM */
+/* ===================== */
+
+.team-section {
+    padding: 0 0 40px;
+    margin-top: -20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    max-width: 250px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member:nth-child(2) .avatar img {
+    transform: scale(1.5);
+    transform-origin: center;
+    object-position: center top;
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member .title {
+    font-size: 16px;
+    color: #21ba66;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    max-width: 200px;
+    margin: 0 auto 10px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+
+.footer {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contact,
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 45px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* ===================== */
+/* BOTONES FLOTANTES */
+/* ===================== */
+
+.floating-email-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    background-color: #21ba66;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-email-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.floating-whatsapp-button {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN - MOBILE */
+/* ===================== */
+
+/* Tablets y pantallas medianas (menos de 1024px) */
+@media (max-width: 1024px) {
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .header-txt p {
+        padding: 0 100px;
+        font-size: 14px;
+    }
+
+    .route-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .route-box:nth-child(5),
+    .route-box:nth-child(6) {
+        grid-column: span 1;
+    }
+
+    .general h2,
+    .stats-title h2,
+    .team-section h2,
+    .g2 h2 {
+        font-size: 35px;
+    }
+
+    .stats-container {
+        gap: 50px;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media (max-width: 768px) {
+    /* Header y navegación */
+    .menu.container {
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        padding-top: 5px;
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+
+    .has-submenu .submenu {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Header content */
+    .header-txt h1 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+
+    .header-txt p {
+        padding: 0 20px;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .btn-1 {
+        font-size: 14px;
+        width: 90%;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+
+    /* Our Region section */
+    .general-content {
+        padding: 0 20px;
+    }
+
+    .our-region-1,
+    .our-region-2,
+    .our-region-3 {
+        height: 300px;
+    }
+
+    .overlay-text-1,
+    .overlay-text-2,
+    .overlay-text-3 {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .overlay-text-1 h3,
+    .overlay-text-2 h3,
+    .overlay-text-3 h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .overlay-text-1 p,
+    .overlay-text-2 p,
+    .overlay-text-3 p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Statistics */
+    .stats-container {
+        gap: 40px;
+    }
+
+    .stat-circle svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-circle .percentage {
+        top: 30px;
+        font-size: 20px;
+    }
+
+    .stat-circle p {
+        font-size: 12px;
+        max-width: 120px;
+    }
+
+    /* Routes section */
+    .route-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .route-box:nth-child(5),
+    .route-box:nth-child(6) {
+        grid-column: span 1;
+    }
+
+    .route-img-container {
+        height: 250px;
+    }
+
+    .route-label {
+        font-size: 16px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    /* Team section */
+    .team-container {
+        gap: 40px;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-member h3 {
+        font-size: 20px;
+    }
+
+    .team-member .title {
+        font-size: 14px;
+    }
+
+    .team-member p {
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    /* Footer */
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-links {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    /* Títulos generales */
+    .general h2,
+    .stats-title h2,
+    .team-section h2,
+    .g2 h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    /* Botones flotantes */
+    .floating-email-button,
+    .floating-whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .floating-whatsapp-button {
+        bottom: 80px;
+    }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 10px;
+    }
+
+    .header-txt h1 {
+        font-size: 26px;
+    }
+
+    .header-txt p {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .btn-1 {
+        font-size: 13px;
+        width: 95%;
+    }
+
+    .general h2,
+    .stats-title h2,
+    .team-section h2,
+    .g2 h2 {
+        font-size: 24px;
+    }
+
+    .overlay-text-1 h3,
+    .overlay-text-2 h3,
+    .overlay-text-3 h3 {
+        font-size: 18px;
+    }
+
+    .overlay-text-1 p,
+    .overlay-text-2 p,
+    .overlay-text-3 p {
+        font-size: 12px;
+    }
+
+    .route-label {
+        font-size: 14px;
+        height: 70px;
+    }
+
+    .stat-circle svg {
+        width: 90px;
+        height: 90px;
+    }
+
+    .stat-circle .percentage {
+        top: 25px;
+        font-size: 18px;
+    }
+
+    .floating-email-button,
+    .floating-whatsapp-button {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .floating-whatsapp-button {
+        bottom: 70px;
+    }
+
+    .floating-email-button svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.stats-background img {
+    display: none;
+}
+
+/* Ajuste específico para la quinta imagen del slider (Caracara) */
+.slider img:nth-child(5) {
+    object-position: center 30%; /* El primer valor es horizontal, el segundo vertical */ 
+}
+
+/* Ajuste para la segunda imagen del slider (Miarchus) */
+.slider img:nth-child(2) {
+    object-position: center 70%; /* Ajusta este porcentaje (0% es arriba, 100% abajo) */
+}
+
+/* Ajuste para la cuarta imagen de rutas (Waka Willka) */
+.route-box:nth-child(4) .route-img-container img {
+    object-position: 10% center; /* Baja el 35% para moverla más a la izquierda */
+    transform: scale(1); /* Zoom ligero para evitar bordes blancos al moverla */
+}
+
+.btn-scroll-top {
+    position: fixed;
+    bottom: 90px; /* Ubicado arriba del de WhatsApp (que suele estar en 20px) */
+    right: 25px;
+    width: 60px;   /* Tamaño un poco más grande */
+    height: 60px;
+    background-color: #ffffff; /* Verde de tu marca */
+    color: #21ba66;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    opacity: 0; /* Invisible al inicio */
+    visibility: hidden;
+}
+
+.btn-scroll-top i {
+    font-size: 20px;
+}
+
+.btn-scroll-top span {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.btn-scroll-top:hover {
+    background-color: #ff9800; /* Naranja al pasar el mouse */
+    transform: translateY(-5px); /* Pequeño salto */
+}
+
+/* Clase para mostrar el botón cuando bajamos */
+.btn-scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===================== */
+/* BOTÓN DE CAMBIO DE IDIOMA */
+/* ===================== */
+
+.floating-language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff830e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.floating-language-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    background-color: #e67e0e;
+}
+
+.floating-language-button:active {
+    transform: scale(0.95);
+}
+
+.floating-language-button .lang-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Botón en móviles */
+@media (max-width: 768px) {
+    .floating-language-button {
+        bottom: 150px;
+        width: 55px;
+        height: 55px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-language-button {
+        bottom: 140px;
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+html[lang="es"] .btn-1 {
+    margin-top: 0px;
+}
+
+html[lang="es"] .header-txt h1 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}

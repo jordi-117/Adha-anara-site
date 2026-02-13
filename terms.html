@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    
+    <!-- CSS GLOBAL del index -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS específico de Routes -->
+    <link rel="stylesheet" href="routes.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- HEADER CON MENÚ (igual que index.html) -->
+    <header class="header route-header">
+        <div class="menu-container">
+            <div class="menu container">
+                <img src="img logo/logo.png" alt="logoagencia" class="logo"/>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <!-- REEMPLAZA el submenu de Our Routes en index.html -->
+                        <li class="has-submenu">
+                            <a href="#">Our Routes</a>
+                                <ul class="submenu">
+                                    <li><a href="route-1.html">Route 1</a></li>
+                                    <li><a href="route-2.html">Route 2</a></li>
+                                    <li><a href="route-3.html">Route 3</a></li>
+                                    <li><a href="route-4.html">Route 4</a></li>
+                                    <li><a href="route-5.html">Route 5</a></li>
+                                    <li><a href="route-6.html">Route 6</a></li>
+                                    <li><a href="route-7.html">Route 7</a></li>
+                                    <li><a href="route-8.html">Route 8</a></li>
+                                </ul>
+                        </li>       
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+
+        <div class="slider-box">
+        <div class="slider">
+            <img src="img landscapes/1.jpg" alt="Terms and Conditions">
+        </div>
+    </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Terms and Conditions</h1>
+            </div>            
+        </div>
+    </header>
+
+    <div class="terms-content">
+        <h1>Terms and Conditions</h1>
+        <p>Welcome to Adha Anara Birdwatching. By booking our services, you agree to follow our safety guidelines and sustainability policies during our birding routes.</p>
+        
+        <h3>1. Reservations</h3>
+        <p>All tours must be booked at least 48 hours in advance to guarantee availability of our guides.</p>
+
+        <h3>2. Safety</h3>
+        <p>Participants must follow the guide's instructions at all times, especially in protected areas like the Colombian Massif.</p>
+
+        <br>
+    </div>
+
+    <!-- FOOTER (igual que index.html) -->
+    <footer class="footer container">
+        <div class="footer-columns">
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376</a></p>
+                <p>E-mail: adha.anara.sanagustin@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575661111982" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>                   
+                </div>
+            </div>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="http://mail.google.com/mail/?view=cm&fs=1&to=adha.anara.sanagustin@gmail.com&su=Tour%20Inquiry&body=Hello,%20I%20would%20like%20more%20information%20about%20your%20birdwatching%20tours." 
+       target="_blank" class="floating-email-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+            <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
+        </svg>
+    </a>
+
+    <a href="http://wa.me/573166672376" target="_blank" class="floating-whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="footer-links">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                </ul>
+                <p>Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    <!-- JAVASCRIPT PARA TABS -->
+    <script>
+        const buttons = document.querySelectorAll('.route-btn');
+        const sections = document.querySelectorAll('.route-section');
+
+        // Mostrar solo Information al cargar
+        sections.forEach(s => s.style.display = 'none');
+        document.getElementById('info').style.display = 'block';
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Ocultar todas las secciones
+                sections.forEach(s => s.style.display = 'none');
+
+                // Quitar estado activo de todos los botones
+                buttons.forEach(b => b.classList.remove('active'));
+
+                // Mostrar sección correspondiente
+                const target = btn.dataset.target;
+                document.getElementById(target).style.display = 'block';
+
+                // Activar botón actual
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+    <i class="fas fa-chevron-up"></i> <span></span>
+    </a>
+
+<script>
+    const btnScroll = document.getElementById('scrollTop');
+
+    window.onscroll = function() {
+        // Si bajamos más de 300px, mostramos el botón
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btnScroll.classList.add('show');
+        } else {
+            btnScroll.classList.remove('show');
+        }
+    };
+
+    // Al hacer click, sube suavemente
+    btnScroll.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+</html>

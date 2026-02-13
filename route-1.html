@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route 1 - Birds of La Chaquira</title>
+    
+    <!-- CSS GLOBAL del index -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS específico de Routes -->
+    <link rel="stylesheet" href="routes.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- HEADER CON MENÚ (igual que index.html) -->
+    <header class="header route-header">
+        <div class="menu-container">
+            <div class="menu container">
+                <img src="img logo/logo.png" alt="logoagencia" class="logo"/>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <!-- REEMPLAZA el submenu de Our Routes en index.html -->
+                        <li class="has-submenu">
+                            <a href="#">Our Routes</a>
+                                <ul class="submenu">
+                                    <li><a href="route-1.html">Route 1</a></li>
+                                    <li><a href="route-2.html">Route 2</a></li>
+                                    <li><a href="route-3.html">Route 3</a></li>
+                                    <li><a href="route-4.html">Route 4</a></li>
+                                    <li><a href="route-5.html">Route 5</a></li>
+                                    <li><a href="route-6.html">Route 6</a></li>
+                                </ul>
+                        </li>       
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Birds of the Rural Mosaic in La Chaquira</h1>
+            </div>            
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN DE TABS -->
+    <nav class="route-nav container">
+        <button class="route-btn active" data-target="info">Information</button>
+        <button class="route-btn" data-target="plan">Tour Plan</button>
+        <button class="route-btn" data-target="gallery">Gallery</button>
+    </nav>
+
+    <!-- SECCIÓN: INFORMATION -->
+    <section id="info" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+
+                <div class="route-info-grid">
+                    <div class="info-item">
+                        <h4>Description</h4>
+                        <p>You will explore a region where ancient history coexists with birds native to the upper Magdalena River.
+                        Along the way, you will observe Andean species while enjoying the river landscapes and the agricultural
+                        areas that characterize the region. This experience highlights the importance of conservation and how it
+                        fosters the presence of birds in the area. Their colors, songs, and movements will accompany you throughout
+                        the journey, becoming the central element of the adventure.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Difficulty</h4>
+                        <p>Easy to Moderate</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Altitude</h4>
+                        <p>1,700 – 2,000 m</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Best time</h4>
+                        <p>Year round</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Group size</h4>
+                        <p>Max 6 people</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>What to bring</h4>
+                        <p>Comfortable hiking shoes, warm jacket, hat, binoculars, camera</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Climate</h4>
+                        <p>Cool to cold in altitude, occasional rain, warm days in valleys</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Ecosystems</h4>
+                        <p>Cloud forests, moorlands, agricultural landscapes</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>Expert guide</h4>
+                        <p>Professional birding guide with extensive local knowledge</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3>Tours Information Request</h3>
+                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <select id="country" name="country" required>
+                            <option value="">Select country</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet">How did you meet Manakin? <span class="required">*</span></label>
+                        <select id="howMeet" name="howMeet" required>
+                            <option value="">Select option</option>
+                            <option value="Google Search">Google Search</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Recommendation">Recommendation</option>
+                            <option value="Website">Website</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other">Other (Please specify)</label>
+                        <textarea id="other" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TOUR PLAN -->
+    <section id="plan" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+                <h2>Tour Plan</h2>
+
+                <div class="plan-item">
+                    <span>01</span>
+                    <p>Early morning birding along rural trails and forest edges. Observation of endemic and near-endemic species.</p>
+                </div>
+
+                <div class="plan-item">
+                    <span>02</span>
+                    <p>Observation of coffee plantations and mixed agricultural landscapes. Spotting colorful tanagers and hummingbirds.</p>
+                </div>
+
+                <div class="plan-item">
+                    <span>03</span>
+                    <p>Strategic stops for endemic and regional bird species. Exploration of cloud forest habitats and moorland ecosystems.</p>
+                </div>
+
+                <div class="plan-item">
+                    <span>04</span>
+                    <p>Return walk with panoramic views of the Magdalena Valley. Final observations and species documentation.</p>
+                </div>
+
+                <div class="plan-item">
+                    <span>05</span>
+                    <p>Optional evening birding session. Photography opportunities during golden hour with scenic mountain backdrops.</p>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3>Tours Information Request</h3>
+                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm2" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <div class="form-group">
+                        <label for="firstName2">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName2" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName2">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName2" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email2">Email <span class="required">*</span></label>
+                        <input type="email" id="email2" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country2">Country <span class="required">*</span></label>
+                        <select id="country2" name="country" required>
+                            <option value="">Select country</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone2">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone2" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate2">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate2" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize2">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize2" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet2">How did you meet Manakin? <span class="required">*</span></label>
+                        <select id="howMeet2" name="howMeet" required>
+                            <option value="">Select option</option>
+                            <option value="Google Search">Google Search</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Recommendation">Recommendation</option>
+                            <option value="Website">Website</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other2">Other (Please specify)</label>
+                        <textarea id="other2" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message2">Message</label>
+                        <textarea id="message2" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: GALLERY -->
+    <section id="gallery" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+                <h2>Gallery</h2>
+
+                <div class="gallery-grid-sidebar">
+                    <img src="img routes/1.jpg" alt="La Chaquira" class="gallery-img">
+                    <img src="img routes/2.jpg" alt="La Chaquira" class="gallery-img">
+                    <img src="img routes/3.jpg" alt="La Chaquira" class="gallery-img">
+                    <img src="img routes/4.jpg" alt="La Chaquira" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3>Tours Information Request</h3>
+                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm3" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <div class="form-group">
+                        <label for="firstName3">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName3" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName3">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName3" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email3">Email <span class="required">*</span></label>
+                        <input type="email" id="email3" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country3">Country <span class="required">*</span></label>
+                        <select id="country3" name="country" required>
+                            <option value="">Select country</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone3">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone3" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate3">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate3" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize3">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize3" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet3">How did you meet Manakin? <span class="required">*</span></label>
+                        <select id="howMeet3" name="howMeet" required>
+                            <option value="">Select option</option>
+                            <option value="Google Search">Google Search</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Recommendation">Recommendation</option>
+                            <option value="Website">Website</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other3">Other (Please specify)</label>
+                        <textarea id="other3" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message3">Message</label>
+                        <textarea id="message3" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: SPECIES HIGHLIGHTS -->
+    <section class="route-section container species-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Key Bird Species</h2>
+        <p style="text-align: center; font-size: 16px; line-height: 1.6; max-width: 900px; margin: 0 auto;">This route offers excellent opportunities to observe colorful tanagers, iridescent hummingbirds, shy antpittas, and incredible toucans. You may encounter endemic species found only in Colombian highlands, including specialized moorland birds and cloud forest specialists. Photography opportunities are excellent throughout the day.</p>
+    </section>
+
+    <!-- FOOTER (igual que index.html) -->
+    <footer class="footer container">
+        <div class="footer-columns">
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376</a></p>
+                <p>E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e5f5a565f105f505f4c5f104d5f505f594b4d4a57507e59535f5752105d5153">[email&#160;protected]</a></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575661111982" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>                   
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="terms.html" target="_blank">Terms and Conditions</a></li>
+                </ul>
+                <p>Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="http://mail.google.com/mail/?view=cm&fs=1&to=adha.anara.sanagustin@gmail.com&su=Tour%20Inquiry&body=Hello,%20I%20would%20like%20more%20information%20about%20your%20birdwatching%20tours." 
+       target="_blank" class="floating-email-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+            <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
+        </svg>
+    </a>
+
+    <a href="http://wa.me/573166672376" target="_blank" class="floating-whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT PARA TABS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const buttons = document.querySelectorAll('.route-btn');
+        const sections = document.querySelectorAll('.route-section');
+
+        // Mostrar solo Information al cargar
+        sections.forEach(s => s.style.display = 'none');
+        document.getElementById('info').style.display = 'block';
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Ocultar todas las secciones
+                sections.forEach(s => s.style.display = 'none');
+
+                // Quitar estado activo de todos los botones
+                buttons.forEach(b => b.classList.remove('active'));
+
+                // Mostrar sección correspondiente
+                const target = btn.dataset.target;
+                document.getElementById(target).style.display = 'block';
+
+                // Activar botón actual
+                btn.classList.add('active');
+            });
+        });
+
+        // LIGHTBOX GALLERY
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        let currentImageIndex = 0;
+        let currentZoom = 1;
+
+        // Abrir lightbox al hacer click en imagen
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                currentZoom = 1;
+                lightboxImg.style.transform = `scale(${currentZoom})`;
+            });
+        });
+
+        // Cerrar lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            currentZoom = 1;
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                currentZoom = 1;
+            }
+        });
+
+        // Zoom con rueda del mouse
+        lightbox.addEventListener('wheel', (e) => {
+            if (lightbox.style.display === 'flex') {
+                e.preventDefault();
+                const zoomSpeed = 0.1;
+                if (e.deltaY > 0) {
+                    currentZoom = Math.max(1, currentZoom - zoomSpeed);
+                } else {
+                    currentZoom = Math.min(3, currentZoom + zoomSpeed);
+                }
+                lightboxImg.style.transform = `scale(${currentZoom})`;
+            }
+        }, { passive: false });
+
+        // Navegación de imágenes
+        lightboxNext.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            currentZoom = 1;
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+        });
+
+        lightboxPrev.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            currentZoom = 1;
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+        });
+
+        // Navegación con teclado
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowRight') lightboxNext.click();
+                if (e.key === 'ArrowLeft') lightboxPrev.click();
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    currentZoom = 1;
+                }
+            }
+        });
+    </script>
+
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+    <i class="fas fa-chevron-up"></i> <span></span>
+    </a>
+
+<script>
+    const btnScroll = document.getElementById('scrollTop');
+
+    window.onscroll = function() {
+        // Si bajamos más de 300px, mostramos el botón
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btnScroll.classList.add('show');
+        } else {
+            btnScroll.classList.remove('show');
+        }
+    };
+
+    // Al hacer click, sube suavemente
+    btnScroll.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+</html>
