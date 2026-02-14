@@ -116,7 +116,7 @@ body {
 }
 
 .navbar {
-    margin-top: -120px;
+    margin-top: -90px;
 }
 
 .navbar ul {
@@ -216,7 +216,7 @@ body {
     font-size: 75px;
     color: #ffffff;
     text-transform: uppercase;
-    margin-top: -120px;
+    margin-top: -70px;
     margin-bottom: 5px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
 }
@@ -304,7 +304,7 @@ body {
     padding: 30px 40px;
     border-radius: 10px;
     text-align: center;
-    max-width: 90%;
+    max-width: 600px;
 }
 
 .overlay-text-1 h3,
@@ -407,8 +407,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 80px;
+    flex-wrap: wrap;
     padding: 180px 0;
 }
 
@@ -488,6 +488,31 @@ body {
     .stats-section {
         padding: 70px 0 90px;
         min-height: 450px;
+    }
+}
+
+/* Desktop (más de 768px) */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .stats-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+
+    .stats-row-top {
+        display: contents;
+    }
+
+    .stats-row-bottom {
+        display: contents;
     }
 }
 
@@ -620,10 +645,6 @@ body {
     transform-origin: 15% center;
 }
 
-.route-box:nth-child(4) .route-img-container img {
-    object-position: center center;
-}
-
 .route-box:nth-child(5) .route-img-container img {
     transform: scale(1.65);
     transform-origin: center;
@@ -632,7 +653,7 @@ body {
 .route-box:nth-child(6) .route-img-container img {
     transform: scale(1.65);
     transform-origin: center;
-    object-position: center center;
+    object-position: 15% center;
 }
 
 /* Animaciones de hover */
@@ -655,18 +676,9 @@ body {
 }
 
 /* Zoom al scroll (sin hover) */
-.route-box.in-view .route-img-container img {
-    animation: zoomScroll 8s ease-in-out infinite alternate;
-}
-
 @keyframes zoomBase {
     from { transform: scale(1); }
     to { transform: scale(1.25); }
-}
-
-@keyframes zoomScroll {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
 }
 
 @keyframes zoom2 {

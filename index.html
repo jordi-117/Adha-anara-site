@@ -132,7 +132,6 @@
     </section>
 
     <!-- SECCIÓN: STATISTICS -->
-    <!-- SECCIÓN: STATISTICS -->
 <div class="stats-title">
     <h2 data-en="STATISTICS" data-es="ESTADÍSTICAS">STATISTICS</h2>
 </div>
@@ -264,9 +263,9 @@
             <div class="footer-contact">
                 <h3 data-en="Contact" data-es="Contacto">Contact</h3>
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376</a></p>
-                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbdadfd3da95dad5dac9da95c8dad5dadccec8cfd2d5fbdcd6dad2d795d8d4d6">[email&#160;protected]</a></p>
+                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span> <a href="http://mail.google.com/mail/?view=cm&fs=1&to=adha.anara.sanagustin@gmail.com&su=Tour%20Inquiry&body=
+Hello,%20I%20would%20like%20more%20information%20about%20your%20birdwatching%20tours." target="_blank"><i class="fas fa-envelope"></i>adha.anara.sanagustin@gmail.com</a></p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61575661111982" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>                   
                 </div>
             </div>
@@ -327,33 +326,11 @@
         });
 
         const stats = document.querySelectorAll('.stat-circle');
-        const routeBoxes = document.querySelectorAll('.route-box');
 
         function isVisible(elem) {
             const rect = elem.getBoundingClientRect();
             return rect.top < window.innerHeight && rect.bottom > 0;
         }
-
-        // Detectar cuando las rutas están visibles y aplicar zoom
-        function handleRouteZoom() {
-            routeBoxes.forEach(box => {
-                const rect = box.getBoundingClientRect();
-                const isInView = rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2;
-                
-                if (isInView) {
-                    box.classList.add('in-view');
-                } else {
-                    box.classList.remove('in-view');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', () => {
-            handleRouteZoom();
-        });
-
-        // Ejecutar al cargar la página
-        handleRouteZoom();
 
         function animateStats() {
             stats.forEach(stat => {
@@ -465,5 +442,65 @@
     }
 </script>
 
+<!-- FOOTER MINIMALISTA - ABRE APP GMAIL EN MÓVIL -->
+<footer class="footer">
+    <div class="footer-content">
+        <a href="javascript:openEmail();" class="email-link">
+            adha.anara.sanagustin@gmail.com
+        </a>
+    </div>
+</footer>
+
+<script>
+    function openEmail() {
+        const email = 'adha.anara.sanagustin@gmail.com';
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // En móvil, abre la app de Gmail
+            window.location.href = 'intent://adha.anara.sanagustin@gmail.com#Intent;action=android.intent.action.SENDTO;scheme=mailto;end;';
+            
+            // Fallback para iOS
+            setTimeout(function() {
+                window.location.href = 'mailto:' + email;
+            }, 500);
+        } else {
+            // En desktop, abre Gmail web
+            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email, '_blank');
+        }
+    }
+</script>
+
+<style>
+    .footer {
+        background-color: #1a1a1a;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .email-link {
+        color: #21ba66;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .email-link:hover {
+        color: #ff830e;
+        text-decoration: underline;
+    }
+
+    .email-link:active {
+        opacity: 0.8;
+    }
+</style>
+
 </body>
-</html>
+</html> 
