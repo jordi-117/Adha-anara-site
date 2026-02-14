@@ -116,7 +116,7 @@ body {
 }
 
 .navbar {
-    margin-top: -90px;
+    margin-top: 0;
 }
 
 .navbar ul {
@@ -680,6 +680,7 @@ body {
     from { transform: scale(1); }
     to { transform: scale(1.25); }
 }
+}
 
 @keyframes zoom2 {
     from { transform: scale(1.2); }
@@ -801,10 +802,23 @@ body {
 .footer a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .footer a:hover {
     text-decoration: underline;
+    color: #21ba66;
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-link i {
+    color: #21ba66;
 }
 
 .footer-links ul {
