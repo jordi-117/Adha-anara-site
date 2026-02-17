@@ -1319,7 +1319,7 @@ body {
     }
 }
 
-/* Móviles pequeños (menos de 480px) */
+/* Móviles pequeños (menos de 480px) galaxy s20*/ 
 @media (max-width: 480px) {
     .header {
         padding: 30px 10px;
@@ -1332,11 +1332,12 @@ body {
     .header-txt p {
         font-size: 20px;
         padding: 0 15px;
+        margin-bottom: -30px;
     }
 
     .btn-1 {
-        font-size: 13px;
-        width: 95%;
+        font-size: 20px;
+        width: 65%;
     }
 
     .general h2,
