@@ -122,8 +122,8 @@
                     <h3 data-en="Destinations" data-es="Destinos">Destinations</h3>
                     <p data-en="Discover a variety of birdwatching routes in the heart of San Agustín, where lush landscapes and ancient history come together. Our tours are designed for all levels—from beginners to experienced birders—and take you through cloud forests, riverbanks, coffee plantations, and natural parks." data-es="Descubre una variedad de rutas de observación de aves en el corazón de San Agustín, donde los paisajes exuberantes y la historia antigua se unen. Nuestros tours están diseñados para todos los niveles, desde principiantes hasta observadores experimentados, y te llevan a través de bosques nubosos, orillas de ríos, plantaciones de café y parques naturales."> 
                         Discover a variety of birdwatching routes in the heart of San Agustín, 
-                        where lush landscapes and ancient history come together. Our tours are designed for all levelsâ€"from 
-                        beginners to experienced birdersâ€"and take you through cloud forests, riverbanks, coffee plantations, 
+                        where lush landscapes and ancient history come together. Our tours are designed for all levels—from 
+                        beginners to experienced birders—and take you through cloud forests, riverbanks, coffee plantations, 
                         and natural parks.
                     </p>
                 </div>
@@ -131,7 +131,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: STATISTICS -->
     <!-- SECCIÓN: STATISTICS -->
 <div class="stats-title">
     <h2 data-en="STATISTICS" data-es="ESTADÍSTICAS">STATISTICS</h2>
@@ -281,8 +280,7 @@
     </footer>
 
     <!-- BOTONES FLOTANTES -->
-    <a href="http://mail.google.com/mail/?view=cm&fs=1&to=adha.anara.sanagustin@gmail.com&su=Tour%20Inquiry&body=Hello,%20I%20would%20like%20more%20information%20about%20your%20birdwatching%20tours." 
-       target="_blank" class="floating-email-button">
+    <a href="javascript:openEmail();" class="floating-email-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
             <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
         </svg>
@@ -297,8 +295,12 @@
         <span class="lang-text" data-en="ES" data-es="EN">ES</span>
     </button>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        
+    <!-- BOTÓN DE SUBIR AL INICIO -->
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i> <span></span>
+    </a>
+
+    <script>
         // FUNCIÓN PARA ABRIR EMAIL EN APP GMAIL (MÓVIL) O GMAIL WEB (DESKTOP)
         function openEmail() {
             const email = 'adha.anara.sanagustin@gmail.com';
@@ -394,73 +396,65 @@
                 resetStats();
             }
         });
-    </script>  
+    </script>
 
-    <a href="#" class="btn-scroll-top" id="scrollTop">
-    <i class="fas fa-chevron-up"></i> <span></span>
-    </a>
+    <script>
+        const btnScroll = document.getElementById('scrollTop');
 
-<script>
-    const btnScroll = document.getElementById('scrollTop');
-
-    window.onscroll = function() {
-        // Si bajamos más de 300px, mostramos el botón
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btnScroll.classList.add('show');
-        } else {
-            btnScroll.classList.remove('show');
-        }
-    };
-
-  
-    // Al hacer click, sube suavemente
-    btnScroll.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-</script>
-
-<!-- JAVASCRIPT PARA CAMBIO DE IDIOMA -->
-<script>
-    const languageToggle = document.getElementById('languageToggle');
-    let currentLanguage = localStorage.getItem('language') || 'en';
-
-    // Establecer idioma al cargar la página
-    setLanguage(currentLanguage);
-
-    languageToggle.addEventListener('click', function() {
-        currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
-        localStorage.setItem('language', currentLanguage);
-        setLanguage(currentLanguage);
-    });
-
-    function setLanguage(lang) {
-        // Cambiar atributo lang del HTML
-        document.documentElement.lang = lang;
-
-        // Cambiar todos los elementos con data-en y data-es
-        document.querySelectorAll('[data-en][data-es]').forEach(element => {
-            const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
-            
-            // Si es un input o textarea, cambiar el value
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.value = text;
+        window.onscroll = function() {
+            // Si bajamos más de 300px, mostramos el botón
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnScroll.classList.add('show');
             } else {
-                element.textContent = text;
+                btnScroll.classList.remove('show');
             }
+        };
+
+        // Al hacer click, sube suavemente
+        btnScroll.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <!-- JAVASCRIPT PARA CAMBIO DE IDIOMA -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        // Establecer idioma al cargar la página
+        setLanguage(currentLanguage);
+
+        languageToggle.addEventListener('click', function() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            localStorage.setItem('language', currentLanguage);
+            setLanguage(currentLanguage);
         });
 
-        // Actualizar el texto del botón de idioma
-        const langButton = document.querySelector('.lang-text');
-        langButton.textContent = lang === 'en' ? 'ES' : 'EN';
+        function setLanguage(lang) {
+            // Cambiar atributo lang del HTML
+            document.documentElement.lang = lang;
 
-        // Cambiar el título de la página
-        document.title = lang === 'en' ? 'Birdwatching in San Agustín' : 'Observación de Aves en San Agustín';
-    }
-</script>
+            // Cambiar todos los elementos con data-en y data-es
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+                
+                // Si es un input o textarea, cambiar el value
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.value = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+
+            // Actualizar el texto del botón de idioma
+            const langButton = document.querySelector('.lang-text');
+            langButton.textContent = lang === 'en' ? 'ES' : 'EN';
+        }
+    </script>
 
 </body>
 </html>
