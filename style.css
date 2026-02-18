@@ -1288,32 +1288,30 @@ body {
     .floating-whatsapp-button,
     .floating-language-button,
     .btn-scroll-top {
-        width: 50px;
-        height: 50px;
         font-size: 20px;
     }
 
     .floating-whatsapp-button {
-        bottom: 20px;
-        right: 20px;
+        bottom: 95px;
+        left: 4vw !important;
     }
 
     .floating-email-button {
         bottom: 20px;
-        right: 80px;
+        left: 4vw !important;
     }
 
     .floating-language-button {
-        bottom: 20px;
-        right: 140px;
+        bottom: 20px !important;
+        right: 4vw !important;
         width: 50px;
         height: 50px;
         font-size: 12px;
     }
 
     .btn-scroll-top {
-        bottom: 20px;
-        right: 200px;
+        bottom: 95px !important;
+        right: 4vw !important;
         width: 50px;
         height: 50px;
     }
