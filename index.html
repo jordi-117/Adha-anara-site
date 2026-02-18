@@ -69,7 +69,24 @@
                     Prepare yourself for the excitement of discovering new bird species, marveling at beautiful natural landscapes, 
                     and connecting with a community that shares your passion for biodiversity.
                 </p>
-                <a href="#" class="btn-1" data-en="read more about adha anara birdwatching" data-es="leer más sobre adha anara">read more about adha anara birdwatching</a>
+                <a href="D:\Adha anara site\pdf" 
+   target="_blank" 
+   class="btn-1" 
+   id="btn-brochure"
+   data-pdf-en="D:\Adha anara site\pdf\Adha-Anara-Birdwatching-Portfolio.pdf" 
+   data-pdf-es="D:\Adha anara site\pdf\Portafolio-Adha-Anara-Birdwatching.pdf">
+    <span class="txt-desktop" 
+          data-en="read more about adha anara birdwatching" 
+          data-es="leer más sobre adha anara">
+          read more about adha anara birdwatching
+    </span>
+
+    <span class="txt-mobile" 
+          data-en="More About Adha Anara Birdwatching" 
+          data-es="más sobre Adha Anara">
+          Read More
+    </span>
+</a>
             </div>            
         </div> 
         
@@ -263,7 +280,7 @@
             <div class="footer-contact">
                 <h3 data-en="Contact" data-es="Contacto">Contact</h3>
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376</a></p>
-                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span> <a href="javascript:openEmail();" class="email-link"><i class="fas fa-envelope"></i>adha.anara.sanagustin@gmail.com</a></p>
+                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span> <a href="javascript:openEmail();" class="email-link"><i class="fas fa-envelope"></i><span class="__cf_email__" data-cfemail="f495909c95da959a958695da87959a95938187809d9ab49399959d98da979b99">[email&#160;protected]</span></a></p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>                   
                 </div>
@@ -300,7 +317,7 @@
         <i class="fas fa-chevron-up"></i> <span></span>
     </a>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // FUNCIÓN PARA ABRIR EMAIL EN APP GMAIL (MÓVIL) O GMAIL WEB (DESKTOP)
         function openEmail() {
             const email = 'adha.anara.sanagustin@gmail.com';
@@ -435,26 +452,30 @@
         });
 
         function setLanguage(lang) {
-            // Cambiar atributo lang del HTML
-            document.documentElement.lang = lang;
+    // 1. Cambiar atributo lang del HTML
+    document.documentElement.lang = lang;
 
-            // Cambiar todos los elementos con data-en y data-es
-            document.querySelectorAll('[data-en][data-es]').forEach(element => {
-                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
-                
-                // Si es un input o textarea, cambiar el value
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.value = text;
-                } else {
-                    element.textContent = text;
-                }
-            });
-
-            // Actualizar el texto del botón de idioma
-            const langButton = document.querySelector('.lang-text');
-            langButton.textContent = lang === 'en' ? 'ES' : 'EN';
+    // 2. Cambiar textos (lo que ya tenías)
+    document.querySelectorAll('[data-en][data-es]').forEach(element => {
+        const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.value = text;
+        } else {
+            element.textContent = text;
         }
-    </script>
+    });
 
+    // 3. NUEVO: Cambiar el PDF del botón según el idioma
+    const btnPdf = document.getElementById('btn-brochure');
+    if (btnPdf) {
+        const pdfPath = lang === 'en' ? btnPdf.getAttribute('data-pdf-en') : btnPdf.getAttribute('data-pdf-es');
+        btnPdf.setAttribute('href', pdfPath);
+    }
+
+    // 4. Actualizar el texto del botón de idioma
+    const langText = languageToggle.querySelector('.lang-text');
+    langText.textContent = lang === 'en' ? 'ES' : 'EN';
+}
+    </script>
 </body>
 </html>

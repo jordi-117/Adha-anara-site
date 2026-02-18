@@ -1384,7 +1384,7 @@ body {
     }
 
     .floating-whatsapp-button {
-        bottom: 80px;
+        bottom: 90px;
         right: 20px;
     }
 
@@ -1402,10 +1402,10 @@ body {
     }
 
     .btn-scroll-top {
-        bottom: 20px;
-        right: 200px;
-        width: 50px;
-        height: 50px;
+        bottom: 90px !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
     }
 
     .floating-email-button svg {
@@ -1545,4 +1545,28 @@ html[lang="es"] .header-txt h1 {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* --- AJUSTE DE BOTÓN ADAPTABLE --- */
+
+/* Por defecto (PC), ocultamos la versión corta */
+.txt-mobile {
+    display: none;
+}
+
+/* En celulares (480px o menos) */
+@media (max-width: 480px) {
+    .txt-desktop {
+        display: none !important; /* Escondemos el texto largo */
+    }
+    .txt-mobile {
+        display: inline !important; /* Mostramos el texto corto */
+    }
+    
+    /* Opcional: ajustar el ancho del botón en móvil para que no se vea vacío */
+    .btn-1 {
+        width: auto !important; 
+        min-width: 150px;
+        padding: 10px 20px !important;
+    }
 }
