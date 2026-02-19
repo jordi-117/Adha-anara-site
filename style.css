@@ -1165,11 +1165,11 @@ body {
     }
 
     .route-link:nth-child(4) .route-box .route-img-container img {
-        object-position: -30% center !important;
+        object-position: -10% center !important;
     }
 
     .route-link:nth-child(6) .route-box .route-img-container img {
-        object-position: -30% center !important;
+        object-position: -20%  center !important;
     }
 
     .route-label {
