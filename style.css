@@ -1826,3 +1826,17 @@ html[lang="es"] .header-txt h1 {
     transform: translateY(-4px);
     transition: transform 0.3s ease;
 }
+
+/* Email links - PC vs Móvil */
+.email-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .email-desktop {
+    display: none;
+  }
+  .email-mobile {
+    display: inline;
+  }
+}
