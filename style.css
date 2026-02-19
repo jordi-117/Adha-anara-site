@@ -58,7 +58,7 @@ body {
     left: 0;
     overflow: hidden;
     z-index: 2;
-    background-image: url('img header/colibri.png');
+    background-image: url('img-header/colibri.png');
     background-size: cover;
     background-position: center;
 }
