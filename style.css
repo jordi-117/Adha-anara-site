@@ -411,7 +411,7 @@ body {
     align-items: center;
     gap: 80px;
     flex-wrap: wrap;
-    padding: 180px 0;
+    padding: 70px 0;
 }
 
 .stats-row-top {
@@ -592,88 +592,68 @@ body {
 }
 
 /* Posicionamiento especial para rutas 5 y 6 */
-.route-box:nth-child(5) {
+.route-link:nth-child(5) {
     grid-column: 2 / 3;
 }
 
-.route-box:nth-child(6) {
+.route-link:nth-child(6) {
     grid-column: 3 / 4;
 }
 
 /* Zoom específico para algunas imágenes */
-.route-box:nth-child(2) .route-img-container img {
+.route-link:nth-child(2) .route-box .route-img-container img {
     transform: scale(1.2);
     transform-origin: 15% center;
 }
 
-.route-box:nth-child(5) .route-img-container img {
+.route-link:nth-child(5) .route-box .route-img-container img {
     transform: scale(1.65);
     transform-origin: center;
 }
 
-.route-box:nth-child(6) .route-img-container img {
+.route-link:nth-child(6) .route-box .route-img-container img {
     transform: scale(1.65);
     transform-origin: center;
     object-position: 15% center;
 }
 
 /* Animaciones de hover */
-.route-box:nth-child(1):hover .route-img-container img,
-.route-box:nth-child(3):hover .route-img-container img,
-.route-box:nth-child(4):hover .route-img-container img {
+.route-link:nth-child(1):hover .route-box .route-img-container img,
+.route-link:nth-child(3):hover .route-box .route-img-container img,
+.route-link:nth-child(4):hover .route-box .route-img-container img {
     animation: zoomBase 5s ease-in-out infinite alternate;
 }
 
-.route-box:nth-child(2):hover .route-img-container img {
+.route-link:nth-child(2):hover .route-box .route-img-container img {
     animation: zoom2 5s ease-in-out infinite alternate;
 }
 
-.route-box:nth-child(5):hover .route-img-container img {
+.route-link:nth-child(5):hover .route-box .route-img-container img {
     animation: zoom5 5s ease-in-out infinite alternate;
 }
 
-.route-box:nth-child(6):hover .route-img-container img {
+.route-link:nth-child(6):hover .route-box .route-img-container img {
     animation: zoom6 5s ease-in-out infinite alternate;
 }
 
 /* Zoom automático al scroll en móvil (clase zoom-active) */
 @media (max-width: 768px) {
-    .route-box:nth-child(1) .route-img-container img.zoom-active,
-    .route-box:nth-child(3) .route-img-container img.zoom-active,
-    .route-box:nth-child(4) .route-img-container img.zoom-active {
-        animation: zoomBase 5s ease-in-out infinite alternate;
+    .route-link[data-route="1"] .route-img-container img.zoom-active,
+    .route-link[data-route="3"] .route-img-container img.zoom-active,
+    .route-link[data-route="4"] .route-img-container img.zoom-active {
+        animation: zoomBase 5s ease-in-out infinite alternate !important;
     }
 
-    .route-box:nth-child(2) .route-img-container img.zoom-active {
-        animation: zoom2 5s ease-in-out infinite alternate;
+    .route-link[data-route="2"] .route-img-container img.zoom-active {
+        animation: zoom2 5s ease-in-out infinite alternate !important;
     }
 
-    .route-box:nth-child(5) .route-img-container img.zoom-active {
-        animation: zoom5 5s ease-in-out infinite alternate;
+    .route-link[data-route="5"] .route-img-container img.zoom-active {
+        animation: zoom5 5s ease-in-out infinite alternate !important;
     }
 
-    .route-box:nth-child(6) .route-img-container img.zoom-active {
-        animation: zoom6 5s ease-in-out infinite alternate;
-    }
-}
-
-@media (max-width: 480px) {
-    .route-box:nth-child(1) .route-img-container img.zoom-active,
-    .route-box:nth-child(3) .route-img-container img.zoom-active,
-    .route-box:nth-child(4) .route-img-container img.zoom-active {
-        animation: zoomBase 5s ease-in-out infinite alternate;
-    }
-
-    .route-box:nth-child(2) .route-img-container img.zoom-active {
-        animation: zoom2 5s ease-in-out infinite alternate;
-    }
-
-    .route-box:nth-child(5) .route-img-container img.zoom-active {
-        animation: zoom5 5s ease-in-out infinite alternate;
-    }
-
-    .route-box:nth-child(6) .route-img-container img.zoom-active {
-        animation: zoom6 5s ease-in-out infinite alternate;
+    .route-link[data-route="6"] .route-img-container img.zoom-active {
+        animation: zoom6 5s ease-in-out infinite alternate !important;
     }
 }
 
@@ -913,8 +893,8 @@ body {
         gap: 20px;
     }
 
-    .route-box:nth-child(5),
-    .route-box:nth-child(6) {
+    .route-link:nth-child(5),
+    .route-link:nth-child(6) {
         grid-column: span 1;
     }
 
@@ -1175,13 +1155,21 @@ body {
         width: 100%;
     }
 
-    .route-box:nth-child(5),
-    .route-box:nth-child(6) {
+    .route-link:nth-child(5),
+    .route-link:nth-child(6) {
         grid-column: span 1;
     }
 
     .route-img-container {
         height: 280px;
+    }
+
+    .route-link:nth-child(4) .route-box .route-img-container img {
+        object-position: -30% center !important;
+    }
+
+    .route-link:nth-child(6) .route-box .route-img-container img {
+        object-position: -30% center !important;
     }
 
     .route-label {
@@ -1324,6 +1312,14 @@ body {
         height: 70px;
     }
 
+    .route-link:nth-child(4) .route-box .route-img-container img {
+        object-position: 70% center;
+    }
+
+    .route-link:nth-child(6) .route-box .route-img-container img {
+        object-position: 40% center;
+    }
+
     /* stat-circle: ver reglas al final del archivo */
 
     .floating-email-button,
@@ -1381,9 +1377,9 @@ body {
 }
 
 /* Ajuste para la cuarta imagen de rutas (Waka Willka) */
-.route-box:nth-child(4) .route-img-container img {
-    object-position: 10% center; /* Baja el 35% para moverla más a la izquierda */
-    transform: scale(1); /* Zoom ligero para evitar bordes blancos al moverla */
+.route-link:nth-child(4) .route-box .route-img-container img {
+    object-position: 10% center;
+    transform: scale(1);
 }
 
 .btn-scroll-top {
@@ -1811,22 +1807,15 @@ html[lang="es"] .header-txt h1 {
 /* =====================================================
    ZOOM AL SCROLL EN RUTAS - SOLO MÓVIL
    ===================================================== */
-@media (max-width: 768px) {
-    .route-box:nth-child(1) .route-img-container img.zoom-active,
-    .route-box:nth-child(3) .route-img-container img.zoom-active,
-    .route-box:nth-child(4) .route-img-container img.zoom-active {
-        animation: zoomBase 5s ease-in-out infinite alternate;
-    }
+/* Route link wrapper */
+.route-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
 
-    .route-box:nth-child(2) .route-img-container img.zoom-active {
-        animation: zoom2 5s ease-in-out infinite alternate;
-    }
-
-    .route-box:nth-child(5) .route-img-container img.zoom-active {
-        animation: zoom5 5s ease-in-out infinite alternate;
-    }
-
-    .route-box:nth-child(6) .route-img-container img.zoom-active {
-        animation: zoom6 5s ease-in-out infinite alternate;
-    }
+.route-link:hover .route-box {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
 }

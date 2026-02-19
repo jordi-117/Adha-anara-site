@@ -204,47 +204,59 @@
             <div class="general-1 txt no-bg">
                 <div class="routes gallery">
                     <div class="route-container">
+                        <a href="route-1.html" class="route-link" data-route="1">
                         <div class="route-box">
                             <div class="route-img-container"> 
                                 <img src="img routes/1.jpg" alt="Chaquira">
                             </div>
                             <p class="route-label" data-en="Birds Of The Rural Mosaic In La Chaquira" data-es="Aves del Mosaico Rural en La Chaquira">Birds Of The Rural Mosaic In La Chaquira</p>
                         </div>
+                        </a>
                         
+                        <a href="route-2.html" class="route-link" data-route="2">
                         <div class="route-box">
                             <div class="route-img-container">     
                                 <img src="img routes/2.jpg" alt="El Oso">
                             </div>
                             <p class="route-label" data-en="Nature Reserve El Oso - On Summits And Fog" data-es="Reserva Natural El Oso - En Cimas y Niebla">Nature Reserve El Oso - On Summits And Fog</p>
                         </div>
+                        </a>
                         
+                        <a href="route-3.html" class="route-link" data-route="3">
                         <div class="route-box">
                             <div class="route-img-container">
                                 <img src="img routes/3.jpg" alt="La Llanara">
                             </div>
                             <p class="route-label" data-en="La Llanara - Bird And Landscape Trail" data-es="La Llanara - Sendero de Aves y Paisaje">La Llanara - Bird And Landscape Trail</p>
                         </div>
+                        </a>
                         
+                        <a href="route-4.html" class="route-link" data-route="4">
                         <div class="route-box">
                             <div class="route-img-container"> 
                                 <img src="img routes/4.jpg" alt="Waka Willka">
                             </div>
                             <p class="route-label" data-en="Waka Willka - Between Forests And Rivers" data-es="Waka Willka - Entre Bosques y Ríos">Waka Willka - Between Forests And Rivers</p>
                         </div>
+                        </a>
                         
+                        <a href="route-5.html" class="route-link" data-route="5">
                         <div class="route-box">
                             <div class="route-img-container"> 
                                 <img src="img routes/5.jpeg" alt="Quinchana">
                             </div>
                             <p class="route-label" data-en="Quinchana - High Mountain Birds" data-es="Quinchana - Aves de Montaña Alta">Quinchana - High Mountain Birds</p>
                         </div>
+                        </a>
                         
+                        <a href="route-6.html" class="route-link" data-route="6">
                         <div class="route-box">
                             <div class="route-img-container"> 
                                 <img src="img routes/6.jpg" alt="La Estrella">
                             </div>
                             <p class="route-label" data-en="La Estrella - Refuge Of Colors" data-es="La Estrella - Refugio de Colores">La Estrella - Refuge Of Colors</p>
-                        </div>    
+                        </div>
+                        </a>
                     </div>
                 </div>
             </div>        
@@ -442,7 +454,7 @@
     <!-- ZOOM AL SCROLL EN RUTAS (SOLO MÓVIL) -->
     <script>
         if (window.innerWidth <= 768) {
-            const routeBoxes = document.querySelectorAll('.route-box');
+            const routeLinks = document.querySelectorAll('.route-link');
 
             const routeObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -458,7 +470,7 @@
                 threshold: 0.3
             });
 
-            routeBoxes.forEach(box => routeObserver.observe(box));
+            routeLinks.forEach(link => routeObserver.observe(link));
         }
     </script>
 
