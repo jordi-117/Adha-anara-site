@@ -85,7 +85,6 @@ body {
     50%, 64% { transform: translateX(-50%); }
     66.6%, 80.6% { transform: translateX(-66.666%); }
     83.3%, 99.99% { transform: translateX(-83.333%); }
-    /* El salto al 100% ahora será sobre un fondo idéntico */
     100% { transform: translateX(0); }
 }
 
@@ -159,13 +158,12 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 1. Eliminar espacios en la lista del submenú */
 .submenu {
-    padding: 0 !important;          /* Quita el espacio interno de la caja grande */
+    padding: 0 !important;
     margin: 0 !important;
     list-style: none;
-    border: none;        /* Quita bordes si los tiene */
-    overflow: hidden;    /* Para que las esquinas respeten el borde si usas border-radius */
+    border: none;
+    overflow: hidden;
 }
 
 .has-submenu:hover .submenu {
@@ -193,6 +191,55 @@ body {
 .submenu li a:hover {
     background-color: #ffffff;
     color: #ff830e !important;
+}
+
+/* Menú toggle (oculto en PC) */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #21ba66;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.menu-toggle.active {
+    background-color: #ff830e;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 /* ===================== */
@@ -249,6 +296,11 @@ body {
 .btn-1:hover {
     background-color: #fffdfc;
     color: #ff830e;
+}
+
+/* Texto del botón */
+.txt-mobile {
+    display: none;
 }
 
 /* ===================== */
@@ -314,7 +366,7 @@ body {
 .overlay-text-3 h3 {
     font-size: 28px;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .overlay-text-1 p,
@@ -322,7 +374,7 @@ body {
 .overlay-text-3 p {
     font-size: 16px;
     line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para el párrafo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -331,8 +383,6 @@ body {
 /* ===================== */
 /* SECCIÓN: STATISTICS */
 /* ===================== */
-
-/* ===== Arreglar título STATISTICS ===== */
 
 .stats-title {
     text-align: center;
@@ -347,31 +397,16 @@ body {
     margin: 0 auto;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .stats-title h2 {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats-title h2 {
-        font-size: 24px;
-    }
-}
-
 .stats-section {
     position: relative;
     padding: 120px 0 0;
     overflow: hidden;
     height: 550px;
-    margin-bottom: 0px;  /* Espacio fijo hasta Every Route */
+    margin-bottom: 0px;
 }
 
-/* Stats mobile: ver reglas al final del archivo */
-
 .g2 {
-    padding: 0 0 60px;  /* Sin padding arriba */
+    padding: 0 0 60px;
     margin-top: 0;
 }
 
@@ -382,17 +417,15 @@ body {
     overflow: hidden;
 }
 
-/* Estilos para que el video cubra todo el fondo */
 #stats-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Esto hace que el video actúe como background-size: cover */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* Capa oscura sobre el video para legibilidad */
 .stats-background::after {
     content: "";
     position: absolute;
@@ -400,11 +433,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.0); /* Ajusta el 0.5 para más o menos oscuridad */
+    background: rgba(0, 0, 0, 0.0);
     z-index: 2;
 }
 
-/* Contenedor de círculos - encima de la imagen */
+.stats-background img {
+    display: none;
+}
+
 .stats-container {
     position: relative;
     z-index: 3;
@@ -481,47 +517,6 @@ body {
     line-height: 1.5;
 }
 
-
-/* =====================================================
-   CÓDIGO RESPONSIVE ACTUALIZADO PARA STATISTICS
-   Agregar o reemplazar en la sección responsive
-   ===================================================== */
-
-/* Tablets (menos de 1024px) */
-@media (max-width: 1024px) {
-    .stats-section {
-        padding: 70px 0 90px;
-        min-height: 450px;
-    }
-}
-
-/* Desktop (más de 768px) */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none !important;
-    }
-
-    .mobile-menu {
-        display: none !important;
-    }
-
-    .stats-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 80px;
-    }
-
-    .stats-row-top {
-        display: contents;
-    }
-
-    .stats-row-bottom {
-        display: contents;
-    }
-}
-
-/* Stats mobile 768px: ver reglas al final del archivo */
-
 /* ===================== */
 /* SECCIÓN: EVERY ROUTE */
 /* ===================== */
@@ -593,7 +588,19 @@ body {
     border-top: 5px solid #ffffff;
 }
 
-/* Posicionamiento especial para rutas 5 y 6 */
+.route-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.route-link:hover .route-box {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+/* Posicionamiento especial rutas 5 y 6 */
 .route-link:nth-child(5) {
     grid-column: 2 / 3;
 }
@@ -619,7 +626,12 @@ body {
     object-position: 15% center;
 }
 
-/* Animaciones de hover */
+.route-link:nth-child(4) .route-box .route-img-container img {
+    object-position: 10% center;
+    transform: scale(1);
+}
+
+/* Animaciones hover */
 .route-link:nth-child(1):hover .route-box .route-img-container img,
 .route-link:nth-child(3):hover .route-box .route-img-container img,
 .route-link:nth-child(4):hover .route-box .route-img-container img {
@@ -638,28 +650,6 @@ body {
     animation: zoom6 5s ease-in-out infinite alternate;
 }
 
-/* Zoom automático al scroll en móvil (clase zoom-active) */
-@media (max-width: 768px) {
-    .route-link[data-route="1"] .route-img-container img.zoom-active,
-    .route-link[data-route="3"] .route-img-container img.zoom-active,
-    .route-link[data-route="4"] .route-img-container img.zoom-active {
-        animation: zoomBase 5s ease-in-out infinite alternate !important;
-    }
-
-    .route-link[data-route="2"] .route-img-container img.zoom-active {
-        animation: zoom2 5s ease-in-out infinite alternate !important;
-    }
-
-    .route-link[data-route="5"] .route-img-container img.zoom-active {
-        animation: zoom5 5s ease-in-out infinite alternate !important;
-    }
-
-    .route-link[data-route="6"] .route-img-container img.zoom-active {
-        animation: zoom6 5s ease-in-out infinite alternate !important;
-    }
-}
-
-/* Zoom al scroll (sin hover) */
 @keyframes zoomBase {
     from { transform: scale(1); }
     to { transform: scale(1.25); }
@@ -875,12 +865,116 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
 
+.btn-scroll-top {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    color: #21ba66;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-scroll-top i {
+    font-size: 20px;
+}
+
+.btn-scroll-top span {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.btn-scroll-top:hover {
+    background-color: #ff9800;
+    transform: translateY(-5px);
+}
+
+.btn-scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.floating-language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 22px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff830e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.floating-language-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    background-color: #e67e0e;
+}
+
+.floating-language-button:active {
+    transform: scale(0.95);
+}
+
+.floating-language-button .lang-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 /* ===================== */
-/* RESPONSIVE DESIGN - MOBILE */
+/* AJUSTES DE IMÁGENES */
 /* ===================== */
 
-/* Tablets y pantallas medianas (menos de 1024px) */
+.slider img:nth-child(5) {
+    object-position: center 30%;
+}
+
+.slider img:nth-child(2) {
+    object-position: center 70%;
+}
+
+/* ===================== */
+/* IDIOMA */
+/* ===================== */
+
+html[lang="es"] .btn-1 {
+    margin-top: 0px;
+}
+
+html[lang="es"] .header-txt h1 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================================ */
+/* RESPONSIVE - TABLETS (max-width: 1024px)                     */
+/* ============================================================ */
+
 @media (max-width: 1024px) {
+
+    /* --- HEADER --- */
     .header-txt h1 {
         font-size: 50px;
     }
@@ -890,6 +984,25 @@ body {
         font-size: 14px;
     }
 
+    /* --- TÍTULOS --- */
+    .general h2,
+    .stats-title h2,
+    .team-section h2,
+    .g2 h2 {
+        font-size: 35px;
+    }
+
+    /* --- STATISTICS --- */
+    .stats-section {
+        padding: 70px 0 90px;
+        min-height: 450px;
+    }
+
+    .stats-container {
+        gap: 50px;
+    }
+
+    /* --- ROUTES --- */
     .route-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -900,66 +1013,42 @@ body {
         grid-column: span 1;
     }
 
-    .general h2,
-    .stats-title h2,
-    .team-section h2,
-    .g2 h2 {
-        font-size: 35px;
+    /* --- MENÚ PC --- */
+    .menu-toggle {
+        display: none !important;
     }
 
+    .mobile-menu {
+        display: none !important;
+    }
+
+    /* --- STATS LAYOUT PC --- */
     .stats-container {
-        gap: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+
+    .stats-row-top {
+        display: contents;
+    }
+
+    .stats-row-bottom {
+        display: contents;
     }
 }
 
-/* Móviles (menos de 768px) */
+/* ============================================================ */
+/* RESPONSIVE - TABLETS PEQUEÑAS (max-width: 768px)             */
+/* ============================================================ */
+
 @media (max-width: 768px) {
-    /* ========== MENÚ HAMBURGUESA ========== */
+
+    /* --- MENÚ HAMBURGUESA --- */
     .menu-toggle {
-        display: none;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: #21ba66;
-        border: none;
-        cursor: pointer;
-        z-index: 1000;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        border-radius: 4px;
-        transition: all 0.3s ease;
+        display: flex;
     }
 
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        display: block;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px);
-    }
-
-    .menu-toggle.active {
-        background-color: #ff830e;
-    }
-
-    /* MENÚ MÓVIL DESPLEGABLE */
     .mobile-menu {
         display: none;
         position: fixed;
@@ -1006,7 +1095,6 @@ body {
         color: #ffffff;
     }
 
-    /* Submenu móvil */
     .mobile-has-submenu .routes-toggle::after {
         content: " ▼";
         font-size: 12px;
@@ -1043,7 +1131,7 @@ body {
         color: #ffffff;
     }
 
-    /* ========== HEADER Y NAVEGACIÓN ========== */
+    /* --- HEADER Y NAVEGACIÓN --- */
     .menu.container {
         flex-direction: column;
         padding: 0 20px;
@@ -1055,9 +1143,9 @@ body {
     }
 
     .logo {
-        width: 110px;
-        margin-top: -25px;
-        margin-bottom: 25px;
+        width: 95px;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 
     .navbar {
@@ -1090,26 +1178,26 @@ body {
         margin-top: 10px;
     }
 
-    /* Header content */
+    /* --- HEADER CONTENT --- */
     .header-txt h1 {
-        font-size: 32px;
-        margin-top: 200px;
+        font-size: 40px;
+        margin-top: 150px;
     }
 
     .header-txt p {
         padding: 0 20px;
         font-size: 14px;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 
     .btn-1 {
-        font-size: 14px;
-        width: 90%;
+        font-size: 16px;
+        width: 80%;
         padding: 10px 20px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
-    /* ========== OUR REGION SECTION ========== */
+    /* --- OUR REGION --- */
     .general-content {
         padding: 0 20px;
         gap: 25px;
@@ -1127,34 +1215,133 @@ body {
         display: block;
         visibility: visible;
         opacity: 1;
-
     }
 
     .overlay-text-1,
     .overlay-text-2,
     .overlay-text-3 {
-        padding: 20px;
-        max-width: 90%;
-        background-color: rgba(33, 186, 102, 0.7);
+        position: absolute !important;
+        top: 50% !important;
+        left: auto !important;
+        right: 10vw !important;
+        transform: translateY(-50%) !important;
+        width: 55% !important;
+        max-width: 55% !important;
+        background-color: rgba(33, 186, 102, 0.85) !important;
+        padding: 12px 14px !important;
+        border-radius: 8px !important;
+        text-align: left !important;
     }
 
     .overlay-text-1 h3,
     .overlay-text-2 h3,
     .overlay-text-3 h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.2 !important;
     }
 
     .overlay-text-1 p,
     .overlay-text-2 p,
     .overlay-text-3 p {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
     }
 
-    /* ========== STATISTICS: ver reglas al final del archivo ========== */
+    /* --- STATISTICS --- */
+    .stats-title h2 {
+        font-size: 28px;
+    }
 
-    /* ========== ROUTES SECTION ========== */
+    .stats-section {
+        position: relative !important;
+        height: auto !important;
+        min-height: unset !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .stats-background {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+        overflow: hidden !important;
+    }
+
+    #stats-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .stats-container {
+        position: relative !important;
+        z-index: 3 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 50px !important;
+        padding: 60px 20px 70px !important;
+        width: 100% !important;
+        min-height: unset !important;
+    }
+
+    .stats-row-top,
+    .stats-row-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 50px !important;
+        width: 100% !important;
+    }
+
+    .stat-circle {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        position: relative !important;
+        text-align: center !important;
+    }
+
+    .stat-circle svg {
+        width: 120px !important;
+        height: 120px !important;
+        transform: rotate(-90deg) !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .stat-circle .percentage {
+        position: absolute !important;
+        top: 60px !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        color: #ffffff !important;
+        white-space: nowrap !important;
+    }
+
+    .stat-circle p {
+        font-size: 13px !important;
+        max-width: 180px !important;
+        width: 180px !important;
+        text-align: center !important;
+        margin: 12px auto 0 !important;
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+        line-height: 1.5 !important;
+    }
+
+    /* --- ROUTES --- */
     .route-container {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1176,7 +1363,7 @@ body {
     }
 
     .route-link:nth-child(6) .route-box .route-img-container img {
-        object-position: -20%  center !important;
+        object-position: -20% center !important;
     }
 
     .route-label {
@@ -1185,7 +1372,25 @@ body {
         padding: 12px;
     }
 
-    /* ========== TEAM SECTION ========== */
+    .route-link[data-route="1"] .route-img-container img.zoom-active,
+    .route-link[data-route="3"] .route-img-container img.zoom-active,
+    .route-link[data-route="4"] .route-img-container img.zoom-active {
+        animation: zoomBase 5s ease-in-out infinite alternate !important;
+    }
+
+    .route-link[data-route="2"] .route-img-container img.zoom-active {
+        animation: zoom2 5s ease-in-out infinite alternate !important;
+    }
+
+    .route-link[data-route="5"] .route-img-container img.zoom-active {
+        animation: zoom5 5s ease-in-out infinite alternate !important;
+    }
+
+    .route-link[data-route="6"] .route-img-container img.zoom-active {
+        animation: zoom6 5s ease-in-out infinite alternate !important;
+    }
+
+    /* --- TEAM --- */
     .team-container {
         gap: 40px;
         flex-direction: column;
@@ -1214,7 +1419,7 @@ body {
         max-width: 250px;
     }
 
-    /* ========== FOOTER ========== */
+    /* --- FOOTER --- */
     .footer-columns {
         flex-direction: column;
         text-align: center;
@@ -1230,7 +1435,7 @@ body {
         font-size: 18px;
     }
 
-    /* ========== TÍTULOS GENERALES ========== */
+    /* --- TÍTULOS --- */
     .general h2,
     .stats-title h2,
     .team-section h2,
@@ -1240,7 +1445,7 @@ body {
         padding: 0 20px;
     }
 
-    /* ========== BOTONES FLOTANTES ========== */
+    /* --- BOTONES FLOTANTES --- */
     .floating-email-button,
     .floating-whatsapp-button,
     .floating-language-button,
@@ -1259,11 +1464,11 @@ body {
     }
 
     .floating-language-button {
-        bottom: 20px !important;
+        bottom: 150px;
         right: 4vw !important;
-        width: 50px;
-        height: 50px;
-        font-size: 12px;
+        width: 55px;
+        height: 55px;
+        font-size: 14px;
     }
 
     .btn-scroll-top {
@@ -1274,20 +1479,53 @@ body {
     }
 }
 
-/* Móviles pequeños (menos de 480px) galaxy s20*/ 
+/* ============================================================ */
+/* RESPONSIVE - MÓVILES (max-width: 480px)                      */
+/* ============================================================ */
+
 @media (max-width: 480px) {
+
+    /* --- HEADER Y NAVEGACIÓN --- */
+    .menu.container {
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 110px;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+
     .header {
         padding: 30px 10px;
     }
 
+    .header-content {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 8% !important;
+    }
+
     .header-txt h1 {
-        font-size: 36px;
+        font-size: 32px;
+        margin-top: 200px;
     }
 
     .header-txt p {
-        font-size: 20px;
+        font-size: 15px !important;
+        line-height: 1.5;
         padding: 0 15px;
         margin-bottom: -10px;
+    }
+
+    .header-content p {
+        font-size: 15px !important;
+        line-height: 1.5;
+        margin-bottom: 20px;
     }
 
     .btn-1 {
@@ -1295,6 +1533,28 @@ body {
         width: 65%;
     }
 
+    .header-content .btn-1 {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+        width: 20% !important;
+        margin: 30px auto;
+    }
+
+    .txt-desktop {
+        display: none !important;
+    }
+
+    .txt-mobile {
+        display: inline !important;
+    }
+
+    .btn-1 {
+        width: auto !important;
+        min-width: 150px;
+        padding: 10px 20px !important;
+    }
+
+    /* --- TÍTULOS --- */
     .general h2,
     .stats-title h2,
     .team-section h2,
@@ -1302,482 +1562,7 @@ body {
         font-size: 24px;
     }
 
-    .overlay-text-1 h3,
-    .overlay-text-2 h3,
-    .overlay-text-3 h3 {
-        font-size: 18px;
-    }
-
-    .overlay-text-1 p,
-    .overlay-text-2 p,
-    .overlay-text-3 p {
-        font-size: 12px;
-    }
-
-    .route-label {
-        font-size: 14px;
-        height: 70px;
-    }
-
-    .route-link:nth-child(4) .route-box .route-img-container img {
-        object-position: 70% center;
-    }
-
-    .route-link:nth-child(6) .route-box .route-img-container img {
-        object-position: 40% center;
-    }
-
-    /* stat-circle: ver reglas al final del archivo */
-
-    .floating-email-button,
-    .floating-whatsapp-button,
-    .floating-language-button,
-    .btn-scroll-top {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-    }
-
-    .floating-whatsapp-button {
-        bottom: 90px;
-        right: 20px;
-    }
-
-    .floating-email-button {
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .floating-language-button {
-        bottom: 20px;
-        right: 140px;
-        width: 50px;
-        height: 50px;
-        font-size: 11px;
-    }
-
-    .btn-scroll-top {
-        bottom: 90px !important;
-        right: 20px !important;
-        width: 50px !important;
-        height: 50px !important;
-    }
-
-    .floating-email-button svg {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-.stats-background img {
-    display: none;
-}
-
-/* Ajuste específico para la quinta imagen del slider (Caracara) */
-.slider img:nth-child(5) {
-    object-position: center 30%; /* El primer valor es horizontal, el segundo vertical */ 
-}
-
-/* Ajuste para la segunda imagen del slider (Miarchus) */
-.slider img:nth-child(2) {
-    object-position: center 70%; /* Ajusta este porcentaje (0% es arriba, 100% abajo) */
-}
-
-/* Ajuste para la cuarta imagen de rutas (Waka Willka) */
-.route-link:nth-child(4) .route-box .route-img-container img {
-    object-position: 10% center;
-    transform: scale(1);
-}
-
-.btn-scroll-top {
-    position: fixed;
-    bottom: 90px;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    background-color: #ffffff;
-    color: #21ba66;
-    text-align: center;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.btn-scroll-top i {
-    font-size: 20px;
-}
-
-.btn-scroll-top span {
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.btn-scroll-top:hover {
-    background-color: #ff9800; /* Naranja al pasar el mouse */
-    transform: translateY(-5px); /* Pequeño salto */
-}
-
-/* Clase para mostrar el botón cuando bajamos */
-.btn-scroll-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ===================== */
-/* BOTÓN DE CAMBIO DE IDIOMA */
-/* ===================== */
-
-.floating-language-button {
-    position: fixed;
-    bottom: 20px;
-    right: 22px;
-    width: 60px;
-    height: 60px;
-    background-color: #ff830e;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 999;
-}
-
-.floating-language-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
-    background-color: #e67e0e;
-}
-
-.floating-language-button:active {
-    transform: scale(0.95);
-}
-
-.floating-language-button .lang-text {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-/* Botón en móviles */
-@media (max-width: 768px) {
-    .floating-language-button {
-        bottom: 150px;
-        width: 55px;
-        height: 55px;
-        font-size: 14px;
-        right: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .floating-language-button {
-        bottom: 20px;
-        width: 48px;
-        height: 48px;
-        font-size: 12px;
-        right: 22px !important;
-    }
-}
-
-html[lang="es"] .btn-1 {
-    margin-top: 0px;
-}
-
-html[lang="es"] .header-txt h1 {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- AJUSTE DE BOTÓN ADAPTABLE --- */
-
-/* Por defecto (PC), ocultamos la versión corta */
-.txt-mobile {
-    display: none;
-}
-
-/* En celulares (480px o menos) */
-@media (max-width: 480px) {
-    .txt-desktop {
-        display: none !important; /* Escondemos el texto largo */
-    }
-    .txt-mobile {
-        display: inline !important; /* Mostramos el texto corto */
-    }
-    
-    /* Opcional: ajustar el ancho del botón en móvil para que no se vea vacío */
-    .btn-1 {
-        width: auto !important; 
-        min-width: 150px;
-        padding: 10px 20px !important;
-    }
-}
-
-/* ====================================================== */
-/* ESTO SOLO SE APLICA A MÓVILES (S8, S20, A14, etc.)    */
-/* ====================================================== */
-@media (max-width: 480px) {
-
-    /* Centra el contenido en pantallas largas como el S20 */
-    .header-content {
-        height: 70vh; /* Ajusta la altura para que no choque con el menú */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        padding: 0 8% !important; /* Margen lateral para que el texto no toque los bordes */
-    }
-
-    /* Ajusta los párrafos para que no se vean gigantes o diminutos */
-    .header-content p {
-        font-size: 15px !important; /* Tamaño fijo ideal para lectura en móvil */
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
-
-    /* Ajusta el botón del header para que sea fácil de tocar con el pulgar */
-    .header-content .btn-1 {
-        padding: 12px 25px !important;
-        font-size: 14px !important;
-        width: 20% !important; /* Para que el botón no ocupe todo el ancho */
-        margin: 30px auto; /* Centra el botón */
-    }
-}
-
-/* =====================================================
-   STATISTICS - MÓVIL (REGLA ÚNICA Y DEFINITIVA)
-   ===================================================== */
-@media (max-width: 768px) {
-    .stats-section {
-        position: relative !important;
-        height: auto !important;
-        min-height: unset !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-    }
-
-    .stats-background {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        z-index: 1 !important;
-        overflow: hidden !important;
-    }
-
-    #stats-video {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-    }
-
-    .stats-container {
-        position: relative !important;
-        z-index: 3 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        gap: 50px !important;
-        padding: 60px 20px 70px !important;
-        width: 100% !important;
-        min-height: unset !important;
-    }
-
-    .stats-row-top,
-    .stats-row-bottom {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 50px !important;
-        width: 100% !important;
-    }
-
-    .stat-circle {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        position: relative !important;
-        text-align: center !important;
-    }
-
-    .stat-circle svg {
-        width: 120px !important;
-        height: 120px !important;
-        transform: rotate(-90deg) !important;
-        display: block !important;
-        overflow: visible !important;
-    }
-
-    .stat-circle .percentage {
-        position: absolute !important;
-        top: 60px !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        font-size: 24px !important;
-        font-weight: bold !important;
-        color: #ffffff !important;
-        white-space: nowrap !important;
-    }
-
-    .stat-circle p {
-        font-size: 13px !important;
-        max-width: 180px !important;
-        width: 180px !important;
-        text-align: center !important;
-        margin: 12px auto 0 !important;
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
-        line-height: 1.5 !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats-section {
-        position: relative !important;
-        height: auto !important;
-        min-height: unset !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-    }
-
-    .stats-background {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        z-index: 1 !important;
-        overflow: hidden !important;
-    }
-
-    #stats-video {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-    }
-
-    .stats-container {
-        position: relative !important;
-        z-index: 3 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        gap: 50px !important;
-        padding: 60px 20px 70px !important;
-        width: 100% !important;
-        min-height: unset !important;
-    }
-
-    .stats-row-top,
-    .stats-row-bottom {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 50px !important;
-        width: 100% !important;
-    }
-
-    .stat-circle {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        position: relative !important;
-        text-align: center !important;
-    }
-
-    .stat-circle svg {
-        width: 120px !important;
-        height: 120px !important;
-        transform: rotate(-90deg) !important;
-        display: block !important;
-        overflow: visible !important;
-    }
-
-    .stat-circle .percentage {
-        position: absolute !important;
-        top: 60px !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        font-size: 24px !important;
-        font-weight: bold !important;
-        color: #ffffff !important;
-        white-space: nowrap !important;
-    }
-
-    .stat-circle p {
-        font-size: 13px !important;
-        max-width: 180px !important;
-        width: 180px !important;
-        text-align: center !important;
-        margin: 12px auto 0 !important;
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
-        line-height: 1.5 !important;
-    }
-}
-
-/* =====================================================
-   OUR REGION - MÓVIL: solo reposiciona el texto
-   ===================================================== */
-@media (max-width: 768px) {
-
-    .overlay-text-1,
-    .overlay-text-2,
-    .overlay-text-3 {
-        position: absolute !important;
-        top: 50% !important;
-        left: auto !important;
-        right: 10vw !important;
-        transform: translateY(-50%) !important;
-        width: 55% !important;
-        max-width: 55% !important;
-        background-color: rgba(33, 186, 102, 0.85) !important;
-        padding: 12px 14px !important;
-        border-radius: 8px !important;
-        text-align: left !important;
-    }
-
-    .overlay-text-1 h3,
-    .overlay-text-2 h3,
-    .overlay-text-3 h3 {
-        font-size: 15px !important;
-        margin-bottom: 6px !important;
-        line-height: 1.2 !important;
-    }
-
-    .overlay-text-1 p,
-    .overlay-text-2 p,
-    .overlay-text-3 p {
-        font-size: 10px !important;
-        line-height: 1.4 !important;
-    }
-}
-
-@media (max-width: 480px) {
-
+    /* --- OUR REGION --- */
     .overlay-text-1,
     .overlay-text-2,
     .overlay-text-3 {
@@ -1809,20 +1594,147 @@ html[lang="es"] .header-txt h1 {
         line-height: 1.4 !important;
         text-align: center !important;
     }
-}
 
-/* =====================================================
-   ZOOM AL SCROLL EN RUTAS - SOLO MÓVIL
-   ===================================================== */
-/* Route link wrapper */
-.route-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
-}
+    /* --- STATISTICS --- */
+    .stats-section {
+        position: relative !important;
+        height: auto !important;
+        min-height: unset !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
 
-.route-link:hover .route-box {
-    transform: translateY(-4px);
-    transition: transform 0.3s ease;
+    .stats-background {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+        overflow: hidden !important;
+    }
+
+    #stats-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .stats-container {
+        position: relative !important;
+        z-index: 3 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 50px !important;
+        padding: 60px 20px 70px !important;
+        width: 100% !important;
+        min-height: unset !important;
+    }
+
+    .stats-row-top,
+    .stats-row-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 50px !important;
+        width: 100% !important;
+    }
+
+    .stat-circle {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        position: relative !important;
+        text-align: center !important;
+    }
+
+    .stat-circle svg {
+        width: 120px !important;
+        height: 120px !important;
+        transform: rotate(-90deg) !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .stat-circle .percentage {
+        position: absolute !important;
+        top: 60px !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        color: #ffffff !important;
+        white-space: nowrap !important;
+    }
+
+    .stat-circle p {
+        font-size: 13px !important;
+        max-width: 180px !important;
+        width: 180px !important;
+        text-align: center !important;
+        margin: 12px auto 0 !important;
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+        line-height: 1.5 !important;
+    }
+
+    /* --- ROUTES --- */
+    .route-label {
+        font-size: 14px;
+        height: 70px;
+    }
+
+    .route-link:nth-child(4) .route-box .route-img-container img {
+        object-position: 70% center;
+    }
+
+    .route-link:nth-child(6) .route-box .route-img-container img {
+        object-position: 40% center;
+    }
+
+    /* --- BOTONES FLOTANTES --- */
+    .floating-email-button,
+    .floating-whatsapp-button,
+    .floating-language-button,
+    .btn-scroll-top {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .floating-whatsapp-button {
+        bottom: 90px;
+        right: 20px;
+    }
+
+    .floating-email-button {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .floating-language-button {
+        bottom: 20px;
+        right: 22px !important;
+        width: 48px;
+        height: 48px;
+        font-size: 12px;
+    }
+
+    .btn-scroll-top {
+        bottom: 90px !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .floating-email-button svg {
+        width: 30px;
+        height: 30px;
+    }
 }
