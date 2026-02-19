@@ -65,7 +65,7 @@
         <div class="header-content container">
             <div class="header-txt">
                 <h1 data-en="Birdwatching in San Agustín" data-es="Observación de Aves en San Agustín">Birdwatching in San Agustín</h1>
-                <p data-en="Prepare yourself for the excitement of discovering new bird species, marveling at beautiful natural landscapes, and connecting with a community that shares your passion for biodiversity." data-es="Prepárate para la emoción de descubrir nuevas especies de aves, maravillarte con hermosos paisajes naturales y conectar con una comunidad que comparte tu pasión por la biodiversidad.">
+                <p data-en="Experience the thrill of discovering unique birds and landscapes alongside a community passionate about nature." data-es="Vive la emoción de descubrir aves y paisajes únicos junto a una comunidad apasionada por la naturaleza.">
                     Prepare yourself for the excitement of discovering new bird species, marveling at beautiful natural landscapes, 
                     and connecting with a community that shares your passion for biodiversity.
                 </p>
@@ -154,41 +154,43 @@
 </div>
 
 <section class="stats-section">
-    <!-- AQUÍ VA LA IMAGEN DE FONDO -->
+    <!-- FONDO DE VIDEO -->
     <div class="stats-background">
         <video autoplay muted loop playsinline id="stats-video">
             <source src="img landscapes/Chalybura.mp4" type="video/mp4">
         </video>
+    </div>
 
+    <!-- CÍRCULOS ENCIMA DEL VIDEO -->
     <div class="stats-container">
         <div class="stats-row-top">
             <div class="stat-circle" data-percentage="25">
-                <svg>
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="60" cy="60" r="50"></circle>
                     <circle class="progress" cx="60" cy="60" r="50"></circle>
                 </svg>
                 <div class="percentage">0%</div>
-                <p data-en="Of Colombia's bird species are found in Huila" data-es="De las especies de aves de Colombia se encuentran en Huila">Of Colombia's bird species are found in Huila<br></p>
+                <p data-en="Of Colombia's bird species are found in Huila" data-es="De las especies de aves de Colombia se encuentran en Huila">Of Colombia's bird species are found in Huila</p>
             </div>
         
             <div class="stat-circle" data-percentage="35">
-                <svg>
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="60" cy="60" r="50"></circle>
                     <circle class="progress" cx="60" cy="60" r="50"></circle>
                 </svg>
                 <div class="percentage">0%</div>
-                <p data-en="Of the departmental territory under conservation and environmental management schemes" data-es="Del territorio departamental bajo esquemas de conservación y gestión ambiental">Of the departmental territory under conservation and environmental management schemes<br></p>
+                <p data-en="Of the departmental territory under conservation and environmental management schemes" data-es="Del territorio departamental bajo esquemas de conservación y gestión ambiental">Of the departmental territory under conservation and environmental management schemes</p>
             </div>
         </div>
 
         <div class="stats-row-bottom">
             <div class="stat-circle" data-percentage="27">
-                <svg>
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="60" cy="60" r="50"></circle>
                     <circle class="progress" cx="60" cy="60" r="50"></circle>
                 </svg>
                 <div class="percentage">0%</div>
-                <p data-en="Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif" data-es="De las especies de colibríes de Colombia habitan los ecosistemas del Macizo Colombiano">Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif<br></p>
+                <p data-en="Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif" data-es="De las especies de colibríes de Colombia habitan los ecosistemas del Macizo Colombiano">Of Colombia's hummingbird species inhabit the ecosystems of the Colombian Massif</p>
             </div>
         </div>
     </div>
@@ -435,6 +437,29 @@
                 behavior: 'smooth'
             });
         });
+    </script>
+
+    <!-- ZOOM AL SCROLL EN RUTAS (SOLO MÓVIL) -->
+    <script>
+        if (window.innerWidth <= 768) {
+            const routeBoxes = document.querySelectorAll('.route-box');
+
+            const routeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const img = entry.target.querySelector('.route-img-container img');
+                    if (!img) return;
+                    if (entry.isIntersecting) {
+                        img.classList.add('zoom-active');
+                    } else {
+                        img.classList.remove('zoom-active');
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            routeBoxes.forEach(box => routeObserver.observe(box));
+        }
     </script>
 
     <!-- JAVASCRIPT PARA CAMBIO DE IDIOMA -->
