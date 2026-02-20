@@ -538,7 +538,7 @@
         const diff = touchEndX - touchStartX;
 
         // Solo si empieza desde el borde izquierdo (primeros 30px) y desliza +80px
-        if (touchStartX < 30 && diff > 80) {
+        if (touchStartX < 80 && diff > 80) {
             history.back();
         }
     });
