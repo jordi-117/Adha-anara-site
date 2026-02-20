@@ -89,7 +89,7 @@
             <div class="section-content">
 
                 <div class="route-info-grid">
-                    <div class="info-item">
+                    <div class="info-item" style="grid-column: 1 / -1;">
                         <h4><i class="fas fa-align-left" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Description" data-es="Descripción">Description</span></h4>
                         <p data-en="You will explore a region where ancient history coexists with birds native to the upper Magdalena River. Along the way, you will observe Andean species while enjoying the river landscapes and the agricultural areas that characterize the region. This experience highlights the importance of conservation and how it fosters the presence of birds in the area. Their colors, songs, and movements will accompany you throughout the journey, becoming the central element of the adventure." data-es="Explorarás una región donde la historia antigua convive con aves nativas del alto río Magdalena. En el camino, observarás especies andinas mientras disfrutas de los paisajes fluviales y las zonas agrícolas que caracterizan la región. Esta experiencia destaca la importancia de la conservación y cómo fomenta la presencia de aves en el área. Sus colores, cantos y movimientos te acompañarán durante todo el recorrido, convirtiéndose en el elemento central de la aventura.">You will explore a region where ancient history coexists with birds native to the upper Magdalena River.
                         Along the way, you will observe Andean species while enjoying the river landscapes and the agricultural
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class="info-item">
-                        <h4><i class="fas fa-backpack" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="What to bring" data-es="Qué traer">What to bring</span></h4>
+                        <h4><i class="fas fa-suitcase" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="What to bring" data-es="Qué traer">What to bring</span></h4>
                         <p data-en="Comfortable hiking shoes, warm jacket, hat, binoculars, camera" data-es="Zapatos de senderismo cómodos, chaqueta abrigada, sombrero, binoculares, cámara">Comfortable hiking shoes, warm jacket, hat, binoculars, camera</p>
                     </div>
 
@@ -447,10 +447,10 @@
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
                 <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
     <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
-        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="9cfdf8f4fdb2fdf2fdeefdb2effdf2fdfbe9efe8f5f2dcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span>
+        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
     </a>
-    <a href="/cdn-cgi/l/email-protection#83e2e7ebe2ade2ede2f1e2adf0e2ede2e4f6f0f7eaedc3e4eee2eaefade0ecee" class="email-link email-mobile" target="_blank">
-        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="e382878b82cd828d829182cd90828d82849690978a8da3848e828a8fcd808c8e">[email&#160;protected]</span>
+    <a href="javascript:openEmail();" class="email-link email-mobile">
+        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
     </a>
 </p>
                 <div class="social-icons">
@@ -659,4 +659,15 @@
         function setLanguage(lang) {
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-en][data-es]').forEach(element => {
-                const tex
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.value = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
