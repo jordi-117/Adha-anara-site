@@ -741,3 +741,27 @@
         margin-bottom: 25px !important;
     }
 }
+/* ---------- FORMULARIO: textos igual al resto en móvil ---------- */
+@media (max-width: 768px) {
+    .info-form-sidebar h3 {
+        font-size: 18px;
+    }
+
+    .form-subtitle {
+        font-size: 15px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .form-submit-btn {
+        font-size: 16px;
+    }
+}
