@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Adha Anara Birdwatching</title>
+
+    <!-- CSS GLOBAL del index -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS específico de Routes -->
+    <link rel="stylesheet" href="routes.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ── Estilos propios de la página de términos ── */
+        .terms-hero {
+            background: linear-gradient(135deg, #1a3a2a 0%, #1f9d55 100%);
+            padding: 80px 20px 50px;
+            text-align: center;
+            color: #fff;
+        }
+        .terms-hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .terms-hero p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ── Layout principal ── */
+        .terms-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px 60px;
+            align-items: start;
+        }
+
+        /* ── Sidebar / índice ── */
+        .terms-sidebar {
+            position: sticky;
+            top: 90px;
+            background: #f8faf9;
+            border: 1px solid #d4edda;
+            border-radius: 12px;
+            padding: 24px 20px;
+        }
+        .terms-sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #1f9d55;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .terms-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .terms-sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .terms-sidebar ul li a {
+            color: #2d6a4f;
+            text-decoration: none;
+            font-size: 0.88rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+        .terms-sidebar ul li a:hover {
+            color: #1f9d55;
+        }
+        .terms-sidebar ul li a i {
+            margin-top: 2px;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Contenido de términos ── */
+        .terms-content {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px 44px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        }
+
+        .terms-section {
+            margin-bottom: 44px;
+            scroll-margin-top: 100px;
+        }
+        .terms-section h2 {
+            font-size: 1.25rem;
+            color: #1a3a2a;
+            font-weight: 700;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4edda;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .terms-section h2 i {
+            color: #1f9d55;
+            font-size: 1.1rem;
+        }
+        .terms-section h3 {
+            font-size: 1rem;
+            color: #2d6a4f;
+            font-weight: 600;
+            margin: 20px 0 8px;
+        }
+        .terms-section p {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+        .terms-section ul {
+            margin: 10px 0 14px 20px;
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .terms-section ul li {
+            margin-bottom: 6px;
+        }
+
+        /* ── Banner de fecha ── */
+        .terms-date-banner {
+            background: #f0faf4;
+            border-left: 4px solid #1f9d55;
+            border-radius: 0 8px 8px 0;
+            padding: 12px 18px;
+            margin-bottom: 32px;
+            font-size: 0.88rem;
+            color: #2d6a4f;
+        }
+        .terms-date-banner strong {
+            color: #1a3a2a;
+        }
+
+        /* ── Responsive: ocultar sidebar en móvil ── */
+        @media (max-width: 768px) {
+            .terms-layout {
+                grid-template-columns: 1fr;
+                margin-top: 30px;
+            }
+            .terms-sidebar {
+                position: static;
+                display: none; /* se oculta en móvil para simplificar */
+            }
+            .terms-content {
+                padding: 26px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════ HEADER ══════════ -->
+    <header class="header route-header">
+        <div class="menu-container">
+            <div class="menu container">
+                <img src="img-logo/logo.png" alt="logoagencia" class="logo"/>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li class="has-submenu">
+                            <a href="#" data-en="Our Routes" data-es="Nuestras Rutas">Our Routes</a>
+                            <ul class="submenu">
+                                <li><a href="route-1.html">Route 1</a></li>
+                                <li><a href="route-2.html">Route 2</a></li>
+                                <li><a href="route-3.html">Route 3</a></li>
+                                <li><a href="route-4.html">Route 4</a></li>
+                                <li><a href="route-5.html">Route 5</a></li>
+                                <li><a href="route-6.html">Route 6</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- MENÚ HAMBURGUESA MÓVIL -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- MENÚ DESPLEGABLE MÓVIL -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li class="mobile-has-submenu">
+                        <a href="#" data-en="Our Routes" data-es="Nuestras Rutas" class="routes-toggle">Our Routes</a>
+                        <ul class="mobile-submenu">
+                            <li><a href="route-1.html">Route 1</a></li>
+                            <li><a href="route-2.html">Route 2</a></li>
+                            <li><a href="route-3.html">Route 3</a></li>
+                            <li><a href="route-4.html">Route 4</a></li>
+                            <li><a href="route-5.html">Route 5</a></li>
+                            <li><a href="route-6.html">Route 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- HERO TEXT (ocupa el espacio del header) -->
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1 data-en="Terms and Conditions" data-es="Términos y Condiciones">Terms and Conditions</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════ LAYOUT PRINCIPAL ══════════ -->
+    <div class="terms-layout">
+
+        <!-- SIDEBAR – Índice de secciones -->
+        <aside class="terms-sidebar">
+            <h3 data-en="Contents" data-es="Contenidos">Contents</h3>
+            <ul>
+                <li><a href="#general"><i class="fas fa-chevron-right"></i><span data-en="1. General Conditions" data-es="1. Condiciones Generales">1. General Conditions</span></a></li>
+                <li><a href="#object"><i class="fas fa-chevron-right"></i><span data-en="2. Purpose of the Portal" data-es="2. Objeto del Portal">2. Purpose of the Portal</span></a></li>
+                <li><a href="#personal-data"><i class="fas fa-chevron-right"></i><span data-en="3. Personal Data" data-es="3. Datos Personales">3. Personal Data</span></a></li>
+                <li><a href="#cookies"><i class="fas fa-chevron-right"></i><span data-en="4. Cookies" data-es="4. Cookies">4. Cookies</span></a></li>
+                <li><a href="#disclaimer"><i class="fas fa-chevron-right"></i><span data-en="5. Disclaimer" data-es="5. Exoneración de Responsabilidad">5. Disclaimer</span></a></li>
+                <li><a href="#jurisdiction"><i class="fas fa-chevron-right"></i><span data-en="6. Jurisdiction" data-es="6. Jurisdicción">6. Jurisdiction</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="terms-content">
+
+            <div class="terms-date-banner">
+                <strong data-en="Last updated:" data-es="Última actualización:">Last updated:</strong>
+                <span data-en="January 2026" data-es="Enero 2026"> January 2026</span>
+            </div>
+
+            <!-- 1. GENERAL CONDITIONS -->
+            <div class="terms-section" id="general">
+                <h2><i class="fas fa-file-contract"></i><span data-en="1. General Conditions and Acceptance" data-es="1. Condiciones Generales y Aceptación">1. General Conditions and Acceptance</span></h2>
+                <p data-en="These general conditions (hereinafter, the 'General Conditions') regulate the use of the website www.adhaanara.com (hereinafter, the 'Portal') that ADHA ANARA BIRDWATCHING (hereinafter, 'Adha Anara') makes available to Internet users." data-es="Las presentes condiciones generales (en adelante, las 'Condiciones Generales') regulan el uso del sitio web www.adhaanara.com (en adelante, el 'Portal') que ADHA ANARA BIRDWATCHING (en adelante, 'Adha Anara') pone a disposición de los usuarios de Internet.">These general conditions (hereinafter, the "General Conditions") regulate the use of the website www.adhaanara.com (hereinafter, the "Portal") that ADHA ANARA BIRDWATCHING (hereinafter, "Adha Anara") makes available to Internet users.</p>
+                <p data-en="The use of the Portal attributes the condition of user (hereinafter, the 'User') and implies full and unreserved acceptance of each and every one of the General Conditions published by Adha Anara at the time the User accesses the Portal. The User must carefully read the General Conditions each time they intend to use the Portal." data-es="El uso del Portal atribuye la condición de usuario (en adelante, el 'Usuario') e implica la aceptación plena y sin reservas de la totalidad de las Condiciones Generales publicadas por Adha Anara en el momento en que el Usuario acceda al Portal. El Usuario debe leer detenidamente las Condiciones Generales cada vez que pretenda utilizar el Portal.">The use of the Portal attributes the condition of user (hereinafter, the "User") and implies full and unreserved acceptance of each and every one of the General Conditions published by Adha Anara at the time the User accesses the Portal. The User must carefully read the General Conditions each time they intend to use the Portal.</p>
+
+                <h3 data-en="1.1. Free Access and Use" data-es="1.1. Acceso y Uso Gratuito">1.1. Free Access and Use</h3>
+                <p data-en="Access and browsing of the Portal is free and does not require prior registration. However, some services — such as tour booking requests — may require the User to provide personal information or complete a registration process, as indicated in the corresponding section." data-es="El acceso y la navegación por el Portal son gratuitos y no requieren registro previo. Sin embargo, algunos servicios —como las solicitudes de reserva de tours— podrán requerir que el Usuario facilite datos personales o complete un proceso de registro, según se indique en la sección correspondiente.">Access and browsing of the Portal is free and does not require prior registration. However, some services — such as tour booking requests — may require the User to provide personal information or complete a registration process, as indicated in the corresponding section.</p>
+
+                <h3 data-en="1.2. Obligation to Make Correct Use of the Portal" data-es="1.2. Obligación de Hacer un Uso Correcto del Portal">1.2. Obligation to Make Correct Use of the Portal</h3>
+                <p data-en="The User agrees to use the Portal and its services in accordance with the law, these General Conditions, as well as morals, good customs, and public order. The User undertakes to refrain from using the Portal for illicit purposes or effects contrary to the provisions of these General Conditions, harmful to the rights and interests of third parties, or that in any way may damage, disable, overload or deteriorate the Portal or prevent normal use by other users." data-es="El Usuario se compromete a utilizar el Portal y sus servicios de conformidad con la ley, las presentes Condiciones Generales, así como la moral, las buenas costumbres y el orden público. El Usuario se obliga a abstenerse de utilizar el Portal con fines o efectos ilícitos, contrarios a lo establecido en estas Condiciones Generales, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar el Portal o impedir el uso normal por parte de otros usuarios.">The User agrees to use the Portal and its services in accordance with the law, these General Conditions, as well as morals, good customs, and public order. The User undertakes to refrain from using the Portal for illicit purposes or effects contrary to the provisions of these General Conditions, harmful to the rights and interests of third parties, or that in any way may damage, disable, overload or deteriorate the Portal or prevent normal use by other users.</p>
+
+                <h3 data-en="1.3. Intellectual Property" data-es="1.3. Propiedad Intelectual">1.3. Intellectual Property</h3>
+                <p data-en="All content, elements and information on this Portal — including texts, photographs, bird images, logos, graphics, videos, animations and other materials — are the exclusive property of Adha Anara or its authorized collaborators, and are protected by copyright and trademark laws. Any unauthorized use may lead to the initiation of the corresponding legal actions." data-es="Todos los contenidos, elementos e información de este Portal —incluyendo textos, fotografías, imágenes de aves, logotipos, gráficos, videos, animaciones y demás materiales— son propiedad exclusiva de Adha Anara o de sus colaboradores autorizados, y están protegidos por la normativa de derechos de autor y marcas. Cualquier uso no autorizado podrá dar lugar al inicio de las correspondientes acciones legales.">All content, elements and information on this Portal — including texts, photographs, bird images, logos, graphics, videos, animations and other materials — are the exclusive property of Adha Anara or its authorized collaborators, and are protected by copyright and trademark laws. Any unauthorized use may lead to the initiation of the corresponding legal actions.</p>
+                <p data-en="The photographic material used on this Portal consists of works protected by copyright regulations. Users require prior written authorization from Adha Anara to use any images stored on the Portal." data-es="El material fotográfico utilizado en este Portal está conformado por obras protegidas por la normativa de derechos de autor. Los Usuarios requerirán autorización previa y escrita de Adha Anara para utilizar cualquier imagen almacenada en el Portal.">The photographic material used on this Portal consists of works protected by copyright regulations. Users require prior written authorization from Adha Anara to use any images stored on the Portal.</p>
+
+                <h3 data-en="1.4. Correct Use of Content" data-es="1.4. Uso Correcto de los Contenidos">1.4. Correct Use of Content</h3>
+                <p data-en="The User undertakes to use the Contents in a diligent, correct and lawful manner, and in particular, agrees to refrain from:" data-es="El Usuario se compromete a utilizar los Contenidos de manera diligente, correcta y lícita, y en particular se obliga a abstenerse de:">The User undertakes to use the Contents in a diligent, correct and lawful manner, and in particular, agrees to refrain from:</p>
+                <ul>
+                    <li data-en="Using the contents for purposes contrary to the law, morals or public order." data-es="Utilizar los contenidos con fines contrarios a la ley, la moral o el orden público.">Using the contents for purposes contrary to the law, morals or public order.</li>
+                    <li data-en="Reproducing, distributing or modifying the contents without prior authorization from Adha Anara." data-es="Reproducir, distribuir o modificar los contenidos sin autorización previa de Adha Anara.">Reproducing, distributing or modifying the contents without prior authorization from Adha Anara.</li>
+                    <li data-en="Suppressing or manipulating copyright notices or any identifying data of Adha Anara's rights." data-es="Suprimir o manipular los avisos de derechos de autor o cualquier dato identificativo de los derechos de Adha Anara.">Suppressing or manipulating copyright notices or any identifying data of Adha Anara's rights.</li>
+                    <li data-en="Using information obtained through the Portal to send unsolicited advertising or commercial communications to third parties." data-es="Utilizar la información obtenida a través del Portal para enviar publicidad o comunicaciones comerciales no solicitadas a terceros.">Using information obtained through the Portal to send unsolicited advertising or commercial communications to third parties.</li>
+                </ul>
+
+                <h3 data-en="1.5. Hyperlinks" data-es="1.5. Hipervínculos">1.5. Hyperlinks</h3>
+                <p data-en="Users who wish to establish a hyperlink to this Portal must ensure that the link only allows access to the web pages of the Portal without reproducing them, does not create frames over the Portal's pages, and does not include false or misleading statements about Adha Anara. The establishment of a hyperlink does not imply any business relationship or approval by Adha Anara of the content of the linking website." data-es="Los Usuarios que deseen establecer un hipervínculo a este Portal deberán asegurarse de que el enlace solo permita acceder a las páginas del Portal sin reproducirlas, no cree marcos sobre las páginas del Portal y no incluya declaraciones falsas o engañosas sobre Adha Anara. El establecimiento de un hipervínculo no implica ninguna relación comercial ni la aprobación por parte de Adha Anara del contenido del sitio web enlazante.">Users who wish to establish a hyperlink to this Portal must ensure that the link only allows access to the web pages of the Portal without reproducing them, does not create frames over the Portal's pages, and does not include false or misleading statements about Adha Anara. The establishment of a hyperlink does not imply any business relationship or approval by Adha Anara of the content of the linking website.</p>
+
+                <h3 data-en="1.6. Liability for Damages" data-es="1.6. Responsabilidad por Daños">1.6. Liability for Damages</h3>
+                <p data-en="The User will be liable for damages of any kind that Adha Anara may suffer, directly or indirectly, as a consequence of a breach of any of the obligations derived from these General Conditions or the applicable law in relation to the use of the Portal." data-es="El Usuario será responsable de los daños y perjuicios de cualquier naturaleza que Adha Anara pueda sufrir, directa o indirectamente, como consecuencia del incumplimiento de cualquiera de las obligaciones derivadas de estas Condiciones Generales o de la legislación aplicable en relación con el uso del Portal.">The User will be liable for damages of any kind that Adha Anara may suffer, directly or indirectly, as a consequence of a breach of any of the obligations derived from these General Conditions or the applicable law in relation to the use of the Portal.</p>
+            </div>
+
+            <!-- 2. OBJECT -->
+            <div class="terms-section" id="object">
+                <h2><i class="fas fa-binoculars"></i><span data-en="2. Purpose of the Portal" data-es="2. Objeto del Portal">2. Purpose of the Portal</span></h2>
+                <p data-en="Through this Portal, Adha Anara provides Users with access to information about birdwatching routes, nature tours, booking request forms, photographic content, and other services related to ecotourism in the municipality of San Agustín, Department of Huila, Colombia." data-es="A través de este Portal, Adha Anara proporciona a los Usuarios acceso a información sobre rutas de avistamiento de aves, tours de naturaleza, formularios de solicitud de reserva, contenidos fotográficos y demás servicios relacionados con el ecoturismo en el municipio de San Agustín, Departamento del Huila, Colombia.">Through this Portal, Adha Anara provides Users with access to information about birdwatching routes, nature tours, booking request forms, photographic content, and other services related to ecotourism in the municipality of San Agustín, Department of Huila, Colombia.</p>
+                <p data-en="Adha Anara reserves the right to modify, at any time and without prior notice, the presentation and configuration of the Portal, as well as the services and conditions required to use it." data-es="Adha Anara se reserva el derecho de modificar, en cualquier momento y sin previo aviso, la presentación y configuración del Portal, así como los servicios y condiciones requeridas para su uso.">Adha Anara reserves the right to modify, at any time and without prior notice, the presentation and configuration of the Portal, as well as the services and conditions required to use it.</p>
+            </div>
+
+            <!-- 3. PERSONAL DATA -->
+            <div class="terms-section" id="personal-data">
+                <h2><i class="fas fa-user-shield"></i><span data-en="3. Personal Data" data-es="3. Datos Personales">3. Personal Data</span></h2>
+                <p data-en="To use certain services offered through the Portal — such as tour information requests — Users must provide Adha Anara with certain personal data (hereinafter, 'Personal Data'), including but not limited to: name, email address, phone number, country of origin and travel dates." data-es="Para utilizar determinados servicios ofrecidos a través del Portal —como las solicitudes de información de tours— los Usuarios deberán facilitar a Adha Anara ciertos datos personales (en adelante, 'Datos Personales'), incluyendo, entre otros: nombre, dirección de correo electrónico, número de teléfono, país de origen y fechas de viaje.">To use certain services offered through the Portal — such as tour information requests — Users must provide Adha Anara with certain personal data (hereinafter, "Personal Data"), including but not limited to: name, email address, phone number, country of origin and travel dates.</p>
+                <p data-en="Adha Anara will process the Personal Data provided by Users exclusively for the purpose of responding to their inquiries and tour booking requests. Personal Data will not be shared with third parties for commercial purposes without the User's express consent." data-es="Adha Anara procesará los Datos Personales facilitados por los Usuarios exclusivamente con el fin de atender sus consultas y solicitudes de reserva de tours. Los Datos Personales no serán compartidos con terceros con fines comerciales sin el consentimiento expreso del Usuario.">Adha Anara will process the Personal Data provided by Users exclusively for the purpose of responding to their inquiries and tour booking requests. Personal Data will not be shared with third parties for commercial purposes without the User's express consent.</p>
+                <p data-en="Users have the right to access, rectify, cancel and oppose the processing of their Personal Data at any time by contacting Adha Anara via email at adha.anara.sanagustin@gmail.com." data-es="Los Usuarios tienen derecho a acceder, rectificar, cancelar y oponerse al tratamiento de sus Datos Personales en cualquier momento, contactando a Adha Anara a través del correo electrónico adha.anara.sanagustin@gmail.com.">Users have the right to access, rectify, cancel and oppose the processing of their Personal Data at any time by contacting Adha Anara via email at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="41202529206f202f2033206f32202f2026343235282f01262c20282d6f222e2c">[email&#160;protected]</a>.</p>
+            </div>
+
+            <!-- 4. COOKIES -->
+            <div class="terms-section" id="cookies">
+                <h2><i class="fas fa-cookie-bite"></i><span data-en="4. Use of Cookie Technology" data-es="4. Uso de la Tecnología de Cookies">4. Use of Cookie Technology</span></h2>
+                <p data-en="Adha Anara may use cookies when a User browses the pages of the Portal. Cookies are small data files stored on the User's device that allow the Portal to remember preferences and improve the browsing experience. Our cookies are only associated with an anonymous user session and their device, and do not by themselves provide references that allow deducing personal identifying information." data-es="Adha Anara podrá utilizar cookies cuando un Usuario navegue por las páginas del Portal. Las cookies son pequeños archivos de datos almacenados en el dispositivo del Usuario que permiten al Portal recordar preferencias y mejorar la experiencia de navegación. Nuestras cookies están asociadas únicamente a una sesión de usuario anónima y a su dispositivo, y no proporcionan por sí mismas referencias que permitan deducir datos de identificación personal.">Adha Anara may use cookies when a User browses the pages of the Portal. Cookies are small data files stored on the User's device that allow the Portal to remember preferences and improve the browsing experience. Our cookies are only associated with an anonymous user session and their device, and do not by themselves provide references that allow deducing personal identifying information.</p>
+                <p data-en="The User has the option to configure their browser to be notified of the receipt of cookies and to prevent their installation on their device. Please refer to the instructions and manuals of your browser to obtain more information on this matter." data-es="El Usuario tiene la posibilidad de configurar su navegador para ser notificado de la recepción de cookies y para impedir su instalación en su dispositivo. Consulte las instrucciones y manuales de su navegador para obtener más información al respecto.">The User has the option to configure their browser to be notified of the receipt of cookies and to prevent their installation on their device. Please refer to the instructions and manuals of your browser to obtain more information on this matter.</p>
+            </div>
+
+            <!-- 5. DISCLAIMER -->
+            <div class="terms-section" id="disclaimer">
+                <h2><i class="fas fa-exclamation-circle"></i><span data-en="5. Disclaimer" data-es="5. Exoneración de Responsabilidad">5. Disclaimer</span></h2>
+                <p data-en="Adha Anara does not guarantee the absence of interruptions or errors in access to the Portal or in its content. Adha Anara excludes, to the fullest extent permitted by law, any liability for damages of any kind that may arise from the lack of availability, continuity, or quality of the Portal." data-es="Adha Anara no garantiza la ausencia de interrupciones o errores en el acceso al Portal o en sus contenidos. Adha Anara excluye, con la máxima amplitud permitida por la ley, cualquier responsabilidad por daños y perjuicios de cualquier naturaleza que puedan derivarse de la falta de disponibilidad, continuidad o calidad del Portal.">Adha Anara does not guarantee the absence of interruptions or errors in access to the Portal or in its content. Adha Anara excludes, to the fullest extent permitted by law, any liability for damages of any kind that may arise from the lack of availability, continuity, or quality of the Portal.</p>
+                <p data-en="Birdwatching and nature tours involve outdoor activities that carry inherent risks. By booking a tour with Adha Anara, the User acknowledges and accepts these risks and agrees to comply with the safety guidelines provided by the guide during the tour." data-es="El avistamiento de aves y los tours de naturaleza implican actividades al aire libre que conllevan riesgos inherentes. Al reservar un tour con Adha Anara, el Usuario reconoce y acepta dichos riesgos y se compromete a cumplir con las pautas de seguridad proporcionadas por el guía durante el tour.">Birdwatching and nature tours involve outdoor activities that carry inherent risks. By booking a tour with Adha Anara, the User acknowledges and accepts these risks and agrees to comply with the safety guidelines provided by the guide during the tour.</p>
+                <p data-en="Adha Anara is not responsible for the content of websites that may be linked from this Portal. The inclusion of any link does not imply approval or endorsement of the linked website by Adha Anara." data-es="Adha Anara no es responsable del contenido de los sitios web que puedan estar enlazados desde este Portal. La inclusión de cualquier enlace no implica aprobación ni respaldo del sitio web enlazado por parte de Adha Anara.">Adha Anara is not responsible for the content of websites that may be linked from this Portal. The inclusion of any link does not imply approval or endorsement of the linked website by Adha Anara.</p>
+            </div>
+
+            <!-- 6. JURISDICTION -->
+            <div class="terms-section" id="jurisdiction">
+                <h2><i class="fas fa-gavel"></i><span data-en="6. Jurisdiction and Applicable Law" data-es="6. Jurisdicción y Ley Aplicable">6. Jurisdiction and Applicable Law</span></h2>
+                <p data-en="These General Conditions are governed by Colombian law. For any dispute arising from the interpretation or application of these conditions, both parties agree to submit to the jurisdiction of the competent courts of the Republic of Colombia, expressly waiving any other jurisdiction that may correspond to them." data-es="Las presentes Condiciones Generales se rigen por la ley colombiana. Para cualquier controversia derivada de la interpretación o aplicación de estas condiciones, ambas partes acuerdan someterse a la jurisdicción de los tribunales competentes de la República de Colombia, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.">These General Conditions are governed by Colombian law. For any dispute arising from the interpretation or application of these conditions, both parties agree to submit to the jurisdiction of the competent courts of the Republic of Colombia, expressly waiving any other jurisdiction that may correspond to them.</p>
+                <p data-en="If you have any questions about these Terms and Conditions, you can contact us at:" data-es="Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos en:">If you have any questions about these Terms and Conditions, you can contact us at:</p>
+                <ul>
+                    <li><i class="fas fa-envelope" style="color:#1f9d55; margin-right:6px;"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d2c29252c632c232c3f2c633e2c232c2a383e3924230d2a202c2421632e2220">[email&#160;protected]</a></li>
+                    <li><i class="fab fa-whatsapp" style="color:#1f9d55; margin-right:6px;"></i> +57 316 6672376 – Diana Escobar</li>
+                    <li><i class="fab fa-whatsapp" style="color:#1f9d55; margin-right:6px;"></i> +57 320 4564917 – Jordan Chavez</li>
+                    <li><i class="fab fa-instagram" style="color:#1f9d55; margin-right:6px;"></i> @adha.anara</li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer container">
+        <div class="footer-columns">
+            <div class="footer-contact">
+                <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376 - Diana Escobar</a></p>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
+                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
+                    <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
+                        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="5f3e3b373e713e313e2d3e712c3e313e382a2c2b36311f38323e3633713c3032">[email&#160;protected]</span>
+                    </a>
+                    <a href="javascript:openEmail();" class="email-link email-mobile">
+                        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="ddbcb9b5bcf3bcb3bcafbcf3aebcb3bcbaa8aea9b4b39dbab0bcb4b1f3beb2b0">[email&#160;protected]</span>
+                    </a>
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>adha.anara</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 data-en="Useful links" data-es="Enlaces útiles">Useful links</h3>
+                <ul>
+                    <li><a href="terms-1.html" data-en="Terms and Conditions" data-es="Términos y Condiciones">Terms and Conditions</a></li>
+                    <li><a href="terms-2.html" data-en="Web Portal Terms of Use" data-es="Términos de Uso del Portal Web">Web Portal Terms of Use</a></li>
+                </ul>
+                <p data-en="Adha Anara Birdwatching © 2026. All Rights Reserved." data-es="Adha Anara Observación de Aves © 2026. Todos los Derechos Reservados.">Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="javascript:openEmail();" class="floating-email-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+            <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
+        </svg>
+    </a>
+
+    <a href="http://wa.me/573166672376" target="_blank" class="floating-whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- BOTÓN DE CAMBIO DE IDIOMA -->
+    <button class="floating-language-button" id="languageToggle">
+        <span class="lang-text" data-en="ES" data-es="EN">ES</span>
+    </button>
+
+    <!-- BOTÓN SCROLL TOP -->
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i> <span></span>
+    </a>
+
+    <!-- SCRIPT: SCROLL TOP -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const btnScroll = document.getElementById('scrollTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnScroll.classList.add('show');
+            } else {
+                btnScroll.classList.remove('show');
+            }
+        };
+        btnScroll.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- SCRIPT: MENÚ HAMBURGUESA -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        const routesToggle = document.querySelector('.routes-toggle');
+        const mobileSubmenu = document.querySelector('.mobile-submenu');
+
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!this.classList.contains('routes-toggle')) {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                } else {
+                    e.preventDefault();
+                    mobileSubmenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- SCRIPT: EMAIL FLOTANTE -->
+    <script>
+        function openEmail() {
+            const email = 'adha.anara.sanagustin@gmail.com';
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'intent://' + email + '#Intent;action=android.intent.action.SENDTO;scheme=mailto;end;';
+                setTimeout(function() { window.location.href = 'mailto:' + email; }, 500);
+            } else {
+                window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email, '_blank');
+            }
+        }
+    </script>
+
+    <!-- SCRIPT: CAMBIO DE IDIOMA -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        setLanguage(currentLanguage);
+
+        languageToggle.addEventListener('click', function() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            localStorage.setItem('language', currentLanguage);
+            setLanguage(currentLanguage);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.value = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+            const langText = languageToggle.querySelector('.lang-text');
+            langText.textContent = lang === 'en' ? 'ES' : 'EN';
+        }
+    </script>
+</body>
+</html>

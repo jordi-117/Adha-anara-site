@@ -13,6 +13,22 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+@media (max-width: 768px) {
+    .map-container-responsive {
+        height: auto !important;
+    }
+    .map-container-responsive img {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: unset !important;
+    }
+}
+</style>
 </head>
 <body>
     
@@ -79,6 +95,7 @@
     <!-- NAVEGACIÓN DE TABS -->
     <nav class="route-nav container">
         <button class="route-btn active" data-target="info" data-en="Information" data-es="Información">Information</button>
+        <button class="route-btn" data-target="map" data-en="Route Map" data-es="Mapa de Ruta">Route Map</button>
         <button class="route-btn" data-target="plan" data-en="Tour Plan" data-es="Plan del Tour">Tour Plan</button>
         <button class="route-btn" data-target="gallery" data-en="Gallery" data-es="Galería">Gallery</button>
     </nav>
@@ -98,19 +115,35 @@
                         the journey, becoming the central element of the adventure.</p>
                     </div>
 
+                    <!-- INCLUYE — media caja (columna 1) -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-check-circle" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Includes" data-es="Incluye">Includes</span></h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2; color: #444;">
+                            <li><i class="fas fa-binoculars" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Binoculars" data-es="Binoculares">Binoculars</span></li>
+                            <li><i class="fas fa-coffee" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Breakfast" data-es="Desayuno">Breakfast</span></li>
+                            <li><i class="fas fa-apple-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Snacks and hydration" data-es="Snacks e hidratación">Snacks and hydration</span></li>
+                            <li><i class="fas fa-user-tie" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Birdwatching guide" data-es="Guía de avistamiento">Birdwatching guide</span></li>
+                            <li><i class="fas fa-shield-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Medical insurance" data-es="Seguro médico">Medical insurance</span></li>
+                            <li><i class="fas fa-camera" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Photos and checklist" data-es="Fotos y lista de especies">Photos and checklist</span></li>
+                            <li><i class="fas fa-bus" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Private transportation (optional)" data-es="Transporte privado (opcional)">Private transportation (optional)</span></li>
+                        </ul>
+                    </div>
+                    <!-- DETALLES — media caja (columna 2) -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-list-ul" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Details" data-es="Detalles">Details</span></h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2; color: #444;">
+                            <li><i class="fas fa-clock" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Duration: Approximately 4 hours" data-es="Duración: Aproximadamente 4 horas">Duration: Approximately 4 hours</span></li>
+                            <li><i class="fas fa-route" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Hiking distance: 4 km (round trip)" data-es="Distancia de caminata: 4 km (ida y vuelta)">Hiking distance: 4 km (round trip)</span></li>
+                            <li><i class="fas fa-sun" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Start time: 6:00 am" data-es="Hora de inicio: 6:00 am">Start time: 6:00 am</span></li>
+                            <li><i class="fas fa-hiking" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Difficulty: Moderate" data-es="Dificultad: Moderada">Difficulty: Moderate</span></li>
+                            <li><i class="fas fa-mountain" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Altitude: 1,722 m.a.s.l." data-es="Altitud: 1.722 m.s.n.m.">Altitude: 1,722 m.a.s.l.</span></li>
+                            <li><i class="fas fa-feather-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Average number of species: 30–50" data-es="Número promedio de especies: 30–50">Average number of species: 30–50</span></li>
+                        </ul>
+                    </div>
+
                     <div class="info-item">
                         <h4><i class="fas fa-map-marker-alt" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Location" data-es="Ubicación">Location</span></h4>
                         <p data-en="Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia" data-es="Vereda La Chaquira, Municipio de San Agustín, Departamento del Huila, Colombia">Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4><i class="fas fa-hiking" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Difficulty" data-es="Dificultad">Difficulty</span></h4>
-                        <p data-en="Easy to Moderate" data-es="Fácil a Moderado">Easy to Moderate</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4><i class="fas fa-mountain" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Altitude" data-es="Altitud">Altitude</span></h4>
-                        <p data-en="1,700 – 2,000 m" data-es="1.700 – 2.000 m">1,700 – 2,000 m</p>
                     </div>
 
                     <div class="info-item">
@@ -125,23 +158,41 @@
 
                     <div class="info-item">
                         <h4><i class="fas fa-suitcase" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="What to bring" data-es="Qué traer">What to bring</span></h4>
-                        <p data-en="Comfortable hiking shoes, warm jacket, hat, binoculars, camera" data-es="Zapatos de senderismo cómodos, chaqueta abrigada, sombrero, binoculares, cámara">Comfortable hiking shoes, warm jacket, hat, binoculars, camera</p>
+                        <p data-en="Comfortable hiking shoes, warm jacket, hat, sunscreen, mosquito repellent" data-es="Zapatos de senderismo cómodos, chaqueta abrigada, sombrero, protector solar, repelente de mosquitos">Comfortable hiking shoes, warm jacket, hat, sunscreen, mosquito repellent</p>
                     </div>
 
                     <div class="info-item">
                         <h4><i class="fas fa-cloud-sun" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Climate" data-es="Clima">Climate</span></h4>
-                        <p data-en="Cool to cold in altitude, occasional rain, warm days in valleys" data-es="Fresco a frío en altura, lluvia ocasional, días cálidos en los valles">Cool to cold in altitude, occasional rain, warm days in valleys</p>
+                        <p data-en="Cool to cold in altitude, occasional rain, warm days most of the time" data-es="Fresco a frío en altura, lluvia ocasional, dias calurosos en la mayor parte del tiempo">Cool to cold in altitude, occasional rain, warm days most of the time</p>
                     </div>
 
                     <div class="info-item">
                         <h4><i class="fas fa-leaf" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Ecosystems" data-es="Ecosistemas">Ecosystems</span></h4>
-                        <p data-en="Cloud forests, moorlands, agricultural landscapes" data-es="Bosques de niebla, páramos, paisajes agrícolas">Cloud forests, moorlands, agricultural landscapes</p>
+                        <p data-en="Secondary forests, cloud forests, agricultural landscapes" data-es="Bosques secundarios, bosques de niebla, paisajes agrícolas">Secondary forests, Cloud forests, agricultural landscapes</p>
                     </div>
 
                     <div class="info-item">
-                        <h4><i class="fas fa-binoculars" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Expert guide" data-es="Guía experto">Expert guide</span></h4>
+                        <h4><i class="fas fa-binoculars" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Professional guide" data-es="Guía profesional">Professional guide</span></h4>
                         <p data-en="Professional birding guide with extensive local knowledge" data-es="Guía ornitológico profesional con amplio conocimiento local">Professional birding guide with extensive local knowledge</p>
                     </div>
+
+                    <!-- TIPOS DE COBERTURA — cabe en 1 columna del grid -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-tree" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Types of Plant Cover" data-es="Tipos de Cobertura Vegetal">Types of Plant Cover</span></h4>
+                        <p data-en="The cover is a Rural Mosaic, composed of remnants of sub-Andean forest (cloud forest), shade-grown coffee plantations and grazing areas." data-es="La cobertura es un Mosaico Rural, compuesto por remanentes de bosque subandino (bosque de niebla), cafetales bajo sombra y zonas de pastoreo.">The cover is a Rural Mosaic, composed of remnants of sub-Andean forest (cloud forest), shade-grown coffee plantations and grazing areas.</p>
+                    </div>
+
+                    <!-- ESPECIES DE INTERÉS — cabe en 1 columna del grid -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-dove" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Species of Interest" data-es="Especies de Interés">Species of Interest</span></h4>
+                        <p>
+                            <em><span data-en="Indigo-capped Hummingbird (E)" data-es="Colibrí Gorriazul (E)"></span> (Saucerottia cyanifrons)</em><br>
+                            <em><span data-en="Red-billed Emerald" data-es="Esmeralda Piquiroja"></span> (Chlorostilbon gibsoni)</em><br>
+                            <em><span data-en="Slaty Spinetail (E)" data-es="Rastrojero Pizarra (E)"></span> (Synallaxis brachyura)</em>
+                        </p>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -195,7 +246,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="howMeet" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
+                        <label for="howMeet" data-en="How did you meet Adha Anara? *" data-es="¿Cómo conociste a Adha Anara? *">How did you meet Adha Anara? <span class="required">*</span></label>
                         <select id="howMeet" name="howMeet" required>
                             <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
                             <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
@@ -219,6 +270,122 @@
                     <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
                 </form>
             </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- SECCIÓN: ROUTE MAP -->
+    <section id="map" class="route-section container">
+        <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+                <p style="color: #666; margin-bottom: 10px; font-size: 15px;"><i class="fas fa-map-marked-alt" style="margin-right: 8px; color: #1f9d55;"></i><span data-en="Explore the route on the map below." data-es="Explora la ruta en el mapa a continuación.">Explore the route on the map below.</span></p>
+                <p style="color: #555; margin-bottom: 24px; font-size: 14px;">
+                    <i class="fas fa-map-pin" style="margin-right: 6px; color: #1f9d55;"></i>
+                    <span data-en="Geographic Coordinates:" data-es="Coordenadas Geográficas:">Geographic Coordinates:</span>
+                    <strong> 1.89659 <span data-en="(Latitude)" data-es="(Latitud)">(Latitude)</span> · -76.27533 <span data-en="(Longitude)" data-es="(Longitud)">(Longitude)</span></strong>
+                </p>
+
+                <!-- Imagen del mapa con zoom y drag -->
+                <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid #d4edda; cursor: grab; background: #f0faf4; height: 480px;" id="mapContainer" class="map-container-responsive">
+                    <img id="routeMapImg"
+                         src="img-routes/Chaquira.png"
+                         alt="Route Map La Chaquira"
+                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; user-select: none; pointer-events: none; transform-origin: center center;"
+                    >
+                </div>
+                <p style="font-size: 13px; color: #999; margin-top: 10px; text-align: center;">
+                    <i class="fas fa-search-plus" style="margin-right: 5px;"></i>
+                    <span data-en="Scroll to zoom · Click and hold to pan" data-es="Scroll para zoom · Clic sostenido para mover">Scroll to zoom · Click and hold to pan</span>
+                </p>
+
+                <script>
+                (function() {
+                    const container = document.getElementById('mapContainer');
+                    const img = document.getElementById('routeMapImg');
+                    let scale = 1;
+                    let translateX = 0, translateY = 0;
+                    let isDragging = false;
+                    let startX, startY;
+
+                    function applyTransform() {
+                        img.style.transformOrigin = 'center center';
+                        img.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')';
+                    }
+
+                    // Scroll para zoom
+                    container.addEventListener('wheel', function(e) {
+                        e.preventDefault();
+                        scale += e.deltaY < 0 ? 0.2 : -0.2;
+                        scale = Math.min(Math.max(scale, 1), 4);
+                        if (scale === 1) { translateX = 0; translateY = 0; }
+                        applyTransform();
+                    }, { passive: false });
+
+                    // Click sostenido para mover (mouse)
+                    container.addEventListener('mousedown', function(e) {
+                        e.preventDefault();
+                        isDragging = true;
+                        startX = e.clientX - translateX;
+                        startY = e.clientY - translateY;
+                        container.style.cursor = 'grabbing';
+                        img.style.transition = 'none';
+                    });
+
+                    window.addEventListener('mousemove', function(e) {
+                        if (!isDragging) return;
+                        translateX = e.clientX - startX;
+                        translateY = e.clientY - startY;
+                        applyTransform();
+                    });
+
+                    window.addEventListener('mouseup', function() {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        container.style.cursor = 'grab';
+                        img.style.transition = 'transform 0.15s ease';
+                    });
+
+                    // Touch para móvil — drag con 1 dedo, zoom con 2
+                    let lastDist = 0;
+                    container.addEventListener('touchstart', function(e) {
+                        if (e.touches.length === 2) {
+                            lastDist = Math.hypot(
+                                e.touches[0].clientX - e.touches[1].clientX,
+                                e.touches[0].clientY - e.touches[1].clientY
+                            );
+                        } else if (e.touches.length === 1) {
+                            isDragging = true;
+                            startX = e.touches[0].clientX - translateX;
+                            startY = e.touches[0].clientY - translateY;
+                            img.style.transition = 'none';
+                        }
+                    }, { passive: true });
+
+                    container.addEventListener('touchmove', function(e) {
+                        e.preventDefault();
+                        if (e.touches.length === 2) {
+                            const dist = Math.hypot(
+                                e.touches[0].clientX - e.touches[1].clientX,
+                                e.touches[0].clientY - e.touches[1].clientY
+                            );
+                            scale *= dist / lastDist;
+                            scale = Math.min(Math.max(scale, 1), 4);
+                            lastDist = dist;
+                            applyTransform();
+                        } else if (e.touches.length === 1 && isDragging) {
+                            translateX = e.touches[0].clientX - startX;
+                            translateY = e.touches[0].clientY - startY;
+                            applyTransform();
+                        }
+                    }, { passive: false });
+
+                    container.addEventListener('touchend', function() {
+                        isDragging = false;
+                        img.style.transition = 'transform 0.15s ease';
+                    });
+                })();
+                </script>
         </div>
     </section>
 
@@ -335,7 +502,7 @@
     <section id="gallery" class="route-section container">
         <div class="section-wrapper gallery-wrapper">
             <div class="section-content">
-                <h2><i class="fas fa-images" style="margin-right: 10px; color: #1f9d55;"></i><span data-en="Gallery" data-es="Galería">Gallery</span></h2>
+                <h2><i class="fas fa-images" style="margin-right: 10px; color: #1f9d55;"></i><span data-en="" data-es="">Gallery</span></h2>
 
                 <div class="gallery-grid-sidebar">
                     <img src="img routes/1.jpg" alt="La Chaquira" class="gallery-img">
@@ -395,7 +562,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="howMeet3" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
+                        <label for="howMeet3" data-en="How did you meet Adha Anara? *" data-es="¿Cómo conociste a Adha Anara? *">How did you meet Adha Anara? <span class="required">*</span></label>
                         <select id="howMeet3" name="howMeet" required>
                             <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
                             <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
@@ -447,10 +614,10 @@
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
                 <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
     <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
-        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="b3d2d7dbd29dd2ddd2c1d29dc0d2ddd2d4c6c0c7daddf3d4ded2dadf9dd0dcde">[email&#160;protected]</span>
     </a>
     <a href="javascript:openEmail();" class="email-link email-mobile">
-        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="7514111d145b141b1407145b06141b14120006011c1b351218141c195b161a18">[email&#160;protected]</span>
     </a>
 </p>
                 <div class="social-icons">
@@ -462,6 +629,7 @@
                 <h3 data-en="Useful links" data-es="Enlaces útiles">Useful links</h3>
                 <ul>
                     <li><a href="terms-1.html" data-en="Terms and Conditions" data-es="Términos y Condiciones">Terms and Conditions</a></li>
+                    <li><a href="terms-2.html" data-en="Web Portal Terms of Use" data-es="Términos de Uso del Portal Web">Web Portal Terms of Use</a></li>
                 </ul>
                 <p data-en="Adha Anara Birdwatching © 2026. All Rights Reserved." data-es="Adha Anara Observación de Aves © 2026. Todos los Derechos Reservados.">Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
             </div>
@@ -490,7 +658,7 @@
     </a>
 
     <!-- JAVASCRIPT PARA TABS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         const buttons = document.querySelectorAll('.route-btn');
         const sections = document.querySelectorAll('.route-section');
 
