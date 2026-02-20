@@ -4,12 +4,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
-
     image-rendering: auto;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    will-change: transform;
 }
 
 /* Contenedor del texto */
