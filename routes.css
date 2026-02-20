@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    background-image: url('img routes/1.jpg');
+    background-image: url('img-routes/1.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,11 +31,11 @@
 /* TÍTULO */
 .header-txt h1 {
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 55px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.65);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
     margin: 0;
 }
 
@@ -209,7 +209,9 @@
 @media (max-width: 768px) {
 
     .header-txt h1 {
-        font-size: 3rem;
+        margin-top: 300px;
+        font-size: 35px;
+
     }
     
     .route-hero {
@@ -403,6 +405,7 @@
     top: 100px;
     height: fit-content;
     margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 .info-form-sidebar h3 {
@@ -728,5 +731,16 @@
 @media (max-width: 768px) {
     .route-info-grid {
         grid-template-columns: 1fr;
+    }
+}
+/* ---------- GALLERY: formulario centrado solo en móvil ---------- */
+@media (max-width: 1200px) {
+ .info-form-sidebar {
+        max-width: 500px;
+        margin: 0vw !important;
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 25px !important;
     }
 }

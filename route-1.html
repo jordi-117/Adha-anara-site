@@ -20,41 +20,67 @@
     <header class="header route-header">
         <div class="menu-container">
             <div class="menu container">
-                <img src="img logo/logo.png" alt="logoagencia" class="logo"/>
+                <img src="img-logo/logo.png" alt="logoagencia" class="logo"/>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <!-- REEMPLAZA el submenu de Our Routes en index.html -->
+                        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
                         <li class="has-submenu">
-                            <a href="#">Our Routes</a>
-                                <ul class="submenu">
-                                    <li><a href="route-1.html">Route 1</a></li>
-                                    <li><a href="route-2.html">Route 2</a></li>
-                                    <li><a href="route-3.html">Route 3</a></li>
-                                    <li><a href="route-4.html">Route 4</a></li>
-                                    <li><a href="route-5.html">Route 5</a></li>
-                                    <li><a href="route-6.html">Route 6</a></li>
-                                </ul>
+                            <a href="#" data-en="Our Routes" data-es="Nuestras Rutas">Our Routes</a>
+                            <ul class="submenu">
+                                <li><a href="route-1.html">Route 1</a></li>
+                                <li><a href="route-2.html">Route 2</a></li>
+                                <li><a href="route-3.html">Route 3</a></li>
+                                <li><a href="route-4.html">Route 4</a></li>
+                                <li><a href="route-5.html">Route 5</a></li>
+                                <li><a href="route-6.html">Route 6</a></li>
+                            </ul>
                         </li>       
-                        <li><a href="about us.html">About Us</a></li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="about us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                        <li><a href="contacts.html" data-en="Contact" data-es="Contacto">Contact</a></li>
                     </ul>
                 </nav>
-            </div>    
+            </div>
+
+            <!-- MENÚ HAMBURGUESA MÓVIL -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- MENÚ DESPLEGABLE MÓVIL -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li class="mobile-has-submenu">
+                        <a href="#" data-en="Our Routes" data-es="Nuestras Rutas" class="routes-toggle">Our Routes</a>
+                        <ul class="mobile-submenu">
+                            <li><a href="route-1.html">Route 1</a></li>
+                            <li><a href="route-2.html">Route 2</a></li>
+                            <li><a href="route-3.html">Route 3</a></li>
+                            <li><a href="route-4.html">Route 4</a></li>
+                            <li><a href="route-5.html">Route 5</a></li>
+                            <li><a href="route-6.html">Route 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about us.html" target="_blank" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                    <li><a href="contacts.html" target="_blank" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="header-content container">
             <div class="header-txt">
-                <h1>Birds of the Rural Mosaic in La Chaquira</h1>
+                <h1 data-en="Birds of the Rural Mosaic in La Chaquira" data-es="Aves del Mosaico Rural en La Chaquira">Birds of the Rural Mosaic in La Chaquira</h1>
             </div>            
         </div>
     </header>
 
     <!-- NAVEGACIÓN DE TABS -->
     <nav class="route-nav container">
-        <button class="route-btn active" data-target="info">Information</button>
-        <button class="route-btn" data-target="plan">Tour Plan</button>
-        <button class="route-btn" data-target="gallery">Gallery</button>
+        <button class="route-btn active" data-target="info" data-en="Information" data-es="Información">Information</button>
+        <button class="route-btn" data-target="plan" data-en="Tour Plan" data-es="Plan del Tour">Tour Plan</button>
+        <button class="route-btn" data-target="gallery" data-en="Gallery" data-es="Galería">Gallery</button>
     </nav>
 
     <!-- SECCIÓN: INFORMATION -->
@@ -64,8 +90,8 @@
 
                 <div class="route-info-grid">
                     <div class="info-item">
-                        <h4>Description</h4>
-                        <p>You will explore a region where ancient history coexists with birds native to the upper Magdalena River.
+                        <h4 data-en="Description" data-es="Descripción">Description</h4>
+                        <p data-en="You will explore a region where ancient history coexists with birds native to the upper Magdalena River. Along the way, you will observe Andean species while enjoying the river landscapes and the agricultural areas that characterize the region. This experience highlights the importance of conservation and how it fosters the presence of birds in the area. Their colors, songs, and movements will accompany you throughout the journey, becoming the central element of the adventure." data-es="Explorarás una región donde la historia antigua convive con aves nativas del alto río Magdalena. En el camino, observarás especies andinas mientras disfrutas de los paisajes fluviales y las zonas agrícolas que caracterizan la región. Esta experiencia destaca la importancia de la conservación y cómo fomenta la presencia de aves en el área. Sus colores, cantos y movimientos te acompañarán durante todo el recorrido, convirtiéndose en el elemento central de la aventura.">You will explore a region where ancient history coexists with birds native to the upper Magdalena River.
                         Along the way, you will observe Andean species while enjoying the river landscapes and the agricultural
                         areas that characterize the region. This experience highlights the importance of conservation and how it
                         fosters the presence of birds in the area. Their colors, songs, and movements will accompany you throughout
@@ -73,124 +99,124 @@
                     </div>
 
                     <div class="info-item">
-                        <h4>Location</h4>
-                        <p>Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia</p>
+                        <h4 data-en="Location" data-es="Ubicación">Location</h4>
+                        <p data-en="Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia" data-es="Vereda La Chaquira, Municipio de San Agustín, Departamento del Huila, Colombia">Hamlet La Chaquira, Municipality of San Agustín, Department of Huila, Colombia</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Difficulty</h4>
-                        <p>Easy to Moderate</p>
+                        <h4 data-en="Difficulty" data-es="Dificultad">Difficulty</h4>
+                        <p data-en="Easy to Moderate" data-es="Fácil a Moderado">Easy to Moderate</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Altitude</h4>
-                        <p>1,700 – 2,000 m</p>
+                        <h4 data-en="Altitude" data-es="Altitud">Altitude</h4>
+                        <p data-en="1,700 – 2,000 m" data-es="1.700 – 2.000 m">1,700 – 2,000 m</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Best time</h4>
-                        <p>Year round</p>
+                        <h4 data-en="Best time" data-es="Mejor época">Best time</h4>
+                        <p data-en="Year round" data-es="Todo el año">Year round</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Group size</h4>
-                        <p>Max 6 people</p>
+                        <h4 data-en="Group size" data-es="Tamaño del grupo">Group size</h4>
+                        <p data-en="Max 6 people" data-es="Máx. 6 personas">Max 6 people</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>What to bring</h4>
-                        <p>Comfortable hiking shoes, warm jacket, hat, binoculars, camera</p>
+                        <h4 data-en="What to bring" data-es="Qué traer">What to bring</h4>
+                        <p data-en="Comfortable hiking shoes, warm jacket, hat, binoculars, camera" data-es="Zapatos de senderismo cómodos, chaqueta abrigada, sombrero, binoculares, cámara">Comfortable hiking shoes, warm jacket, hat, binoculars, camera</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Climate</h4>
-                        <p>Cool to cold in altitude, occasional rain, warm days in valleys</p>
+                        <h4 data-en="Climate" data-es="Clima">Climate</h4>
+                        <p data-en="Cool to cold in altitude, occasional rain, warm days in valleys" data-es="Fresco a frío en altura, lluvia ocasional, días cálidos en los valles">Cool to cold in altitude, occasional rain, warm days in valleys</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Ecosystems</h4>
-                        <p>Cloud forests, moorlands, agricultural landscapes</p>
+                        <h4 data-en="Ecosystems" data-es="Ecosistemas">Ecosystems</h4>
+                        <p data-en="Cloud forests, moorlands, agricultural landscapes" data-es="Bosques de niebla, páramos, paisajes agrícolas">Cloud forests, moorlands, agricultural landscapes</p>
                     </div>
 
                     <div class="info-item">
-                        <h4>Expert guide</h4>
-                        <p>Professional birding guide with extensive local knowledge</p>
+                        <h4 data-en="Expert guide" data-es="Guía experto">Expert guide</h4>
+                        <p data-en="Professional birding guide with extensive local knowledge" data-es="Guía ornitológico profesional con amplio conocimiento local">Professional birding guide with extensive local knowledge</p>
                     </div>
                 </div>
             </div>
 
             <!-- FORMULARIO DE INFORMACIÓN -->
             <div class="info-form-sidebar">
-                <h3>Tours Information Request</h3>
-                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
                 
                 <form id="tourForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
                     <div class="form-group">
-                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <label for="firstName" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
                         <input type="text" id="firstName" name="firstName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <label for="lastName" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
                         <input type="text" id="lastName" name="lastName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
+                        <label for="email" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="country">Country <span class="required">*</span></label>
+                        <label for="country" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
                         <select id="country" name="country" required>
-                            <option value="">Select country</option>
-                            <option value="United States">United States</option>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
                             <option value="Canada">Canada</option>
-                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
                             <option value="Australia">Australia</option>
                             <option value="Colombia">Colombia</option>
-                            <option value="Other">Other</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone <span class="required">*</span></label>
+                        <label for="phone" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="departureDate">Departure date <span class="required">*</span></label>
+                        <label for="departureDate" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
                         <input type="date" id="departureDate" name="departureDate" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="groupSize">Number of travelers <span class="required">*</span></label>
+                        <label for="groupSize" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
                         <input type="number" id="groupSize" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="howMeet">How did you meet Manakin? <span class="required">*</span></label>
+                        <label for="howMeet" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
                         <select id="howMeet" name="howMeet" required>
-                            <option value="">Select option</option>
-                            <option value="Google Search">Google Search</option>
-                            <option value="Social Media">Social Media</option>
-                            <option value="Recommendation">Recommendation</option>
-                            <option value="Website">Website</option>
-                            <option value="Other">Other</option>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="other">Other (Please specify)</label>
+                        <label for="other" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
                         <textarea id="other" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-en="Message" data-es="Mensaje">Message</label>
                         <textarea id="message" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
                     </div>
 
-                    <button type="submit" class="form-submit-btn">Send Request</button>
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
                 </form>
             </div>
         </div>
@@ -200,106 +226,106 @@
     <section id="plan" class="route-section container">
         <div class="section-wrapper">
             <div class="section-content">
-                <h2>Tour Plan</h2>
+                <h2 data-en="Tour Plan" data-es="Plan del Tour">Tour Plan</h2>
 
                 <div class="plan-item">
                     <span>01</span>
-                    <p>Early morning birding along rural trails and forest edges. Observation of endemic and near-endemic species.</p>
+                    <p data-en="Early morning birding along rural trails and forest edges. Observation of endemic and near-endemic species." data-es="Observación de aves al amanecer por senderos rurales y bordes de bosque. Avistamiento de especies endémicas y casi endémicas.">Early morning birding along rural trails and forest edges. Observation of endemic and near-endemic species.</p>
                 </div>
 
                 <div class="plan-item">
                     <span>02</span>
-                    <p>Observation of coffee plantations and mixed agricultural landscapes. Spotting colorful tanagers and hummingbirds.</p>
+                    <p data-en="Observation of coffee plantations and mixed agricultural landscapes. Spotting colorful tanagers and hummingbirds." data-es="Observación de cafetales y paisajes agrícolas mixtos. Avistamiento de tángaras coloridas y colibríes.">Observation of coffee plantations and mixed agricultural landscapes. Spotting colorful tanagers and hummingbirds.</p>
                 </div>
 
                 <div class="plan-item">
                     <span>03</span>
-                    <p>Strategic stops for endemic and regional bird species. Exploration of cloud forest habitats and moorland ecosystems.</p>
+                    <p data-en="Strategic stops for endemic and regional bird species. Exploration of cloud forest habitats and moorland ecosystems." data-es="Paradas estratégicas para especies endémicas y regionales. Exploración de hábitats de bosque nuboso y ecosistemas de páramo.">Strategic stops for endemic and regional bird species. Exploration of cloud forest habitats and moorland ecosystems.</p>
                 </div>
 
                 <div class="plan-item">
                     <span>04</span>
-                    <p>Return walk with panoramic views of the Magdalena Valley. Final observations and species documentation.</p>
+                    <p data-en="Return walk with panoramic views of the Magdalena Valley. Final observations and species documentation." data-es="Caminata de regreso con vistas panorámicas del Valle del Magdalena. Observaciones finales y documentación de especies.">Return walk with panoramic views of the Magdalena Valley. Final observations and species documentation.</p>
                 </div>
 
                 <div class="plan-item">
                     <span>05</span>
-                    <p>Optional evening birding session. Photography opportunities during golden hour with scenic mountain backdrops.</p>
+                    <p data-en="Optional evening birding session. Photography opportunities during golden hour with scenic mountain backdrops." data-es="Sesión opcional de observación vespertina. Oportunidades fotográficas durante la hora dorada con paisajes de montaña.">Optional evening birding session. Photography opportunities during golden hour with scenic mountain backdrops.</p>
                 </div>
             </div>
 
             <!-- FORMULARIO DE INFORMACIÓN -->
             <div class="info-form-sidebar">
-                <h3>Tours Information Request</h3>
-                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
                 
                 <form id="tourForm2" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
                     <div class="form-group">
-                        <label for="firstName2">First Name <span class="required">*</span></label>
+                        <label for="firstName2" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
                         <input type="text" id="firstName2" name="firstName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="lastName2">Last Name <span class="required">*</span></label>
+                        <label for="lastName2" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
                         <input type="text" id="lastName2" name="lastName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email2">Email <span class="required">*</span></label>
+                        <label for="email2" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
                         <input type="email" id="email2" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="country2">Country <span class="required">*</span></label>
+                        <label for="country2" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
                         <select id="country2" name="country" required>
-                            <option value="">Select country</option>
-                            <option value="United States">United States</option>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
                             <option value="Canada">Canada</option>
-                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
                             <option value="Australia">Australia</option>
                             <option value="Colombia">Colombia</option>
-                            <option value="Other">Other</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone2">Phone <span class="required">*</span></label>
+                        <label for="phone2" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
                         <input type="tel" id="phone2" name="phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="departureDate2">Departure date <span class="required">*</span></label>
+                        <label for="departureDate2" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
                         <input type="date" id="departureDate2" name="departureDate" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="groupSize2">Number of travelers <span class="required">*</span></label>
+                        <label for="groupSize2" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
                         <input type="number" id="groupSize2" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="howMeet2">How did you meet Manakin? <span class="required">*</span></label>
+                        <label for="howMeet2" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
                         <select id="howMeet2" name="howMeet" required>
-                            <option value="">Select option</option>
-                            <option value="Google Search">Google Search</option>
-                            <option value="Social Media">Social Media</option>
-                            <option value="Recommendation">Recommendation</option>
-                            <option value="Website">Website</option>
-                            <option value="Other">Other</option>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="other2">Other (Please specify)</label>
+                        <label for="other2" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
                         <textarea id="other2" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="message2">Message</label>
+                        <label for="message2" data-en="Message" data-es="Mensaje">Message</label>
                         <textarea id="message2" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
                     </div>
 
-                    <button type="submit" class="form-submit-btn">Send Request</button>
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
                 </form>
             </div>
         </div>
@@ -307,9 +333,9 @@
 
     <!-- SECCIÓN: GALLERY -->
     <section id="gallery" class="route-section container">
-        <div class="section-wrapper">
+        <div class="section-wrapper gallery-wrapper">
             <div class="section-content">
-                <h2>Gallery</h2>
+                <h2 data-en="Gallery" data-es="Galería">Gallery</h2>
 
                 <div class="gallery-grid-sidebar">
                     <img src="img routes/1.jpg" alt="La Chaquira" class="gallery-img">
@@ -321,76 +347,76 @@
 
             <!-- FORMULARIO DE INFORMACIÓN -->
             <div class="info-form-sidebar">
-                <h3>Tours Information Request</h3>
-                <p class="form-subtitle">Fields marked with an <span class="required">*</span> are required</p>
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
                 
                 <form id="tourForm3" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
                     <div class="form-group">
-                        <label for="firstName3">First Name <span class="required">*</span></label>
+                        <label for="firstName3" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
                         <input type="text" id="firstName3" name="firstName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="lastName3">Last Name <span class="required">*</span></label>
+                        <label for="lastName3" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
                         <input type="text" id="lastName3" name="lastName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email3">Email <span class="required">*</span></label>
+                        <label for="email3" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
                         <input type="email" id="email3" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="country3">Country <span class="required">*</span></label>
+                        <label for="country3" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
                         <select id="country3" name="country" required>
-                            <option value="">Select country</option>
-                            <option value="United States">United States</option>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
                             <option value="Canada">Canada</option>
-                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
                             <option value="Australia">Australia</option>
                             <option value="Colombia">Colombia</option>
-                            <option value="Other">Other</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone3">Phone <span class="required">*</span></label>
+                        <label for="phone3" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
                         <input type="tel" id="phone3" name="phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="departureDate3">Departure date <span class="required">*</span></label>
+                        <label for="departureDate3" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
                         <input type="date" id="departureDate3" name="departureDate" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="groupSize3">Number of travelers <span class="required">*</span></label>
+                        <label for="groupSize3" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
                         <input type="number" id="groupSize3" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="howMeet3">How did you meet Manakin? <span class="required">*</span></label>
+                        <label for="howMeet3" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
                         <select id="howMeet3" name="howMeet" required>
-                            <option value="">Select option</option>
-                            <option value="Google Search">Google Search</option>
-                            <option value="Social Media">Social Media</option>
-                            <option value="Recommendation">Recommendation</option>
-                            <option value="Website">Website</option>
-                            <option value="Other">Other</option>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="other3">Other (Please specify)</label>
+                        <label for="other3" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
                         <textarea id="other3" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="message3">Message</label>
+                        <label for="message3" data-en="Message" data-es="Mensaje">Message</label>
                         <textarea id="message3" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
                     </div>
 
-                    <button type="submit" class="form-submit-btn">Send Request</button>
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
                 </form>
             </div>
         </div>
@@ -408,36 +434,42 @@
 
     <!-- SECCIÓN: SPECIES HIGHLIGHTS -->
     <section class="route-section container species-section">
-        <h2 style="text-align: center; margin-bottom: 30px;">Key Bird Species</h2>
-        <p style="text-align: center; font-size: 16px; line-height: 1.6; max-width: 900px; margin: 0 auto;">This route offers excellent opportunities to observe colorful tanagers, iridescent hummingbirds, shy antpittas, and incredible toucans. You may encounter endemic species found only in Colombian highlands, including specialized moorland birds and cloud forest specialists. Photography opportunities are excellent throughout the day.</p>
+        <h2 style="text-align: center; margin-bottom: 30px;" data-en="Key Bird Species" data-es="Especies Clave de Aves">Key Bird Species</h2>
+        <p style="text-align: center; font-size: 16px; line-height: 1.6; max-width: 900px; margin: 0 auto;" data-en="This route offers excellent opportunities to observe colorful tanagers, iridescent hummingbirds, shy antpittas, and incredible toucans. You may encounter endemic species found only in Colombian highlands, including specialized moorland birds and cloud forest specialists. Photography opportunities are excellent throughout the day." data-es="Esta ruta ofrece excelentes oportunidades para observar tángaras coloridas, colibríes iridiscentes, tímidos hormigueros y increíbles tucanes. Podrás encontrar especies endémicas exclusivas de las tierras altas colombianas, incluyendo aves especializadas de páramo y especialistas del bosque nuboso. Las oportunidades fotográficas son excelentes durante todo el día.">This route offers excellent opportunities to observe colorful tanagers, iridescent hummingbirds, shy antpittas, and incredible toucans. You may encounter endemic species found only in Colombian highlands, including specialized moorland birds and cloud forest specialists. Photography opportunities are excellent throughout the day.</p>
     </section>
 
-    <!-- FOOTER (igual que index.html) -->
+    <!-- FOOTER -->
     <footer class="footer container">
         <div class="footer-columns">
             <div class="footer-contact">
-                <h3>Contact</h3>
-                <p>Phone: <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376</a></p>
-                <p>E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e5f5a565f105f505f4c5f104d5f505f594b4d4a57507e59535f5752105d5153">[email&#160;protected]</a></p>
+                <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376 - Diana Escobar</a></p>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
+                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
+    <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
+        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+    </a>
+    <a href="mailto:adha.anara.sanagustin@gmail.com" class="email-link email-mobile" target="_blank">
+        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+    </a>
+</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61575661111982" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>                   
+                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>adha.anara</a>
                 </div>
             </div>
 
             <div class="footer-links">
-                <h3>Useful links</h3>
+                <h3 data-en="Useful links" data-es="Enlaces útiles">Useful links</h3>
                 <ul>
-                    <li><a href="terms.html" target="_blank">Terms and Conditions</a></li>
+                    <li><a href="terms.html" target="_blank" data-en="Terms and Conditions" data-es="Términos y Condiciones">Terms and Conditions</a></li>
                 </ul>
-                <p>Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
+                <p data-en="Adha Anara Birdwatching © 2026. All Rights Reserved." data-es="Adha Anara Observación de Aves © 2026. Todos los Derechos Reservados.">Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- BOTONES FLOTANTES -->
-    <a href="http://mail.google.com/mail/?view=cm&fs=1&to=adha.anara.sanagustin@gmail.com&su=Tour%20Inquiry&body=Hello,%20I%20would%20like%20more%20information%20about%20your%20birdwatching%20tours." 
-       target="_blank" class="floating-email-button">
+    <a href="javascript:openEmail();" class="floating-email-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
             <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
         </svg>
@@ -445,6 +477,16 @@
 
     <a href="http://wa.me/573166672376" target="_blank" class="floating-whatsapp-button">
         <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- BOTÓN DE CAMBIO DE IDIOMA -->
+    <button class="floating-language-button" id="languageToggle">
+        <span class="lang-text" data-en="ES" data-es="EN">ES</span>
+    </button>
+
+    <!-- BOTÓN SCROLL TOP -->
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i> <span></span>
     </a>
 
     <!-- JAVASCRIPT PARA TABS -->
@@ -458,17 +500,10 @@
 
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Ocultar todas las secciones
                 sections.forEach(s => s.style.display = 'none');
-
-                // Quitar estado activo de todos los botones
                 buttons.forEach(b => b.classList.remove('active'));
-
-                // Mostrar sección correspondiente
                 const target = btn.dataset.target;
                 document.getElementById(target).style.display = 'block';
-
-                // Activar botón actual
                 btn.classList.add('active');
             });
         });
@@ -483,7 +518,6 @@
         let currentImageIndex = 0;
         let currentZoom = 1;
 
-        // Abrir lightbox al hacer click en imagen
         galleryImages.forEach((img, index) => {
             img.addEventListener('click', () => {
                 currentImageIndex = index;
@@ -495,7 +529,6 @@
             });
         });
 
-        // Cerrar lightbox
         lightboxClose.addEventListener('click', () => {
             lightbox.style.display = 'none';
             document.body.style.overflow = 'auto';
@@ -510,7 +543,6 @@
             }
         });
 
-        // Zoom con rueda del mouse
         lightbox.addEventListener('wheel', (e) => {
             if (lightbox.style.display === 'flex') {
                 e.preventDefault();
@@ -524,7 +556,6 @@
             }
         }, { passive: false });
 
-        // Navegación de imágenes
         lightboxNext.addEventListener('click', () => {
             currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
             lightboxImg.src = galleryImages[currentImageIndex].src;
@@ -539,7 +570,6 @@
             lightboxImg.style.transform = `scale(${currentZoom})`;
         });
 
-        // Navegación con teclado
         document.addEventListener('keydown', (e) => {
             if (lightbox.style.display === 'flex') {
                 if (e.key === 'ArrowRight') lightboxNext.click();
@@ -553,31 +583,91 @@
         });
     </script>
 
-    <a href="#" class="btn-scroll-top" id="scrollTop">
-    <i class="fas fa-chevron-up"></i> <span></span>
-    </a>
+    <!-- SCRIPT PARA BOTÓN SCROLL TOP -->
+    <script>
+        const btnScroll = document.getElementById('scrollTop');
 
-<script>
-    const btnScroll = document.getElementById('scrollTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnScroll.classList.add('show');
+            } else {
+                btnScroll.classList.remove('show');
+            }
+        };
 
-    window.onscroll = function() {
-        // Si bajamos más de 300px, mostramos el botón
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btnScroll.classList.add('show');
-        } else {
-            btnScroll.classList.remove('show');
-        }
-    };
-
-    // Al hacer click, sube suavemente
-    btnScroll.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        btnScroll.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    });
-</script>
+    </script>
+
+    <!-- SCRIPT PARA MENÚ HAMBURGUESA -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        const routesToggle = document.querySelector('.routes-toggle');
+        const mobileSubmenu = document.querySelector('.mobile-submenu');
+
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!this.classList.contains('routes-toggle')) {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                } else {
+                    e.preventDefault();
+                    mobileSubmenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- SCRIPT PARA EMAIL FLOTANTE (DESKTOP / MÓVIL) -->
+    <script>
+        function openEmail() {
+            const email = 'adha.anara.sanagustin@gmail.com';
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'intent://' + email + '#Intent;action=android.intent.action.SENDTO;scheme=mailto;end;';
+                setTimeout(function() {
+                    window.location.href = 'mailto:' + email;
+                }, 500);
+            } else {
+                window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email, '_blank');
+            }
+        }
+    </script>
+
+    <!-- JAVASCRIPT PARA CAMBIO DE IDIOMA -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        setLanguage(currentLanguage);
+
+        languageToggle.addEventListener('click', function() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            localStorage.setItem('language', currentLanguage);
+            setLanguage(currentLanguage);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.value = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

@@ -801,7 +801,7 @@ body {
 }
 
 .email-link i {
-    color: #21ba66;
+    color: #fff;
 }
 
 .footer-links ul {
@@ -818,7 +818,7 @@ body {
 
 .social-icons a {
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     margin-right: 15px;
     display: inline-block;
 }
@@ -967,7 +967,9 @@ body {
         right: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         z-index: 999;
         padding-top: 80px;
         overflow-y: auto;
@@ -988,13 +990,13 @@ body {
 
     .mobile-menu ul li {
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .mobile-menu ul li a {
         display: block;
         padding: 18px 25px;
-        color: #ffffff;
+        color: #2c2c2c;
         font-size: 16px;
         font-weight: 500;
         text-decoration: none;
