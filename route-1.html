@@ -118,7 +118,7 @@
                     <!-- INCLUYE — media caja (columna 1) -->
                     <div class="info-item">
                         <h4><i class="fas fa-check-circle" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Includes" data-es="Incluye">Includes</span></h4>
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2; color: #444;">
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; line-height: 2; color: #333;">
                             <li><i class="fas fa-binoculars" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Binoculars" data-es="Binoculares">Binoculars</span></li>
                             <li><i class="fas fa-coffee" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Breakfast" data-es="Desayuno">Breakfast</span></li>
                             <li><i class="fas fa-apple-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Snacks and hydration" data-es="Snacks e hidratación">Snacks and hydration</span></li>
@@ -131,7 +131,7 @@
                     <!-- DETALLES — media caja (columna 2) -->
                     <div class="info-item">
                         <h4><i class="fas fa-list-ul" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Details" data-es="Detalles">Details</span></h4>
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2; color: #444;">
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; line-height: 2; color: #333;">
                             <li><i class="fas fa-clock" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Duration: Approximately 4 hours" data-es="Duración: Aproximadamente 4 horas">Duration: Approximately 4 hours</span></li>
                             <li><i class="fas fa-route" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Hiking distance: 4 km (round trip)" data-es="Distancia de caminata: 4 km (ida y vuelta)">Hiking distance: 4 km (round trip)</span></li>
                             <li><i class="fas fa-sun" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Start time: 6:00 am" data-es="Hora de inicio: 6:00 am">Start time: 6:00 am</span></li>
@@ -277,27 +277,29 @@
 
 
     <!-- SECCIÓN: ROUTE MAP -->
-    <section id="map" class="route-section container">
-        <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-                <p style="color: #666; margin-bottom: 10px; font-size: 15px;"><i class="fas fa-map-marked-alt" style="margin-right: 8px; color: #1f9d55;"></i><span data-en="Explore the route on the map below." data-es="Explora la ruta en el mapa a continuación.">Explore the route on the map below.</span></p>
-                <p style="color: #555; margin-bottom: 24px; font-size: 14px;">
-                    <i class="fas fa-map-pin" style="margin-right: 6px; color: #1f9d55;"></i>
-                    <span data-en="Geographic Coordinates:" data-es="Coordenadas Geográficas:">Geographic Coordinates:</span>
-                    <strong> 1.89659 <span data-en="(Latitude)" data-es="(Latitud)">(Latitude)</span> · -76.27533 <span data-en="(Longitude)" data-es="(Longitud)">(Longitude)</span></strong>
+    <section id="map" class="route-section container" style="padding: 0 0 40px;">
+        <!-- Wrapper que envuelve textos + mapa con el mismo ancho y centrado -->
+        <div style="width: 75%; margin: 0 auto;" id="mapWrapper">
+                <p style="color: #666; margin-bottom: 10px; font-size: 16px;"><i class="fas fa-map-marked-alt" style="margin-right: 8px; color: #1f9d55;"></i><strong><span data-en="Explore the route on the map below." data-es="Explora la ruta en el mapa a continuación.">Explore the route on the map below.</span></strong></p>
+                <p style="color: #111; margin-bottom: 16px; font-size: 16px;">
+                    <i class="fas fa-map-pin" style="font-size: 18px; color: #1f9d55; margin-right: 8px;"></i>
+                    <span data-en="Geographic Coordinates:" data-es="Coordenadas Geográficas:"><strong>Geographic Coordinates:</strong></span>
+                    &nbsp;1.89659 <span data-en="(Latitude)" data-es="(Latitud)">(Latitude)</span> &nbsp;·&nbsp; -76.27533 <span data-en="(Longitude)" data-es="(Longitud)">(Longitude)</span>
                 </p>
 
                 <!-- Imagen del mapa con zoom y drag -->
-                <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid #d4edda; cursor: grab; background: #f0faf4; height: 480px;" id="mapContainer" class="map-container-responsive">
+                <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid #d4edda; cursor: grab; background: #f5f5f5;" id="mapContainer" class="map-container-responsive">
                     <img id="routeMapImg"
                          src="img-routes/Chaquira.png"
                          alt="Route Map La Chaquira"
-                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; user-select: none; pointer-events: none; transform-origin: center center;"
+                         style="width: 100%; height: auto; display: block; user-select: none; pointer-events: none; transform-origin: center center;"
                     >
                 </div>
                 <p style="font-size: 13px; color: #999; margin-top: 10px; text-align: center;">
                     <i class="fas fa-search-plus" style="margin-right: 5px;"></i>
                     <span data-en="Scroll to zoom · Click and hold to pan" data-es="Scroll para zoom · Clic sostenido para mover">Scroll to zoom · Click and hold to pan</span>
                 </p>
+        </div><!-- fin mapWrapper -->
 
                 <script>
                 (function() {
@@ -334,8 +336,14 @@
 
                     window.addEventListener('mousemove', function(e) {
                         if (!isDragging) return;
-                        translateX = e.clientX - startX;
-                        translateY = e.clientY - startY;
+                        const imgW = img.offsetWidth * scale;
+                        const imgH = img.offsetHeight * scale;
+                        const cW = container.offsetWidth;
+                        const cH = container.offsetHeight;
+                        const maxX = Math.max(0, (imgW - cW) / 2);
+                        const maxY = Math.max(0, (imgH - cH) / 2);
+                        translateX = Math.min(maxX, Math.max(-maxX, e.clientX - startX));
+                        translateY = Math.min(maxY, Math.max(-maxY, e.clientY - startY));
                         applyTransform();
                     });
 
@@ -374,8 +382,14 @@
                             lastDist = dist;
                             applyTransform();
                         } else if (e.touches.length === 1 && isDragging) {
-                            translateX = e.touches[0].clientX - startX;
-                            translateY = e.touches[0].clientY - startY;
+                            const imgW = img.offsetWidth * scale;
+                            const imgH = img.offsetHeight * scale;
+                            const cW = container.offsetWidth;
+                            const cH = container.offsetHeight;
+                            const maxX = Math.max(0, (imgW - cW) / 2);
+                            const maxY = Math.max(0, (imgH - cH) / 2);
+                            translateX = Math.min(maxX, Math.max(-maxX, e.touches[0].clientX - startX));
+                            translateY = Math.min(maxY, Math.max(-maxY, e.touches[0].clientY - startY));
                             applyTransform();
                         }
                     }, { passive: false });
