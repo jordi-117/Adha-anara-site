@@ -9,6 +9,18 @@
     image-rendering: auto;
 }
 
+@media (min-width: 769px) {
+    .header {
+        background-position: center 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-position: 35% 25% !important;
+    }
+}
+
 /* Contenedor del texto */
 .header-content {
     position: absolute;
@@ -397,7 +409,7 @@
 /* ---------- INFO SECTION BOTTOM SPACING (PC only) ---------- */
 @media (min-width: 1201px) {
     #info.route-section {
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
     #birdlist.route-section {
         margin-bottom: 100px;
@@ -507,7 +519,7 @@
     color: #fff;
     border: none;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 600;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -790,7 +802,7 @@
     }
 
     .form-submit-btn {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 /* ---------- BIRD LIST SECTION ---------- */
@@ -907,9 +919,9 @@
 
 .bird-badge {
     display: inline-block;
-    padding: 3px 7px;
+    padding: 4px 9px;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.3px;
@@ -918,7 +930,29 @@
 }
 
 @media (max-width: 768px) {
-    .bird-badge { font-size: 9px; padding: 2px 6px; }
+    .bird-badge { font-size: 12px; padding: 3px 8px; }
     .bird-common { font-size: 16px; }
     .bird-scientific { font-size: 14px; }
+}
+/* ---------- BIRD FAMILY DIET ---------- */
+.bird-family-diet {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    font-style: italic;
+    margin-top: 2px;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+    .bird-family-diet {
+        font-size: 11px;
+    }
+}
+
+.bird-family-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
