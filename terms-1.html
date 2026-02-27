@@ -95,7 +95,7 @@
         <p style="margin-bottom: 30px;" data-en="Adha Anara Birdwatching is not responsible for loss of personal belongings, delays caused by weather or road conditions, or any events beyond our control. We strongly recommend that all participants obtain travel insurance prior to their visit." data-es="Adha Anara Birdwatching no es responsable por la pérdida de pertenencias personales, retrasos causados por condiciones climáticas o viales, ni por eventos fuera de nuestro control. Recomendamos que todos los participantes obtengan un seguro de viaje antes de su visita.">Adha Anara Birdwatching is not responsible for loss of personal belongings, delays caused by weather or road conditions, or any events beyond our control. We strongly recommend that all participants obtain travel insurance prior to their visit.</p>
 
         <h2 style="font-size: 22px; color: #1f9d55; margin-bottom: 15px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i><span data-en="8. Contact" data-es="8. Contacto">8. Contact</span></h2>
-        <p style="margin-bottom: 30px;" data-en="For any questions regarding these Terms and Conditions, please contact us via WhatsApp or email at adha.anara.sanagustin@gmail.com." data-es="Para cualquier pregunta sobre estos Términos y Condiciones, contáctanos por WhatsApp o correo electrónico a adha.anara.sanagustin@gmail.com.">For any questions regarding these Terms and Conditions, please contact us via WhatsApp or email at adha.anara.sanagustin@gmail.com.</p>
+        <p style="margin-bottom: 30px;" data-en="For any questions regarding these Terms and Conditions, please contact us via WhatsApp or email at adha.anara.sanagustin@gmail.com." data-es="Para cualquier pregunta sobre estos Términos y Condiciones, contáctanos por WhatsApp o correo electrónico a adha.anara.sanagustin@gmail.com.">For any questions regarding these Terms and Conditions, please contact us via WhatsApp or email at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e3f3a363f703f303f2c3f702d3f303f392b2d2a37301e39333f3732703d3133">[email&#160;protected]</a>.</p>
 
         <h2 style="font-size: 22px; color: #1f9d55; margin-bottom: 15px;"><i class="fas fa-binoculars" style="margin-right: 10px;"></i><span data-en="9. Nature of the Activity" data-es="9. Naturaleza de la Actividad">9. Nature of the Activity</span></h2>
         <p style="margin-bottom: 30px;" data-en="Birdwatching and nature tourism activities take place in rural and natural environments, so sightings depend on weather conditions, time of day, wildlife behavior, and ecosystem conditions. The sighting of specific species is not guaranteed." data-es="Las actividades de avistamiento de aves y turismo de naturaleza se desarrollan en entornos rurales y naturales, por lo que los avistamientos dependen de las condiciones climáticas, la hora del día, el comportamiento de la fauna y las condiciones del ecosistema. No se garantiza el avistamiento de especies específicas.">Birdwatching and nature tourism activities take place in rural and natural environments, so sightings depend on weather conditions, time of day, wildlife behavior, and ecosystem conditions. The sighting of specific species is not guaranteed.</p>
@@ -185,16 +185,26 @@
     </a>
 
     <!-- SCRIPTS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const menuLinks = mobileMenu.querySelectorAll('a');
         const routesToggle = document.querySelector('.routes-toggle');
         const mobileSubmenu = document.querySelector('.mobile-submenu');
 
+        // SCRIPT PARA MENÚ MÓVIL
+
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar al tocar el fondo del menú (fuera de los links)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
 
         menuLinks.forEach(link => {
@@ -280,6 +290,3 @@
         }
     });
 </script>
-
-</body>
-</html>

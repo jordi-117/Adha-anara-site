@@ -410,9 +410,19 @@
         const routesToggle = document.querySelector('.routes-toggle');
         const mobileSubmenu = document.querySelector('.mobile-submenu');
 
+        // SCRIPT PARA MENÚ MÓVIL
+
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar al tocar el fondo del menú (fuera de los links)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
 
         menuLinks.forEach(link => {
