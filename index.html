@@ -369,16 +369,21 @@
         const routesToggle = document.querySelector('.routes-toggle');
         const mobileSubmenu = document.querySelector('.mobile-submenu');
 
-        // Abrir/cerrar menú
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer click en un enlace
+        // Cerrar al tocar el fondo del menú (fuera de los links)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
         menuLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Si no es el toggle de routes, cerrar el menú
                 if (!this.classList.contains('routes-toggle')) {
                     mobileMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -389,6 +394,7 @@
             });
         });
 
+        // SCRIPT PARA ANIMACIÓN DE STATS
         const stats = document.querySelectorAll('.stat-circle');
 
         function isVisible(elem) {
@@ -436,16 +442,6 @@
                 animateStats();
             } else {
                 resetStats();
-            }
-        });
-    
-        // Cerrar menú al tocar fuera (solo móvil)
-        document.addEventListener("click", function(e) {
-            if (mobileMenu.classList.contains("active") &&
-                !mobileMenu.contains(e.target) &&
-                !menuToggle.contains(e.target)) {
-                mobileMenu.classList.remove("active");
-                menuToggle.classList.remove("active");
             }
         });
     </script>

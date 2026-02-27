@@ -1029,10 +1029,10 @@
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
                 <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
     <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
-        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="0f6e6b676e216e616e7d6e217c6e616e687a7c7b66614f68626e6663216c6062">[email&#160;protected]</span>
     </a>
     <a href="javascript:openEmail();" class="email-link email-mobile">
-        <i class="fas fa-envelope"></i> adha.anara.sanagustin@gmail.com
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="19787d7178377877786b78376a7877787e6c6a6d7077597e74787075377a7674">[email&#160;protected]</span>
     </a>
 </p>
                 <div class="social-icons">
@@ -1073,7 +1073,7 @@
     </a>
 
     <!-- JAVASCRIPT PARA TABS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         const buttons = document.querySelectorAll('.route-btn');
         const sections = document.querySelectorAll('.route-section');
 
@@ -1208,6 +1208,16 @@
                 }
             });
         });
+    
+        // Cerrar menú al tocar fuera (solo móvil)
+        document.addEventListener("click", function(e) {
+            if (mobileMenu.classList.contains("active") &&
+                !mobileMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                mobileMenu.classList.remove("active");
+                menuToggle.classList.remove("active");
+            }
+        });
     </script>
 
     <!-- SCRIPT PARA EMAIL FLOTANTE (DESKTOP / MÓVIL) -->
@@ -1261,7 +1271,7 @@
     });
 
     document.addEventListener('touchend', function(e) {
-        const touchEndX = e.changedTouches[0].clientX;
+    const touchEndX = e.changedTouches[0].clientX;
         const diff = touchEndX - touchStartX;
 
         // Solo si empieza desde el borde izquierdo (primeros 30px) y desliza +80px
