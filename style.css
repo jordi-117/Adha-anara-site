@@ -108,11 +108,28 @@ body {
     z-index: 4;
 }
 
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.logo-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 100px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    pointer-events: none;
+    z-index: 10;
+}
+
 .logo {
     width: 120px;
     height: auto;
-    margin-right: 20px;
     border-radius: 100px;
+    display: block;
 }
 
 .navbar {

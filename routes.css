@@ -1,12 +1,15 @@
 .header {
     position: relative;
-    background-image: url('img-routes/1.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
     image-rendering: auto;
+}
+
+.route-header {
+    background-image: url('img-routes/1.jpg');
 }
 
 @media (min-width: 769px) {
@@ -412,7 +415,7 @@
         margin-bottom: 60px;
     }
     #birdlist.route-section {
-        margin-bottom: 100px;
+        margin-bottom: 30px;
     }
     .plan-title {
         margin-left: 75px;
