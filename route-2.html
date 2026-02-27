@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route 2 - Nature Reserve El Oso - On Summits and Fog</title>
+    
+    <!-- CSS GLOBAL del index -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS específico de Routes -->
+    <link rel="stylesheet" href="routes.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+@media (max-width: 768px) {
+    .map-container-responsive {
+        height: auto !important;
+    }
+    .map-container-responsive img {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: unset !important;
+    }
+}
+
+.route-header-2 {
+    background-image: url('img-routes/2.jpg');
+}
+</style>
+</head>
+<body>
+    
+    <!-- HEADER CON MENÚ (igual que index.html) -->
+    <header class="header route-header-2">
+        <div class="menu-container">
+            <div class="menu container">
+                <img src="img-logo/logo.png" alt="logoagencia" class="logo"/>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li class="has-submenu">
+                            <a href="#" data-en="Our Routes" data-es="Nuestras Rutas">Our Routes</a>
+                            <ul class="submenu">
+                                <li><a href="route-1.html">Route 1</a></li>
+                                <li><a href="route-2.html">Route 2</a></li>
+                                <li><a href="route-3.html">Route 3</a></li>
+                                <li><a href="route-4.html">Route 4</a></li>
+                                <li><a href="route-5.html">Route 5</a></li>
+                                <li><a href="route-6.html">Route 6</a></li>
+                            </ul>
+                        </li>       
+                        <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- MENÚ HAMBURGUESA MÓVIL -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- MENÚ DESPLEGABLE MÓVIL -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li class="mobile-has-submenu">
+                        <a href="#" data-en="Our Routes" data-es="Nuestras Rutas" class="routes-toggle">Our Routes</a>
+                        <ul class="mobile-submenu">
+                            <li><a href="route-1.html">Route 1</a></li>
+                            <li><a href="route-2.html">Route 2</a></li>
+                            <li><a href="route-3.html">Route 3</a></li>
+                            <li><a href="route-4.html">Route 4</a></li>
+                            <li><a href="route-5.html">Route 5</a></li>
+                            <li><a href="route-6.html">Route 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1 data-en="Nature Reserve El Oso - On Summits and Fog" data-es="Reserva Natural El Oso - Entre Cumbres y Niebla">Nature Reserve El Oso - On Summits and Fog</h1>
+            </div>            
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN DE TABS -->
+    <nav class="route-nav container">
+        <button class="route-btn active" data-target="info" data-en="Information" data-es="Información">Information</button>
+        <button class="route-btn" data-target="map" data-en="Route Map" data-es="Mapa de Ruta">Route Map</button>
+        <button class="route-btn" data-target="plan" data-en="Tour Plan" data-es="Plan del Tour">Tour Plan</button>
+        <button class="route-btn" data-target="birdlist" data-en="Bird List" data-es="Lista de Aves">Bird List</button>
+        <button class="route-btn" data-target="gallery" data-en="Gallery" data-es="Galería">Gallery</button>
+    </nav>
+
+    <!-- SECCIÓN: INFORMATION -->
+    <section id="info" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+
+                <div class="route-info-grid">
+                    <div class="info-item" style="grid-column: 1 / -1;">
+                        <h4><i class="fas fa-align-left" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Description" data-es="Descripción">Description</span></h4>
+                        <p data-en="Discover the diversity of the Andean forests in a private reserve with decades of protection. Along the trail, you can observe striking birds such as the Andean Tanager, the Crested Quetzal, and various species of Chlorophonia, as well as enjoy orchids lining the paths. Depending on the season, it is also possible to see the Andean Cock-of-the-rock. With a bit of luck, you might spot signs of or sightings of mammals native to the area, such as the Woolly Monkey, the Ocelot, or the Spectacled Bear." data-es="Descubre la diversidad de los bosques andinos en una reserva privada con décadas de protección. A lo largo del sendero, podrás observar aves llamativas como la Tangara Andina, el Quetzal Crestado y varias especies de Clorofonia, además de disfrutar de orquídeas que bordean los caminos. Dependiendo de la temporada, también es posible ver el Gallito de las Rocas Andino. Con un poco de suerte, podrías avistar señales o ejemplares de mamíferos nativos del área, como el Mono Lanudo, el Ocelote o el Oso de Anteojos.">Discover the diversity of the Andean forests in a private reserve with decades of protection. Along the trail, you can observe striking birds such as the Andean Tanager, the Crested Quetzal, and various species of Chlorophonia, as well as enjoy orchids lining the paths. Depending on the season, it is also possible to see the Andean Cock-of-the-rock. With a bit of luck, you might spot signs of or sightings of mammals native to the area, such as the Woolly Monkey, the Ocelot, or the Spectacled Bear.</p>
+                    </div>
+
+                    <!-- INCLUYE — media caja (columna 1) -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-check-circle" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Includes" data-es="Incluye">Includes</span></h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; line-height: 2; color: #333;">
+                            <li><i class="fas fa-binoculars" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Binoculars" data-es="Binoculares">Binoculars</span></li>
+                            <li><i class="fas fa-coffee" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Breakfast, lunch, and dinner" data-es="Desayuno, almuerzo y cena">Breakfast, lunch, and dinner</span></li>
+                            <li><i class="fas fa-apple-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Snacks and hydration" data-es="Snacks e hidratación">Snacks and hydration</span></li>
+                            <li><i class="fas fa-user-tie" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Birdwatching guide" data-es="Guía de avistamiento">Birdwatching guide</span></li>
+                            <li><i class="fas fa-shield-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Medical insurance" data-es="Seguro médico">Medical insurance</span></li>
+                            <li><i class="fas fa-camera" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Photos and checklist" data-es="Fotos y lista de especies">Photos and checklist</span></li>
+                            <li><i class="fas fa-bus" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Private transportation (round trip)" data-es="Transporte privado (ida y vuelta)">Private transportation (round trip)</span></li>
+                            <li><i class="fas fa-bed" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Accommodation (1 night)" data-es="Alojamiento (1 noche)">Accommodation (1 night)</span></li>
+                        </ul>
+                    </div>
+                    <!-- DETALLES — media caja (columna 2) -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-list-ul" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Details" data-es="Detalles">Details</span></h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; line-height: 2; color: #333;">
+                            <li><i class="fas fa-clock" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Duration: Approximately 4 hours" data-es="Duración: Aproximadamente 4 horas">Duration: Approximately 4 hours</span></li>
+                            <li><i class="fas fa-route" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Hiking distance: 2.2 km" data-es="Distancia de caminata: 2.2 km">Hiking distance: 2.2 km</span></li>
+                            <li><i class="fas fa-sun" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Start time: 6:00 am" data-es="Hora de inicio: 6:00 am">Start time: 6:00 am</span></li>
+                            <li><i class="fas fa-hiking" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Difficulty: Moderate" data-es="Dificultad: Moderada">Difficulty: Moderate</span></li>
+                            <li><i class="fas fa-mountain" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Altitude: 2,380 m.a.s.l." data-es="Altitud: 2.380 m.s.n.m.">Altitude: 2,380 m.a.s.l.</span></li>
+                            <li><i class="fas fa-feather-alt" style="color:#1f9d55; margin-right:8px;"></i><span data-en="Average number of species: 30–50" data-es="Número promedio de especies: 30–50">Average number of species: 30–50</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-map-marker-alt" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Location" data-es="Ubicación">Location</span></h4>
+                        <p data-en="Nature Reserve Portal del Oso, Hamlet El Oso, Municipality of San Agustín, Department of Huila, Colombia" data-es="Reserva Natural Portal del Oso, Vereda El Oso, Municipio de San Agustín, Departamento del Huila, Colombia">Nature Reserve Portal del Oso, Hamlet El Oso, Municipality of San Agustín, Department of Huila, Colombia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-calendar-alt" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Best time" data-es="Mejor época">Best time</span></h4>
+                        <p data-en="Year round" data-es="Todo el año">Year round</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-users" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Group size" data-es="Tamaño del grupo">Group size</span></h4>
+                        <p data-en="Maximum 6 people" data-es="Máximo 6 personas">Max 6 people</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-suitcase" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="What to bring" data-es="Qué traer">What to bring</span></h4>
+                        <p data-en="Comfortable hiking shoes, warm jacket, hat, sunscreen, mosquito repellent" data-es="Zapatos de senderismo cómodos, chaqueta abrigada, sombrero, protector solar, repelente de mosquitos">Comfortable hiking shoes, warm jacket, hat, sunscreen, mosquito repellent</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-cloud-sun" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Climate" data-es="Clima">Climate</span></h4>
+                        <p data-en="Cool to cold in altitude, occasional rain, warm days most of the time" data-es="Fresco a frío en altura, lluvia ocasional, dias calurosos en la mayor parte del tiempo">Cool to cold in altitude, occasional rain, warm days most of the time</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-leaf" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Ecosystems" data-es="Ecosistemas">Ecosystems</span></h4>
+                        <p data-en="Andean cloud forest, primary and secondary" data-es="Bosque nuboso andino, primario y secundario">Andean cloud forest, primary and secondary</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-binoculars" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Professional guide" data-es="Guía profesional">Professional guide</span></h4>
+                        <p data-en="Professional birding guide with extensive local knowledge" data-es="Guía ornitológico profesional con amplio conocimiento local">Professional birding guide with extensive local knowledge</p>
+                    </div>
+
+                    <!-- TIPOS DE COBERTURA — cabe en 1 columna del grid -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-tree" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Types of Plant Cover" data-es="Tipos de Cobertura Vegetal">Types of Plant Cover</span></h4>
+                        <p data-en="Andean cloud forest. Reserve forest cover, homogeneous and with minimal intervention compared to the rural mosaic." data-es="Bosque nuboso andino. Cobertura forestal de reserva, homogénea y con mínima intervención en comparación con el mosaico rural.">Andean cloud forest. Reserve forest cover, homogeneous and with minimal intervention compared to the rural mosaic.</p>
+                    </div>
+
+                    <!-- ESPECIES DE INTERÉS — cabe en 1 columna del grid -->
+                    <div class="info-item">
+                        <h4><i class="fas fa-dove" style="font-size: 24px; color: #1f9d55; margin-bottom: 8px; display: block;"></i><span data-en="Species of Interest" data-es="Especies de Interés">Species of Interest</span></h4>
+                        <p>
+                            <em><span data-en="Wattled Guan" data-es="Pava Carunculada"></span> (Aburria aburri)</em><br>
+                            <em><span data-en="Cinnamon Flycatcher" data-es="Atrapamoscas Canela"></span> (Pyrrhomyias cinnamomeus)</em><br>
+                            <em><span data-en="Crimson-crested Woodpecker" data-es="Carpintero Crestirojo"></span> (Campephilus melanoleucos)</em><br>
+                            <em><span data-en="Flame-faced Tanager" data-es="Tangara Carafuego"></span> (Tangara parzudakii)</em>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm" method="POST" action="https://formspree.io/f/xjgejwde">
+                    <div class="form-group">
+                        <label for="firstName" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
+                        <select id="country" name="country" required>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet" data-en="How did you meet Adha Anara? *" data-es="¿Cómo conociste a Adha Anara? *">How did you meet Adha Anara? <span class="required">*</span></label>
+                        <select id="howMeet" name="howMeet" required>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
+                        <textarea id="other" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- SECCIÓN: ROUTE MAP -->
+    <section id="map" class="route-section container" style="padding: 0 0 40px;">
+        <!-- Wrapper que envuelve textos + mapa con el mismo ancho y centrado -->
+        <div style="width: 75%; margin: 0 auto;" id="mapWrapper">
+                <p style="color: #222; margin-bottom: 10px; font-size: 18px;"><i class="fas fa-map-marked-alt" style="margin-right: 8px; color: #1f9d55;"></i><strong><span data-en="Explore the route on the map below" data-es="Explora la ruta en el mapa a continuación">Explore the route on the map below.</span></strong></p>
+                <p style="color: #222; margin-bottom: 16px; font-size: 16px;">
+                    <i class="fas fa-map-pin" style="font-size: 18px; color: #1f9d55; margin-right: 8px;"></i>
+                    <span data-en="Geographic Coordinates:" data-es="Coordenadas Geográficas:"><strong>Geographic Coordinates:</strong></span>
+                    &nbsp;1.82981 <span data-en="(Latitude)" data-es="(Latitud)">(Latitude)</span> &nbsp;·&nbsp; -76.39251 <span data-en="(Longitude)" data-es="(Longitud)">(Longitude)</span>
+                </p>
+
+                <!-- Imagen del mapa con zoom y drag -->
+                <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid #d4edda; cursor: grab; background: #f5f5f5;" id="mapContainer" class="map-container-responsive">
+                    <img id="routeMapImg"
+                         src="img-routes/ElOso.png"
+                         alt="Route Map Nature Reserve El Oso"
+                         style="width: 100%; height: auto; display: block; user-select: none; pointer-events: none; transform-origin: center center;"
+                    >
+                </div>
+                <p style="font-size: 13px; color: #999; margin-top: 10px; text-align: center;">
+                    <i class="fas fa-search-plus" style="margin-right: 5px;"></i>
+                    <span data-en="Scroll to zoom · Click and hold to pan" data-es="Scroll para zoom · Clic sostenido para mover">Scroll to zoom · Click and hold to pan</span>
+                </p>
+        </div><!-- fin mapWrapper -->
+
+                <script>
+                (function() {
+                    const container = document.getElementById('mapContainer');
+                    const img = document.getElementById('routeMapImg');
+                    let scale = 1;
+                    let translateX = 0, translateY = 0;
+                    let isDragging = false;
+                    let startX, startY;
+
+                    function applyTransform() {
+                        img.style.transformOrigin = 'center center';
+                        img.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')';
+                    }
+
+                    // Scroll para zoom
+                    container.addEventListener('wheel', function(e) {
+                        e.preventDefault();
+                        scale += e.deltaY < 0 ? 0.2 : -0.2;
+                        scale = Math.min(Math.max(scale, 1), 4);
+                        if (scale === 1) { translateX = 0; translateY = 0; }
+                        applyTransform();
+                    }, { passive: false });
+
+                    // Click sostenido para mover (mouse)
+                    container.addEventListener('mousedown', function(e) {
+                        e.preventDefault();
+                        isDragging = true;
+                        startX = e.clientX - translateX;
+                        startY = e.clientY - translateY;
+                        container.style.cursor = 'grabbing';
+                        img.style.transition = 'none';
+                    });
+
+                    window.addEventListener('mousemove', function(e) {
+                        if (!isDragging) return;
+                        const imgW = img.offsetWidth * scale;
+                        const imgH = img.offsetHeight * scale;
+                        const cW = container.offsetWidth;
+                        const cH = container.offsetHeight;
+                        const maxX = Math.max(0, (imgW - cW) / 2);
+                        const maxY = Math.max(0, (imgH - cH) / 2);
+                        translateX = Math.min(maxX, Math.max(-maxX, e.clientX - startX));
+                        translateY = Math.min(maxY, Math.max(-maxY, e.clientY - startY));
+                        applyTransform();
+                    });
+
+                    window.addEventListener('mouseup', function() {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        container.style.cursor = 'grab';
+                        img.style.transition = 'transform 0.15s ease';
+                    });
+
+                    // Touch para móvil — drag con 1 dedo, zoom con 2
+                    let lastDist = 0;
+                    container.addEventListener('touchstart', function(e) {
+                        if (e.touches.length === 2) {
+                            lastDist = Math.hypot(
+                                e.touches[0].clientX - e.touches[1].clientX,
+                                e.touches[0].clientY - e.touches[1].clientY
+                            );
+                        } else if (e.touches.length === 1) {
+                            isDragging = true;
+                            startX = e.touches[0].clientX - translateX;
+                            startY = e.touches[0].clientY - translateY;
+                            img.style.transition = 'none';
+                        }
+                    }, { passive: true });
+
+                    container.addEventListener('touchmove', function(e) {
+                        e.preventDefault();
+                        if (e.touches.length === 2) {
+                            const dist = Math.hypot(
+                                e.touches[0].clientX - e.touches[1].clientX,
+                                e.touches[0].clientY - e.touches[1].clientY
+                            );
+                            scale *= dist / lastDist;
+                            scale = Math.min(Math.max(scale, 1), 4);
+                            lastDist = dist;
+                            applyTransform();
+                        } else if (e.touches.length === 1 && isDragging) {
+                            const imgW = img.offsetWidth * scale;
+                            const imgH = img.offsetHeight * scale;
+                            const cW = container.offsetWidth;
+                            const cH = container.offsetHeight;
+                            const maxX = Math.max(0, (imgW - cW) / 2);
+                            const maxY = Math.max(0, (imgH - cH) / 2);
+                            translateX = Math.min(maxX, Math.max(-maxX, e.touches[0].clientX - startX));
+                            translateY = Math.min(maxY, Math.max(-maxY, e.touches[0].clientY - startY));
+                            applyTransform();
+                        }
+                    }, { passive: false });
+
+                    container.addEventListener('touchend', function() {
+                        isDragging = false;
+                        img.style.transition = 'transform 0.15s ease';
+                    });
+                })();
+                </script>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TOUR PLAN -->
+    <section id="plan" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+                <h2 class="plan-title"><i class="fas fa-map-marked-alt" style="margin-right: 10px; color: #1f9d55;"></i><span data-en="" data-es="">Tour Plan</span></h2>
+
+                <div class="plan-item">
+                    <span>01<br><i class="fas fa-car" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">5:50 a.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Departure toward Nature Reserve Portal del Oso. We meet at the agreed pickup point and head into the mountains as the first light of dawn filters through the cloud forest." data-es="Salida hacia la Reserva Natural Portal del Oso. Nos reunimos en el punto de recogida acordado y nos adentramos en la montaña mientras la primera luz del amanecer se filtra por el bosque nuboso.">Departure toward Nature Reserve Portal del Oso. We meet at the agreed pickup point and head into the mountains as the first light of dawn filters through the cloud forest.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>02<br><i class="fas fa-map-marker-alt" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">6:00 a.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Arrival at the reserve entrance. The guide introduces the area, the rules of the reserve, and gives a preview of the key species that inhabit this Andean cloud forest, including the Crested Quetzal and Wattled Guan." data-es="Llegada a la entrada de la reserva. El guía presenta el área, las normas de la reserva y da una vista previa de las especies clave que habitan este bosque nuboso andino, incluidos el Quetzal Crestado y la Pava Carunculada.">Arrival at the reserve entrance. The guide introduces the area, the rules of the reserve, and gives a preview of the key species that inhabit this Andean cloud forest, including the Crested Quetzal and Wattled Guan.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>03<br><i class="fas fa-binoculars" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">6:10 a.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Start of the birdwatching activity. Moving slowly through the trail, we scan orchid-lined paths and dense canopy for Flame-faced Tanagers, Chlorophonia species, and with luck, the Andean Cock-of-the-rock. Every bend in the trail offers a new surprise." data-es="Inicio de la actividad de avistamiento de aves. Moviéndonos lentamente por el sendero, exploramos caminos bordeados de orquídeas y el denso dosel en busca de Tángaras Carafuego, especies de Clorofonia y, con suerte, el Gallo de Roca Andino.">Start of the birdwatching activity. Moving slowly through the trail, we scan orchid-lined paths and dense canopy for Flame-faced Tanagers, Chlorophonia species, and with luck, the Andean Cock-of-the-rock. Every bend in the trail offers a new surprise.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>04<br><i class="fas fa-coffee" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">9:00 a.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Breakfast break inside the reserve. A moment to rest, share sightings, and review the checklist while enjoying a traditional breakfast surrounded by the sounds and atmosphere of the Andean forest." data-es="Pausa para el desayuno dentro de la reserva. Un momento para descansar, compartir avistamientos y revisar la lista mientras se disfruta de un desayuno tradicional rodeados de los sonidos y la atmósfera del bosque andino.">Breakfast break inside the reserve. A moment to rest, share sightings, and review the checklist while enjoying a traditional breakfast surrounded by the sounds and atmosphere of the Andean forest.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>05<br><i class="fas fa-feather-alt" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">10:00 a.m. – 12:00 p.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Continuation of birdwatching along upper trail sections, exploring higher elevations of the reserve where different species appear. Look out for the Crimson-crested Woodpecker and Cinnamon Flycatcher in this zone." data-es="Continuación del avistamiento por los tramos superiores del sendero, explorando las zonas más altas de la reserva donde aparecen diferentes especies. Atención al Carpintero Crestirojo y al Atrapamoscas Canela en esta zona.">Continuation of birdwatching along upper trail sections, exploring higher elevations of the reserve where different species appear. Look out for the Crimson-crested Woodpecker and Cinnamon Flycatcher in this zone.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>06<br><i class="fas fa-utensils" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">1:00 p.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Lunch at the reserve. Time to rest and enjoy a hearty lunch while the midday heat settles. A great opportunity to process photos, note observations, and prepare for the afternoon session." data-es="Almuerzo en la reserva. Tiempo para descansar y disfrutar de un almuerzo abundante mientras el calor del mediodía se asienta. Una excelente oportunidad para procesar fotos, anotar observaciones y prepararse para la sesión de tarde.">Lunch at the reserve. Time to rest and enjoy a hearty lunch while the midday heat settles. A great opportunity to process photos, note observations, and prepare for the afternoon session.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>07<br><i class="fas fa-binoculars" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">3:00 p.m. – 6:00 p.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Afternoon birdwatching session. The late afternoon brings new activity as birds feed before dusk. This is an ideal time to spot mammals such as the Woolly Monkey or Ocelot that may cross the trail." data-es="Sesión de avistamiento vespertino. La tarde trae nueva actividad cuando las aves se alimentan antes del anochecer. Es el momento ideal para avistar mamíferos como el Mono Lanudo o el Ocelote que pueden cruzar el sendero.">Afternoon birdwatching session. The late afternoon brings new activity as birds feed before dusk. This is an ideal time to spot mammals such as the Woolly Monkey or Ocelot that may cross the trail.</p>
+                    </div>
+                </div>
+
+                <div class="plan-item">
+                    <span>08<br><i class="fas fa-bed" style="font-size: 18px; color: #1f9d55;"></i></span>
+                    <div>
+                        <strong style="color: #1f9d55; font-size: 18px;">7:00 p.m.</strong>
+                        <p style="margin: 4px 0 0;" data-en="Dinner and overnight stay at the reserve. End the day with a warm dinner and rest inside the reserve, ready for an early morning session on Day 2 before heading back." data-es="Cena y pernocte en la reserva. Termina el día con una cena caliente y descansa dentro de la reserva, listo para una sesión matutina temprana en el Día 2 antes del regreso.">Dinner and overnight stay at the reserve. End the day with a warm dinner and rest inside the reserve, ready for an early morning session on Day 2 before heading back.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm2" method="POST" action="https://formspree.io/f/xjgejwde">
+                    <div class="form-group">
+                        <label for="firstName2" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName2" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName2" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName2" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email2" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
+                        <input type="email" id="email2" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country2" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
+                        <select id="country2" name="country" required>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone2" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone2" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate2" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate2" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize2" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize2" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet2" data-en="How did you meet Manakin? *" data-es="¿Cómo conociste a Manakin? *">How did you meet Manakin? <span class="required">*</span></label>
+                        <select id="howMeet2" name="howMeet" required>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other2" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
+                        <textarea id="other2" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message2" data-en="Message" data-es="Mensaje">Message</label>
+                        <textarea id="message2" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: BIRD LIST -->
+    <section id="birdlist" class="route-section container">
+        <div class="section-wrapper">
+            <div class="section-content">
+
+                <h2 style="color: #222; margin-bottom: 10px; font-size: 18px;"><i class="fas fa-feather-alt" style="margin-right: 10px; color: #1f9d55;"></i><span data-en="Bird species recorded at Nature Reserve El Oso" data-es="Especies registradas en la Reserva Natural El Oso">Bird List</span></h2>
+                <p style="color:#666; margin-bottom: 32px; font-size: 18px; font-weight: 700;"><span data-en="" data-es="">Species recorded · Nature Reserve El Oso, San Agustín</span></p>
+
+                <!-- CRACIDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-apple-alt" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Cracids" data-es="Crácidos">Cracids</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Colombian Chachalaca" data-es="Chachalaca Colombiana">Colombian Chachalaca</span><span class="bird-scientific">Ortalis columbiana</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Endemic" data-es="Endémica" style="background:#7b1fa2;">E</span><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- DOVES & PIGEONS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Doves & Pigeons" data-es="Palomas">Doves & Pigeons</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Pale-vented Pigeon" data-es="Paloma Colorada">Pale-vented Pigeon</span><span class="bird-scientific">Patagioenas cayennensis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Ruddy Ground Dove" data-es="Columbina Colorada">Ruddy Ground Dove</span><span class="bird-scientific">Columbina talpacoti</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="White-tipped Dove" data-es="Paloma Montaraz Común">White-tipped Dove</span><span class="bird-scientific">Leptotila verreauxi</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- SWIFTS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-bug" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Swifts" data-es="Vencejos">Swifts</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="White-collared Swift" data-es="Vencejo Acollarado">White-collared Swift</span><span class="bird-scientific">Streptoprocne zonaris</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- HUMMINGBIRDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-spa" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Hummingbirds" data-es="Colibríes">Hummingbirds</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Brown Violetear" data-es="Colibrí Pardo">Brown Violetear</span><span class="bird-scientific">Colibri delphinae</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Red-billed Emerald" data-es="Esmeralda Piquirroja">Red-billed Emerald</span><span class="bird-scientific">Chlorostilbon gibsoni</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Endemic" data-es="Endémica" style="background:#7b1fa2;">E</span><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="White-vented Plumeleteer" data-es="Colibrí de Buffon">White-vented Plumeleteer</span><span class="bird-scientific">Chalybura buffonii</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Steely-vented Hummingbird" data-es="Amazilia Verdiazul">Steely-vented Hummingbird</span><span class="bird-scientific">Saucerottia saucerottei</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- SHOREBIRDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-fish" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Shorebirds" data-es="Aves Playeras">Shorebirds</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Southern Lapwing" data-es="Avefría Tero">Southern Lapwing</span><span class="bird-scientific">Vanellus chilensis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- IBISES & HERONS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-fish" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Ibises & Herons" data-es="Ibis y Garzas">Ibises & Herons</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Bare-faced Ibis" data-es="Ibis Afeitado">Bare-faced Ibis</span><span class="bird-scientific">Phimosus infuscatus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Western Cattle-Egret" data-es="Garcilla Bueyera Occidental">Western Cattle-Egret</span><span class="bird-scientific">Ardea ibis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- HAWKS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-paw" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Hawks" data-es="Gavilanes">Hawks</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Roadside Hawk" data-es="Busardo Caminero">Roadside Hawk</span><span class="bird-scientific">Rupornis magnirostris</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- PARROTS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-apple-alt" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Parrots & Parakeets" data-es="Loros y Pericos">Parrots & Parakeets</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Bronze-winged Parrot" data-es="Loro Alibronceado">Bronze-winged Parrot</span><span class="bird-scientific">Pionus chalcopterus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Spectacled Parrotlet" data-es="Cotorrita de Anteojos">Spectacled Parrotlet</span><span class="bird-scientific">Forpus conspicillatus</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Near-Endemic" data-es="Casi Endémica" style="background:#1565c0;">NE</span><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Scarlet-fronted Parakeet" data-es="Aratinga de Wagler">Scarlet-fronted Parakeet</span><span class="bird-scientific">Psittacara wagleri</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- ANTBIRDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-bug" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Antbirds" data-es="Hormigueros">Antbirds</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Bar-crested Antshrike" data-es="Batará Crestibarrado">Bar-crested Antshrike</span><span class="bird-scientific">Thamnophilus multistriatus</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Endemic" data-es="Endémica" style="background:#7b1fa2;">E</span><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- OVENBIRDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-bug" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Ovenbirds" data-es="Horneros y Colaespinas">Ovenbirds</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Slaty Spinetail" data-es="Pijuí Pizarroso">Slaty Spinetail</span><span class="bird-scientific">Synallaxis brachyura</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- TYRANT FLYCATCHERS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-bug" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Tyrant Flycatchers" data-es="Atrapamoscas">Tyrant Flycatchers</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Common Tody-Flycatcher" data-es="Titirijí Común">Common Tody-Flycatcher</span><span class="bird-scientific">Todirostrum cinereum</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Yellow-bellied Elaenia" data-es="Fiofío Ventriamarillo">Yellow-bellied Elaenia</span><span class="bird-scientific">Elaenia flavogaster</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Golden-faced Tyrannulet" data-es="Mosquerito Caridorado">Golden-faced Tyrannulet</span><span class="bird-scientific">Zimmerius chrysops</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Near-Endemic" data-es="Casi Endémica" style="background:#1565c0;">NE</span><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Western Wood-Pewee" data-es="Pibí Occidental">Western Wood-Pewee</span><span class="bird-scientific">Contopus sordidulus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Vermilion Flycatcher" data-es="Mosquero Cardenal">Vermilion Flycatcher</span><span class="bird-scientific">Pyrocephalus rubinus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Great Kiskadee" data-es="Bienteveo Común">Great Kiskadee</span><span class="bird-scientific">Pitangus sulphuratus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Boat-billed Flycatcher" data-es="Bienteveo Pitanguá">Boat-billed Flycatcher</span><span class="bird-scientific">Megarynchus pitangua</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Rusty-margined Flycatcher" data-es="Bienteveo Alicastaño">Rusty-margined Flycatcher</span><span class="bird-scientific">Myiozetetes cayanensis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Tropical Kingbird" data-es="Tirano Melancólico">Tropical Kingbird</span><span class="bird-scientific">Tyrannus melancholicus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- JAYS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-leaf" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Jays" data-es="Urracas">Jays</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Green Jay" data-es="Chara Verde">Green Jay</span><span class="bird-scientific">Cyanocorax yncas</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- MOCKINGBIRDS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-apple-alt" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Mockingbirds" data-es="Sinsontes">Mockingbirds</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Tropical Mockingbird" data-es="Sinsonte Tropical">Tropical Mockingbird</span><span class="bird-scientific">Mimus gilvus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- THRUSHES -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Thrushes" data-es="Mirlos">Thrushes</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Black-billed Thrush" data-es="Zorzal Piquinegro">Black-billed Thrush</span><span class="bird-scientific">Turdus ignobilis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- FINCHES -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Finches" data-es="Pinzones">Finches</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Lesser Goldfinch" data-es="Jilguero Menor">Lesser Goldfinch</span><span class="bird-scientific">Spinus psaltria</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- SPARROWS & BRUSHFINCHES -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Sparrows & Brushfinches" data-es="Gorriones y Atlapetes">Sparrows & Brushfinches</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Black-striped Sparrow" data-es="Cerquero Negrilistado">Black-striped Sparrow</span><span class="bird-scientific">Arremonops conirostris</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Rufous-collared Sparrow" data-es="Chingolo Común">Rufous-collared Sparrow</span><span class="bird-scientific">Zonotrichia capensis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Dusky-headed Brushfinch" data-es="Atlapetes Sombrío">Dusky-headed Brushfinch</span><span class="bird-scientific">Atlapetes fuscoolivaceus</span><span class="bird-badges"><span class="bird-badge bird-endemic" data-en="Endemic" data-es="Endémica" style="background:#7b1fa2;">E</span><span class="bird-badge bird-status" style="background:#ff9800;">NT</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- ORIOLES -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-spa" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Orioles" data-es="Turpiales">Orioles</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Yellow-backed Oriole" data-es="Turpial Dorsidorado">Yellow-backed Oriole</span><span class="bird-scientific">Icterus chrysater</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- WOOD-WARBLERS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-bug" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Wood-Warblers" data-es="Reinitas">Wood-Warblers</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Tropical Parula" data-es="Parula Pitiayumí">Tropical Parula</span><span class="bird-scientific">Setophaga pitiayumi</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Blackburnian Warbler" data-es="Reinita Gorjinaranja">Blackburnian Warbler</span><span class="bird-scientific">Setophaga fusca</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- GROSBEAKS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Grosbeaks" data-es="Picogruesos">Grosbeaks</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Rose-breasted Grosbeak" data-es="Picogrueso Pechirrosado">Rose-breasted Grosbeak</span><span class="bird-scientific">Pheucticus ludovicianus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- TANAGERS -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-apple-alt" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Tanagers" data-es="Tángaras">Tanagers</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="White-lined Tanager" data-es="Tangara Negra">White-lined Tanager</span><span class="bird-scientific">Tachyphonus rufus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Crimson-backed Tanager" data-es="Tangara Dorsirroja">Crimson-backed Tanager</span><span class="bird-scientific">Ramphocelus dimidiatus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Blue-gray Tanager" data-es="Tangara Azuleja">Blue-gray Tanager</span><span class="bird-scientific">Thraupis episcopus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Scrub Tanager" data-es="Tangara Matorralera">Scrub Tanager</span><span class="bird-scientific">Stilpnia vitriolina</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Blue-necked Tanager" data-es="Tangara Cabeciazul">Blue-necked Tanager</span><span class="bird-scientific">Stilpnia cyanicollis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+                <!-- SEEDEATERS, GRASSQUITS & BANANAQUIT -->
+                <div class="bird-family-block">
+                    <div class="bird-family-header">
+                        <span class="bird-family-icon">
+                            <i class="fas fa-seedling" style="font-size:22px; color:#1f9d55;"></i>
+                        </span>
+                        <span class="bird-family-name" data-en="Seedeaters, Grassquits & Bananaquit" data-es="Semilleros, Volatineros y Bananaquito">Seedeaters, Grassquits & Bananaquit</span>
+                    </div>
+                    <ul class="bird-species-list">
+                        <li><span class="bird-common" data-en="Saffron Finch" data-es="Chirigüe Azafranado">Saffron Finch</span><span class="bird-scientific">Sicalis flaveola</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Blue-black Grassquit" data-es="Semillero Volatinero">Blue-black Grassquit</span><span class="bird-scientific">Volatinia jacarina</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Yellow-bellied Seedeater" data-es="Semillero Ventriamarillo">Yellow-bellied Seedeater</span><span class="bird-scientific">Sporophila nigricollis</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Bananaquit" data-es="Platanero">Bananaquit</span><span class="bird-scientific">Coereba flaveola</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                        <li><span class="bird-common" data-en="Yellow-faced Grassquit" data-es="Semillero Tomeguín">Yellow-faced Grassquit</span><span class="bird-scientific">Tiaris olivaceus</span><span class="bird-badges"><span class="bird-badge bird-status" style="background:#4caf50;">LC</span></span></li>
+                    </ul>
+                </div>
+
+            </div><!-- fin section-content -->
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
+                <form id="tourFormBirds" method="POST" action="https://formspree.io/f/xjgejwde">
+                    <div class="form-group">
+                        <label for="firstNameB" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstNameB" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastNameB" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastNameB" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailB" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
+                        <input type="email" id="emailB" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="countryB" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
+                        <select id="countryB" name="country" required>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneB" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phoneB" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureDateB" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDateB" name="departureDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="groupSizeB" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSizeB" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="howMeetB" data-en="How did you meet Adha Anara? *" data-es="¿Cómo conociste a Adha Anara? *">How did you meet Adha Anara? <span class="required">*</span></label>
+                        <select id="howMeetB" name="howMeet" required>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="otherB" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
+                        <textarea id="otherB" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageB" data-en="Message" data-es="Mensaje">Message</label>
+                        <textarea id="messageB" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+                </form>
+            </div>
+
+        </div><!-- fin section-wrapper -->
+    </section>
+
+    <!-- SECCIÓN: GALLERY -->
+    <section id="gallery" class="route-section container">
+        <div class="section-wrapper gallery-wrapper">
+            <div class="section-content">
+                <h2><i class="fas fa-images" style="margin-right: 10px; color: #1f9d55;"></i><span data-en="" data-es="">Gallery</span></h2>
+
+                <div class="gallery-grid-sidebar">
+                    <img src="img-routes/7.jpg" alt="Nature Reserve El Oso" class="gallery-img">
+                    <img src="img-routes/8.jpg" alt="Nature Reserve El Oso" class="gallery-img">
+                    <img src="img-routes/9.jpg" alt="Nature Reserve El Oso" class="gallery-img">
+                    <img src="img-routes/10.jpeg" alt="Nature Reserve El Oso" class="gallery-img">
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE INFORMACIÓN -->
+            <div class="info-form-sidebar">
+                <h3 data-en="Tours Information Request" data-es="Solicitud de Información del Tour">Tours Information Request</h3>
+                <p class="form-subtitle" data-en="Fields marked with an * are required" data-es="Los campos marcados con * son obligatorios">Fields marked with an <span class="required">*</span> are required</p>
+                
+                <form id="tourForm3" method="POST" action="https://formspree.io/f/xjgejwde">
+                    <div class="form-group">
+                        <label for="firstName3" data-en="First Name *" data-es="Nombre *">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName3" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName3" data-en="Last Name *" data-es="Apellido *">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName3" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email3" data-en="Email *" data-es="Correo electrónico *">Email <span class="required">*</span></label>
+                        <input type="email" id="email3" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country3" data-en="Country *" data-es="País *">Country <span class="required">*</span></label>
+                        <select id="country3" name="country" required>
+                            <option value="" data-en="Select country" data-es="Seleccionar país">Select country</option>
+                            <option value="United States" data-en="United States" data-es="Estados Unidos">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom" data-en="United Kingdom" data-es="Reino Unido">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone3" data-en="Phone *" data-es="Teléfono *">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone3" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate3" data-en="Departure date *" data-es="Fecha de salida *">Departure date <span class="required">*</span></label>
+                        <input type="date" id="departureDate3" name="departureDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groupSize3" data-en="Number of travelers *" data-es="Número de viajeros *">Number of travelers <span class="required">*</span></label>
+                        <input type="number" id="groupSize3" name="groupSize" min="1" max="6" placeholder="Max 6 travelers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howMeet3" data-en="How did you meet Adha Anara? *" data-es="¿Cómo conociste a Adha Anara? *">How did you meet Adha Anara? <span class="required">*</span></label>
+                        <select id="howMeet3" name="howMeet" required>
+                            <option value="" data-en="Select option" data-es="Seleccionar opción">Select option</option>
+                            <option value="Google Search" data-en="Google Search" data-es="Búsqueda en Google">Google Search</option>
+                            <option value="Social Media" data-en="Social Media" data-es="Redes Sociales">Social Media</option>
+                            <option value="Recommendation" data-en="Recommendation" data-es="Recomendación">Recommendation</option>
+                            <option value="Website" data-en="Website" data-es="Sitio web">Website</option>
+                            <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other3" data-en="Other (Please specify)" data-es="Otro (Por favor especifica)">Other (Please specify)</label>
+                        <textarea id="other3" name="other" rows="2" placeholder="Specify if Other was selected above..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message3" data-en="Message" data-es="Mensaje">Message</label>
+                        <textarea id="message3" name="message" rows="4" placeholder="Tell us more about your interests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: SPECIES HIGHLIGHTS -->
+    <section class="route-section container species-section">
+        <h2 style="text-align: center; margin-bottom: 30px;" data-en="Key Bird Species" data-es="Especies Clave de Aves">Key Bird Species</h2>
+        <p style="text-align: center; font-size: 16px; line-height: 1.6; max-width: 900px; margin: 0 auto;" data-en="This route offers extraordinary opportunities to observe cloud forest specialists, including the Crested Quetzal, Wattled Guan, and Flame-faced Tanager, within a decades-old private reserve. Orchids line the paths while mammals such as the Woolly Monkey, Ocelot, and Spectacled Bear may also be spotted. Photography opportunities are outstanding throughout the day." data-es="Esta ruta ofrece extraordinarias oportunidades para observar especialistas del bosque nuboso, incluidos el Quetzal Crestado, la Pava Carunculada y la Tangara Carafuego, dentro de una reserva privada con décadas de protección. Las orquídeas bordean los senderos mientras que mamíferos como el Mono Lanudo, el Ocelote y el Oso de Anteojos también pueden avistarse.">This route offers extraordinary opportunities to observe cloud forest specialists, including the Crested Quetzal, Wattled Guan, and Flame-faced Tanager, within a decades-old private reserve. Orchids line the paths while mammals such as the Woolly Monkey, Ocelot, and Spectacled Bear may also be spotted. Photography opportunities are outstanding throughout the day.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer container">
+        <div class="footer-columns">
+            <div class="footer-contact">
+                <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573166672376" target="_blank"><i class="fab fa-whatsapp"></i>+57 3166672376 - Diana Escobar</a></p>
+                <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
+                <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
+    <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="5b3a3f333a753a353a293a75283a353a3c2e282f32351b3c363a323775383436">[email&#160;protected]</span>
+    </a>
+    <a href="javascript:openEmail();" class="email-link email-mobile">
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="9dfcf9f5fcb3fcf3fceffcb3eefcf3fcfae8eee9f4f3ddfaf0fcf4f1b3fef2f0">[email&#160;protected]</span>
+    </a>
+</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/adha.anara/?next=%2F" target="_blank"><i class="fab fa-instagram"></i>adha.anara</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 data-en="Useful links" data-es="Enlaces útiles">Useful links</h3>
+                <ul>
+                    <li><a href="terms-1.html" data-en="Terms and Conditions" data-es="Términos y Condiciones">Terms and Conditions</a></li>
+                    <li><a href="terms-2.html" data-en="Web Portal Terms of Use" data-es="Términos de Uso del Portal Web">Web Portal Terms of Use</a></li>
+                </ul>
+                <p data-en="Adha Anara Birdwatching © 2026. All Rights Reserved." data-es="Adha Anara Observación de Aves © 2026. Todos los Derechos Reservados.">Adha Anara Birdwatching © 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="javascript:openEmail();" class="floating-email-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+            <path d="M12 13.5L2 6.75V18h20V6.75L12 13.5zM12 11l10-6H2l10 6z"/>
+        </svg>
+    </a>
+
+    <a href="http://wa.me/573166672376" target="_blank" class="floating-whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- BOTÓN DE CAMBIO DE IDIOMA -->
+    <button class="floating-language-button" id="languageToggle">
+        <span class="lang-text" data-en="ES" data-es="EN">ES</span>
+    </button>
+
+    <!-- BOTÓN SCROLL TOP -->
+    <a href="#" class="btn-scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i> <span></span>
+    </a>
+
+    <!-- JAVASCRIPT PARA TABS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const buttons = document.querySelectorAll('.route-btn');
+        const sections = document.querySelectorAll('.route-section');
+
+        // Mostrar solo Information al cargar
+        sections.forEach(s => s.style.display = 'none');
+        document.getElementById('info').style.display = 'block';
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sections.forEach(s => s.style.display = 'none');
+                buttons.forEach(b => b.classList.remove('active'));
+                const target = btn.dataset.target;
+                document.getElementById(target).style.display = 'block';
+                btn.classList.add('active');
+            });
+        });
+
+        // LIGHTBOX GALLERY
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        let currentImageIndex = 0;
+        let currentZoom = 1;
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                currentZoom = 1;
+                lightboxImg.style.transform = `scale(${currentZoom})`;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            currentZoom = 1;
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                currentZoom = 1;
+            }
+        });
+
+        lightbox.addEventListener('wheel', (e) => {
+            if (lightbox.style.display === 'flex') {
+                e.preventDefault();
+                const zoomSpeed = 0.1;
+                if (e.deltaY > 0) {
+                    currentZoom = Math.max(1, currentZoom - zoomSpeed);
+                } else {
+                    currentZoom = Math.min(3, currentZoom + zoomSpeed);
+                }
+                lightboxImg.style.transform = `scale(${currentZoom})`;
+            }
+        }, { passive: false });
+
+        lightboxNext.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            currentZoom = 1;
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+        });
+
+        lightboxPrev.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            currentZoom = 1;
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowRight') lightboxNext.click();
+                if (e.key === 'ArrowLeft') lightboxPrev.click();
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    currentZoom = 1;
+                }
+            }
+        });
+    </script>
+
+    <!-- SCRIPT PARA BOTÓN SCROLL TOP -->
+    <script>
+        const btnScroll = document.getElementById('scrollTop');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnScroll.classList.add('show');
+            } else {
+                btnScroll.classList.remove('show');
+            }
+        };
+
+        btnScroll.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- SCRIPT PARA MENÚ HAMBURGUESA -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        const routesToggle = document.querySelector('.routes-toggle');
+        const mobileSubmenu = document.querySelector('.mobile-submenu');
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar al tocar el fondo del menú (fuera de los links)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!this.classList.contains('routes-toggle')) {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                } else {
+                    e.preventDefault();
+                    mobileSubmenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- SCRIPT PARA EMAIL FLOTANTE (DESKTOP / MÓVIL) -->
+    <script>
+        function openEmail() {
+            const email = 'adha.anara.sanagustin@gmail.com';
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'intent://' + email + '#Intent;action=android.intent.action.SENDTO;scheme=mailto;end;';
+                setTimeout(function() {
+                    window.location.href = 'mailto:' + email;
+                }, 500);
+            } else {
+                window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + email, '_blank');
+            }
+        }
+    </script>
+
+    <!-- JAVASCRIPT PARA CAMBIO DE IDIOMA -->
+    <script>
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        setLanguage(currentLanguage);
+
+        languageToggle.addEventListener('click', function() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            localStorage.setItem('language', currentLanguage);
+            setLanguage(currentLanguage);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-es');
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.value = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+        }
+    </script>
+
+    <!-- SWIPE RIGHT PARA RETROCEDER (SOLO MÓVIL) -->
+<script>
+    let touchStartX = 0;
+
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    document.addEventListener('touchend', function(e) {
+    const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchEndX - touchStartX;
+
+        // Solo si empieza desde el borde izquierdo (primeros 30px) y desliza +80px
+        if (touchStartX < 80 && diff > 80) {
+            history.back();
+        }
+    });
+</script>
+
+</body>
+</html>
