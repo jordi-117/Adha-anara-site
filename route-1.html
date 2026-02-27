@@ -1029,10 +1029,10 @@
                 <p><span data-en="Phone:" data-es="Teléfono:">Phone:</span> <a href="http://wa.me/573204564917" target="_blank"><i class="fab fa-whatsapp"></i>+57 3204564917 - Jordan Chavez</a></p>
                 <p><span data-en="E-mail:" data-es="Correo:">E-mail:</span>
     <a href="https://mail.google.com/mail/?view=cm&to=adha.anara.sanagustin@gmail.com" class="email-link email-desktop" target="_blank">
-        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="0f6e6b676e216e616e7d6e217c6e616e687a7c7b66614f68626e6663216c6062">[email&#160;protected]</span>
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="5b3a3f333a753a353a293a75283a353a3c2e282f32351b3c363a323775383436">[email&#160;protected]</span>
     </a>
     <a href="javascript:openEmail();" class="email-link email-mobile">
-        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="19787d7178377877786b78376a7877787e6c6a6d7077597e74787075377a7674">[email&#160;protected]</span>
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="9dfcf9f5fcb3fcf3fceffcb3eefcf3fcfae8eee9f4f3ddfaf0fcf4f1b3fef2f0">[email&#160;protected]</span>
     </a>
 </p>
                 <div class="social-icons">
@@ -1191,10 +1191,17 @@
         const menuLinks = mobileMenu.querySelectorAll('a');
         const routesToggle = document.querySelector('.routes-toggle');
         const mobileSubmenu = document.querySelector('.mobile-submenu');
-
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar al tocar el fondo del menú (fuera de los links)
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
 
         menuLinks.forEach(link => {
@@ -1207,16 +1214,6 @@
                     mobileSubmenu.classList.toggle('active');
                 }
             });
-        });
-    
-        // Cerrar menú al tocar fuera (solo móvil)
-        document.addEventListener("click", function(e) {
-            if (mobileMenu.classList.contains("active") &&
-                !mobileMenu.contains(e.target) &&
-                !menuToggle.contains(e.target)) {
-                mobileMenu.classList.remove("active");
-                menuToggle.classList.remove("active");
-            }
         });
     </script>
 
