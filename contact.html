@@ -28,12 +28,12 @@
                         <li class="has-submenu">
                             <a href="#" data-en="Our Routes" data-es="Nuestras Rutas">Our Routes</a>
                             <ul class="submenu">
-                                <li><a href="route-1.html">Route 1</a></li>
-                                <li><a href="route-2.html">Route 2</a></li>
-                                <li><a href="route-3.html">Route 3</a></li>
-                                <li><a href="route-4.html">Route 4</a></li>
-                                <li><a href="route-5.html">Route 5</a></li>
-                                <li><a href="route-6.html">Route 6</a></li>
+                                <li><a href="route-1.html">La Chaquira</a></li>
+                                <li><a href="route-2.html">El Oso</a></li>
+                                <li><a href="route-3.html">La Llanara</a></li>
+                                <li><a href="route-4.html">Waka Willka</a></li>
+                                <li><a href="route-5.html">Quinchana</a></li>
+                                <li><a href="route-6.html">La Estrella</a></li>
                             </ul>
                         </li>
                         <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
@@ -54,12 +54,12 @@
                     <li class="mobile-has-submenu">
                         <a href="#" data-en="Our Routes" data-es="Nuestras Rutas" class="routes-toggle">Our Routes</a>
                         <ul class="mobile-submenu">
-                            <li><a href="route-1.html">Route 1</a></li>
-                            <li><a href="route-2.html">Route 2</a></li>
-                            <li><a href="route-3.html">Route 3</a></li>
-                            <li><a href="route-4.html">Route 4</a></li>
-                            <li><a href="route-5.html">Route 5</a></li>
-                            <li><a href="route-6.html">Route 6</a></li>
+                            <li><a href="route-1.html">La Chaquira</a></li>
+                            <li><a href="route-2.html">El Oso</a></li>
+                            <li><a href="route-3.html">La Llanara</a></li>
+                            <li><a href="route-4.html">Waka Willka</a></li>
+                            <li><a href="route-5.html">Quinchana</a></li>
+                            <li><a href="route-6.html">La Estrella</a></li>
                         </ul>
                     </li>
                     <li><a href="about-us.html" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
@@ -264,14 +264,11 @@
         const routesToggle = document.querySelector('.routes-toggle');
         const mobileSubmenu = document.querySelector('.mobile-submenu');
 
-        // SCRIPT PARA MENÚ MÓVIL
-
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
 
-        // Cerrar al tocar el fondo del menú (fuera de los links)
         mobileMenu.addEventListener('click', function(e) {
             if (e.target === mobileMenu) {
                 mobileMenu.classList.remove('active');
@@ -359,11 +356,11 @@
         const touchEndX = e.changedTouches[0].clientX;
         const diff = touchEndX - touchStartX;
 
-        // Solo si empieza desde el borde izquierdo (primeros 30px) y desliza +80px
         if (touchStartX < 80 && diff > 80) {
             history.back();
         }
     });
-</script>
+    </script>
+
 </body>
 </html>
