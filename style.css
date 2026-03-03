@@ -1343,7 +1343,7 @@ body {
     }
 
     .route-link:nth-child(6) .route-box .route-img-container img {
-        object-position: 40% center;
+        object-position: 50% center !important;
     }
 
     /* stat-circle: ver reglas al final del archivo */
